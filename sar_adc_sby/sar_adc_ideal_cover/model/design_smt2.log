@@ -1,0 +1,284 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000001111101000
+Used module:     \sar_adc__N_BITS_10
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010
+Used module:             \sample_and_hold
+Used module:             \comparator_latch
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010
+Used module:             \digital_to_analog_converter
+
+2.2. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000001111101000
+Used module:     \sar_adc__N_BITS_10
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010
+Used module:             \sample_and_hold
+Used module:             \comparator_latch
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010
+Used module:             \digital_to_analog_converter
+Removed 0 unused modules.
+Module sar_tb_working directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== sar_tb_working ===
+
+   Number of wires:                 33
+   Number of wire bits:            167
+   Number of public wires:          11
+   Number of public wire bits:      74
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 37
+     $add                            1
+     $anyinit                        2
+     $anyseq                         1
+     $assert                         1
+     $assume                        10
+     $ff                             1
+     $ge                             1
+     $gt                             1
+     $initstate                      1
+     $logic_not                      4
+     $lt                             1
+     $not                            2
+     $or                             8
+     $paramod\frequency_divider\DIVISION=s32'00000000000000000000001111101000      1
+     $reduce_bool                    1
+     sar_adc__N_BITS_10              1
+
+=== sar_adc__N_BITS_10 ===
+
+   Number of wires:                  7
+   Number of wire bits:             25
+   Number of public wires:           7
+   Number of public wire bits:      25
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010      1
+
+=== sample_and_hold ===
+
+   Number of wires:                 17
+   Number of wire bits:            217
+   Number of public wires:           8
+   Number of public wire bits:      66
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     $anyinit                        2
+     $assume                         1
+     $eq                             1
+     $logic_not                      1
+     $mux                            5
+     $not                            1
+     $pmux                           1
+
+=== digital_to_analog_converter ===
+
+   Number of wires:                 36
+   Number of wire bits:            696
+   Number of public wires:          36
+   Number of public wire bits:     696
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $mul                            1
+
+=== comparator_latch ===
+
+   Number of wires:                426
+   Number of wire bits:          17018
+   Number of public wires:         384
+   Number of public wire bits:   16258
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 67
+     $add                           11
+     $and                            5
+     $anyinit                        4
+     $assume                         1
+     $div                            2
+     $eq                             4
+     $gt                             4
+     $le                             2
+     $logic_not                      1
+     $mul                           14
+     $mux                           10
+     $neg                            1
+     $not                            3
+     $pmux                           3
+     $reduce_or                      1
+     $sub                            1
+
+=== $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010 ===
+
+   Number of wires:                 35
+   Number of wire bits:            222
+   Number of public wires:           8
+   Number of public wire bits:      30
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 41
+     $add                            1
+     $and                            1
+     $anyinit                        2
+     $assume                         1
+     $eq                            10
+     $logic_not                      2
+     $logic_or                       1
+     $mux                           14
+     $ne                             1
+     $neg                            1
+     $not                            2
+     $or                             1
+     $shift                          2
+     $sub                            2
+
+=== $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010 ===
+
+   Number of wires:                 15
+   Number of wire bits:             60
+   Number of public wires:          11
+   Number of public wire bits:      56
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 10
+     $anyinit                        1
+     $assume                         1
+     $gt                             1
+     $mux                            2
+     $not                            1
+     $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010      1
+     comparator_latch                1
+     digital_to_analog_converter      1
+     sample_and_hold                 1
+
+=== $paramod\frequency_divider\DIVISION=s32'00000000000000000000001111101000 ===
+
+   Number of wires:                 16
+   Number of wire bits:            140
+   Number of public wires:           7
+   Number of public wire bits:      38
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 13
+     $add                            1
+     $anyinit                        2
+     $anyseq                         1
+     $assume                         1
+     $eq                             1
+     $logic_not                      1
+     $mux                            4
+     $ne                             1
+     $not                            1
+
+=== design hierarchy ===
+
+   sar_tb_working                    1
+     $paramod\frequency_divider\DIVISION=s32'00000000000000000000001111101000      1
+     sar_adc__N_BITS_10              1
+       $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010      1
+         $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010      1
+         comparator_latch            1
+         digital_to_analog_converter      1
+         sample_and_hold             1
+
+   Number of wires:                585
+   Number of wire bits:          18545
+   Number of public wires:         472
+   Number of public wire bits:   17243
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                175
+     $add                           14
+     $and                            6
+     $anyinit                       13
+     $anyseq                         2
+     $assert                         1
+     $assume                        15
+     $div                            2
+     $eq                            16
+     $ff                             1
+     $ge                             1
+     $gt                             6
+     $initstate                      1
+     $le                             2
+     $logic_not                      9
+     $logic_or                       1
+     $lt                             1
+     $mul                           15
+     $mux                           35
+     $ne                             2
+     $neg                            2
+     $not                           10
+     $or                             9
+     $pmux                           4
+     $reduce_bool                    1
+     $reduce_or                      1
+     $shift                          2
+     $sub                            3
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module $paramod\frequency_divider\DIVISION=s32'00000000000000000000001111101000.
+Creating SMT-LIBv2 representation of module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Creating SMT-LIBv2 representation of module comparator_latch.
+Creating SMT-LIBv2 representation of module digital_to_analog_converter.
+Creating SMT-LIBv2 representation of module sample_and_hold.
+Creating SMT-LIBv2 representation of module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+Creating SMT-LIBv2 representation of module sar_adc__N_BITS_10.
+Creating SMT-LIBv2 representation of module sar_tb_working.
+
+End of script. Logfile hash: 8de7c2c641, CPU: user 0.04s system 0.00s, MEM: 13.25 MB peak
+Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 61% 2x write_smt2 (0 sec), 22% 2x read_ilang (0 sec), ...

@@ -1,0 +1,8 @@
+# running in sar_adc_ideal_basic/src/
+
+read -formal -sv sar_adc_ideal_conv.sv
+prep -top sar_tb_working
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2023-12-09T23:45:18" hostname="Will-Linux-Laptop" package="sar_adc_ideal" id="0" name="liveness" tests="1" errors="1" failures="0" time="1" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="ERROR"/>
+</properties>
+<testcase classname="liveness" name="liveness" time="1">
+<error type="ERROR"/>
+</testcase>
+<system-out>SBY 23:45:17 [sar_adc_ideal_liveness] Removing directory '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_sby/sar_adc_ideal_liveness'.
+SBY 23:45:17 [sar_adc_ideal_liveness] Copy '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_sby/sar_adc_ideal_conv.sv' to '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_sby/sar_adc_ideal_liveness/src/sar_adc_ideal_conv.sv'.
+SBY 23:45:17 [sar_adc_ideal_liveness] Copy '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_sby/sar_adc__N_BITS_10__pickled.v' to '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_sby/sar_adc_ideal_liveness/src/sar_adc__N_BITS_10__pickled.v'.
+SBY 23:45:17 [sar_adc_ideal_liveness] engine_0: aiger suprove
+SBY 23:45:17 [sar_adc_ideal_liveness] base: starting process &quot;cd sar_adc_ideal_liveness/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 23:45:17 [sar_adc_ideal_liveness] base: Warning: wire '\eoc_high_cycle' is assigned in a block at sar_adc_ideal_conv.sv:82.10-82.29.
+SBY 23:45:17 [sar_adc_ideal_liveness] base: sar_adc_ideal_conv.sv:82: Warning: Identifier `\eoc_high_cycle' is implicitly declared.
+SBY 23:45:18 [sar_adc_ideal_liveness] base: finished (returncode=0)
+SBY 23:45:18 [sar_adc_ideal_liveness] prep: starting process &quot;cd sar_adc_ideal_liveness/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 23:45:18 [sar_adc_ideal_liveness] prep: finished (returncode=0)
+SBY 23:45:18 [sar_adc_ideal_liveness] aig: starting process &quot;cd sar_adc_ideal_liveness/model; yosys -ql design_aiger.log design_aiger.ys&quot;
+SBY 23:45:18 [sar_adc_ideal_liveness] aig: finished (returncode=0)
+SBY 23:45:18 [sar_adc_ideal_liveness] engine_0: starting process &quot;cd sar_adc_ideal_liveness; suprove +simple_liveness model/design_aiger.aig&quot;
+SBY 23:45:18 [sar_adc_ideal_liveness] engine_0: finished (returncode=127)
+SBY 23:45:18 [sar_adc_ideal_liveness] engine_0: COMMAND NOT FOUND. ERROR.
+SBY 23:45:18 [sar_adc_ideal_liveness] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 23:45:18 [sar_adc_ideal_liveness] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 23:45:18 [sar_adc_ideal_liveness] summary: engine_0 (aiger suprove) did not return a status
+SBY 23:45:18 [sar_adc_ideal_liveness] summary: engine_0 did not produce any traces
+SBY 23:45:18 [sar_adc_ideal_liveness] DONE (ERROR, rc=16)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

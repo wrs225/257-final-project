@@ -1,0 +1,14 @@
+input 0 0 clk
+input 1 0 reset
+input 2 0 input_hold_digital
+input 3 0 input_voltage_real
+input 4 1 input_voltage_real
+input 5 2 input_voltage_real
+input 6 3 input_voltage_real
+input 7 4 input_voltage_real
+input 8 5 input_voltage_real
+input 9 6 input_voltage_real
+input 10 7 input_voltage_real
+input 11 8 input_voltage_real
+input 12 9 input_voltage_real
+ninitff 340

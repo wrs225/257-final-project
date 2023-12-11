@@ -1,0 +1,19 @@
+[options]
+
+mode live
+multiclock on
+fst on
+
+
+[engines]
+
+aiger suprove
+
+[script]
+
+read -formal -sv sar_adc_ideal_conv.sv
+prep -top sar_tb_working
+
+[files]
+sar_adc_ideal_conv.sv
+sar_adc__N_BITS_10__pickled.v

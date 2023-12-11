@@ -1,0 +1,1018 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: sar_adc_ideal_conv.sv
+Parsing formal SystemVerilog input from `sar_adc_ideal_conv.sv' to AST representation.
+Storing AST representation for module `$abstract\comparator_latch'.
+Storing AST representation for module `$abstract\digital_to_analog_converter'.
+Storing AST representation for module `$abstract\sample_and_hold'.
+Storing AST representation for module `$abstract\successive_approximation_register'.
+Storing AST representation for module `$abstract\sar_adc'.
+Storing AST representation for module `$abstract\sar_adc__N_BITS_10'.
+Storing AST representation for module `$abstract\sar_tb_working'.
+Storing AST representation for module `$abstract\frequency_divider'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\sar_tb_working'.
+Generating RTLIL representation for module `\sar_tb_working'.
+Warning: wire '\eoc_high_cycle' is assigned in a block at sar_adc_ideal_conv.sv:87.10-87.29.
+sar_adc_ideal_conv.sv:87: Warning: Identifier `\eoc_high_cycle' is implicitly declared.
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Parameter \DIVISION = 2
+
+2.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\frequency_divider'.
+Parameter \DIVISION = 2
+Generating RTLIL representation for module `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010'.
+
+2.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\sar_adc__N_BITS_10'.
+Generating RTLIL representation for module `\sar_adc__N_BITS_10'.
+
+2.2.4. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
+Used module:     \sar_adc__N_BITS_10
+Parameter \N_BITS = 10
+
+2.2.5. Executing AST frontend in derive mode using pre-parsed AST for module `\sar_adc'.
+Parameter \N_BITS = 10
+Generating RTLIL representation for module `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010'.
+
+2.2.6. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
+Used module:     \sar_adc__N_BITS_10
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010
+
+2.2.7. Executing AST frontend in derive mode using pre-parsed AST for module `\comparator_latch'.
+Generating RTLIL representation for module `\comparator_latch'.
+
+2.2.8. Executing AST frontend in derive mode using pre-parsed AST for module `\digital_to_analog_converter'.
+Generating RTLIL representation for module `\digital_to_analog_converter'.
+Parameter \N_BITS = 10
+
+2.2.9. Executing AST frontend in derive mode using pre-parsed AST for module `\successive_approximation_register'.
+Parameter \N_BITS = 10
+Generating RTLIL representation for module `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010'.
+
+2.2.10. Executing AST frontend in derive mode using pre-parsed AST for module `\sample_and_hold'.
+Generating RTLIL representation for module `\sample_and_hold'.
+
+2.2.11. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
+Used module:     \sar_adc__N_BITS_10
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010
+Used module:             \comparator_latch
+Used module:             \digital_to_analog_converter
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010
+Used module:             \sample_and_hold
+
+2.2.12. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
+Used module:     \sar_adc__N_BITS_10
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010
+Used module:             \comparator_latch
+Used module:             \digital_to_analog_converter
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010
+Used module:             \sample_and_hold
+Removing unused module `$abstract\frequency_divider'.
+Removing unused module `$abstract\sar_tb_working'.
+Removing unused module `$abstract\sar_adc__N_BITS_10'.
+Removing unused module `$abstract\sar_adc'.
+Removing unused module `$abstract\successive_approximation_register'.
+Removing unused module `$abstract\sample_and_hold'.
+Removing unused module `$abstract\digital_to_analog_converter'.
+Removing unused module `$abstract\comparator_latch'.
+Removed 8 unused modules.
+Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module sar_tb_working directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$./sample_and_hold.v:26$322 in module sample_and_hold.
+Marked 1 switch rules as full_case in process $proc$./successive_approximation_register.v:31$232 in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Marked 2 switch rules as full_case in process $proc$./successive_approximation_register.v:22$228 in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Marked 8 switch rules as full_case in process $proc$./comparator_latch.v:791$203 in module comparator_latch.
+Marked 1 switch rules as full_case in process $proc$sar_adc.v:71$129 in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+Marked 1 switch rules as full_case in process $proc$sar_adc_ideal_conv.sv:123$116 in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Marked 1 switch rules as full_case in process $proc$sar_adc_ideal_conv.sv:85$50 in module sar_tb_working.
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 53 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$112'.
+  Set init value: $formal$sar_adc_ideal_conv.sv:102$23_EN = 1'0
+Found init rule in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$110'.
+  Set init value: $formal$sar_adc_ideal_conv.sv:94$22_EN = 1'0
+Found init rule in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$108'.
+  Set init value: $formal$sar_adc_ideal_conv.sv:92$21_EN = 1'0
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~30 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\sample_and_hold.$proc$./sample_and_hold.v:26$322'.
+     1/2: $0\fsm[31:0]
+     2/2: $0\state_cap[9:0]
+Creating decoders for process `\sample_and_hold.$proc$./sample_and_hold.v:20$321'.
+Creating decoders for process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:39$256'.
+Creating decoders for process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+     1/4: $1$lookahead\quantized_voltage_register$231[9:0]$242
+     2/4: $1$bitselwrite$sel$./successive_approximation_register.v:35$227[31:0]$241
+     3/4: $1$bitselwrite$data$./successive_approximation_register.v:35$226[9:0]$240
+     4/4: $1$bitselwrite$mask$./successive_approximation_register.v:35$225[9:0]$239
+Creating decoders for process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:22$228'.
+     1/1: $0\counter[4:0]
+Creating decoders for process `\comparator_latch.$proc$./comparator_latch.v:791$203'.
+     1/3: $0\fsm[31:0]
+     2/3: $0\o[34:0]
+     3/3: $0\state_cycle_counter[16:0]
+Creating decoders for process `\comparator_latch.$proc$./comparator_latch.v:782$202'.
+Creating decoders for process `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.$proc$sar_adc.v:71$129'.
+     1/1: $0\comparator_output_digital[0:0]
+Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$125'.
+Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:131$120'.
+     1/1: $0\output_clk_digital[0:0]
+Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:123$116'.
+     1/1: $0\counter[31:0]
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$112'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$110'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$108'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:101$67'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+     1/3: $0\eoc_high_cycle[0:0]
+     2/3: $0\hit_eoc[0:0]
+     3/3: $0\eoc_high_counter[31:0]
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:39$26'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:34$24'.
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.\quantized_voltage' from process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:39$256'.
+No latch inferred for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$unnamed_block$2.i' from process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:39$256'.
+No latch inferred for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$formal$sar_adc_ideal_conv.sv:119$114_CHECK' from process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$125'.
+No latch inferred for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$formal$sar_adc_ideal_conv.sv:119$114_EN' from process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$125'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:53$3_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:53$3_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:55$5_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:55$5_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:56$7_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:56$7_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:58$9_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:58$9_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:60$11_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:60$11_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:62$13_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:62$13_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:63$15_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:63$15_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:71$17_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:71$17_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:72$18_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:72$18_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:72$19_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:72$19_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:75$20_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:75$20_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\sample_and_hold.\state_cap' using process `\sample_and_hold.$proc$./sample_and_hold.v:26$322'.
+  created $dff cell `$procdff$440' with positive edge clock.
+Creating register for signal `\sample_and_hold.\fsm' using process `\sample_and_hold.$proc$./sample_and_hold.v:26$322'.
+  created $dff cell `$procdff$441' with positive edge clock.
+Creating register for signal `\sample_and_hold.\prev_sys_clk' using process `\sample_and_hold.$proc$./sample_and_hold.v:20$321'.
+  created $dff cell `$procdff$442' with positive edge clock.
+Creating register for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.\quantized_voltage_register' using process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+  created $dff cell `$procdff$443' with positive edge clock.
+Creating register for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$bitselwrite$mask$./successive_approximation_register.v:35$225' using process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+  created $dff cell `$procdff$444' with positive edge clock.
+Creating register for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$bitselwrite$data$./successive_approximation_register.v:35$226' using process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+  created $dff cell `$procdff$445' with positive edge clock.
+Creating register for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$bitselwrite$sel$./successive_approximation_register.v:35$227' using process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+  created $dff cell `$procdff$446' with positive edge clock.
+Creating register for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$lookahead\quantized_voltage_register$231' using process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+  created $dff cell `$procdff$447' with positive edge clock.
+Creating register for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.\counter' using process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:22$228'.
+  created $dff cell `$procdff$448' with positive edge clock.
+Creating register for signal `\comparator_latch.\state_cycle_counter' using process `\comparator_latch.$proc$./comparator_latch.v:791$203'.
+  created $dff cell `$procdff$449' with positive edge clock.
+Creating register for signal `\comparator_latch.\o' using process `\comparator_latch.$proc$./comparator_latch.v:791$203'.
+  created $dff cell `$procdff$450' with positive edge clock.
+Creating register for signal `\comparator_latch.\fsm' using process `\comparator_latch.$proc$./comparator_latch.v:791$203'.
+  created $dff cell `$procdff$451' with positive edge clock.
+Creating register for signal `\comparator_latch.\prev_sys_clk' using process `\comparator_latch.$proc$./comparator_latch.v:782$202'.
+  created $dff cell `$procdff$452' with positive edge clock.
+Creating register for signal `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.\comparator_output_digital' using process `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.$proc$sar_adc.v:71$129'.
+  created $dff cell `$procdff$453' with positive edge clock.
+Creating register for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.\output_clk_digital' using process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:131$120'.
+  created $dff cell `$procdff$454' with positive edge clock.
+Creating register for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.\counter' using process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:123$116'.
+  created $dff cell `$procdff$455' with positive edge clock.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:102$23_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:101$67'.
+  created $dff cell `$procdff$456' with positive edge clock.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:102$23_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:101$67'.
+  created $dff cell `$procdff$457' with positive edge clock.
+Creating register for signal `\sar_tb_working.\eoc_high_counter' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+  created $dff cell `$procdff$458' with positive edge clock.
+Creating register for signal `\sar_tb_working.\hit_eoc' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+  created $dff cell `$procdff$459' with positive edge clock.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:92$21_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+  created $dff cell `$procdff$460' with positive edge clock.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:92$21_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+  created $dff cell `$procdff$461' with positive edge clock.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:94$22_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+  created $dff cell `$procdff$462' with positive edge clock.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:94$22_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+  created $dff cell `$procdff$463' with positive edge clock.
+Creating register for signal `\sar_tb_working.\eoc_high_cycle' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+  created $dff cell `$procdff$464' with positive edge clock.
+Creating register for signal `\sar_tb_working.\sys_counter' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:39$26'.
+  created $dff cell `$procdff$465' with positive edge clock.
+Creating register for signal `\sar_tb_working.\cycles' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:34$24'.
+  created $dff cell `$procdff$466' with positive edge clock.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 6 empty switches in `\sample_and_hold.$proc$./sample_and_hold.v:26$322'.
+Removing empty process `sample_and_hold.$proc$./sample_and_hold.v:26$322'.
+Removing empty process `sample_and_hold.$proc$./sample_and_hold.v:20$321'.
+Removing empty process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:39$256'.
+Found and cleaned up 1 empty switch in `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+Removing empty process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:31$232'.
+Found and cleaned up 3 empty switches in `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:22$228'.
+Removing empty process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$proc$./successive_approximation_register.v:22$228'.
+Found and cleaned up 14 empty switches in `\comparator_latch.$proc$./comparator_latch.v:791$203'.
+Removing empty process `comparator_latch.$proc$./comparator_latch.v:791$203'.
+Removing empty process `comparator_latch.$proc$./comparator_latch.v:782$202'.
+Found and cleaned up 2 empty switches in `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.$proc$sar_adc.v:71$129'.
+Removing empty process `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.$proc$sar_adc.v:71$129'.
+Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$125'.
+Found and cleaned up 1 empty switch in `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:131$120'.
+Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:131$120'.
+Found and cleaned up 1 empty switch in `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:123$116'.
+Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:123$116'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$112'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$110'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$108'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$83'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:101$67'.
+Found and cleaned up 2 empty switches in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:85$50'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:68$28'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:39$26'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:34$24'.
+Cleaned up 30 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module sample_and_hold.
+<suppressed ~3 debug messages>
+Optimizing module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+<suppressed ~2 debug messages>
+Optimizing module digital_to_analog_converter.
+Optimizing module comparator_latch.
+<suppressed ~46 debug messages>
+Optimizing module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+<suppressed ~1 debug messages>
+Optimizing module sar_adc__N_BITS_10.
+Optimizing module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+<suppressed ~1 debug messages>
+Optimizing module sar_tb_working.
+<suppressed ~11 debug messages>
+
+2.4. Executing FUTURE pass.
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module sample_and_hold.
+Optimizing module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module digital_to_analog_converter.
+Optimizing module comparator_latch.
+Optimizing module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module sar_adc__N_BITS_10.
+Optimizing module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Optimizing module sar_tb_working.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module \sar_adc__N_BITS_10..
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module \sar_tb_working..
+Removed 12 unused cells and 214 unused wires.
+<suppressed ~32 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010...
+Checking module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010...
+Checking module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010...
+Checking module comparator_latch...
+Checking module digital_to_analog_converter...
+Checking module sample_and_hold...
+Checking module sar_adc__N_BITS_10...
+Checking module sar_tb_working...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Optimizing module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module comparator_latch.
+Optimizing module digital_to_analog_converter.
+Optimizing module sample_and_hold.
+Optimizing module sar_adc__N_BITS_10.
+Optimizing module sar_tb_working.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010'.
+Finding identical cells in module `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010'.
+<suppressed ~96 debug messages>
+Finding identical cells in module `\comparator_latch'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `\digital_to_analog_converter'.
+Finding identical cells in module `\sample_and_hold'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\sar_adc__N_BITS_10'.
+Finding identical cells in module `\sar_tb_working'.
+<suppressed ~39 debug messages>
+Removed a total of 58 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \comparator_latch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$386.
+    dead port 1/2 on $mux $procmux$391.
+    dead port 1/2 on $mux $procmux$395.
+    dead port 1/2 on $mux $procmux$399.
+    dead port 1/2 on $mux $procmux$403.
+Running muxtree optimizer on module \digital_to_analog_converter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \sample_and_hold..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$335.
+    dead port 1/2 on $mux $procmux$340.
+Running muxtree optimizer on module \sar_adc__N_BITS_10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \sar_tb_working..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 7 multiplexer ports.
+<suppressed ~22 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+  Optimizing cells in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+  Optimizing cells in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+  Optimizing cells in module \comparator_latch.
+    New ctrl vector for $pmux cell $procmux$388: { $auto$opt_reduce.cc:134:opt_pmux$468 $procmux$375_CMP $procmux$372_CMP $procmux$369_CMP }
+  Optimizing cells in module \comparator_latch.
+  Optimizing cells in module \digital_to_analog_converter.
+  Optimizing cells in module \sample_and_hold.
+    New ctrl vector for $pmux cell $procmux$337: $procmux$330_CMP
+  Optimizing cells in module \sample_and_hold.
+  Optimizing cells in module \sar_adc__N_BITS_10.
+  Optimizing cells in module \sar_tb_working.
+Performed a total of 2 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010'.
+Finding identical cells in module `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010'.
+Finding identical cells in module `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010'.
+Finding identical cells in module `\comparator_latch'.
+Finding identical cells in module `\digital_to_analog_converter'.
+Finding identical cells in module `\sample_and_hold'.
+Finding identical cells in module `\sar_adc__N_BITS_10'.
+Finding identical cells in module `\sar_tb_working'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \sar_adc__N_BITS_10..
+Finding unused cells or wires in module \sar_tb_working..
+Removed 0 unused cells and 65 unused wires.
+<suppressed ~5 debug messages>
+
+2.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Optimizing module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module comparator_latch.
+Optimizing module digital_to_analog_converter.
+Optimizing module sample_and_hold.
+Optimizing module sar_adc__N_BITS_10.
+Optimizing module sar_tb_working.
+
+2.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \comparator_latch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \digital_to_analog_converter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \sample_and_hold..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \sar_adc__N_BITS_10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \sar_tb_working..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+2.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+  Optimizing cells in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+  Optimizing cells in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+  Optimizing cells in module \comparator_latch.
+  Optimizing cells in module \digital_to_analog_converter.
+  Optimizing cells in module \sample_and_hold.
+  Optimizing cells in module \sar_adc__N_BITS_10.
+  Optimizing cells in module \sar_tb_working.
+Performed a total of 0 changes.
+
+2.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010'.
+Finding identical cells in module `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010'.
+Finding identical cells in module `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010'.
+Finding identical cells in module `\comparator_latch'.
+Finding identical cells in module `\digital_to_analog_converter'.
+Finding identical cells in module `\sample_and_hold'.
+Finding identical cells in module `\sar_adc__N_BITS_10'.
+Finding identical cells in module `\sar_tb_working'.
+Removed a total of 0 cells.
+
+2.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \sar_adc__N_BITS_10..
+Finding unused cells or wires in module \sar_tb_working..
+
+2.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Optimizing module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module comparator_latch.
+Optimizing module digital_to_analog_converter.
+Optimizing module sample_and_hold.
+Optimizing module sar_adc__N_BITS_10.
+Optimizing module sar_tb_working.
+
+2.8.14. Finished OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$mul$sar_adc_ideal_conv.sv:125$117 ($mul).
+Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$ne$sar_adc_ideal_conv.sv:125$118 ($ne).
+Removed top 31 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$add$sar_adc_ideal_conv.sv:126$119 ($add).
+Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$eq$sar_adc_ideal_conv.sv:132$122 ($eq).
+Removed top 24 bits (of 32) from port B of cell $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.$gt$sar_adc.v:75$131 ($gt).
+Removed top 30 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$div$./successive_approximation_register.v:35$243 ($div).
+Removed top 31 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$add$./successive_approximation_register.v:26$230 ($add).
+Removed top 27 bits (of 32) from port Y of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$add$./successive_approximation_register.v:26$230 ($add).
+Removed top 28 bits (of 32) from port A of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$sub$./successive_approximation_register.v:35$244 ($sub).
+Removed top 31 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$sub$./successive_approximation_register.v:35$245 ($sub).
+Removed top 31 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$sub$./successive_approximation_register.v:0$246 ($sub).
+Converting cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$sub$./successive_approximation_register.v:0$246 ($sub) from signed to unsigned.
+Removed top 1 bits (of 33) from port A of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$sub$./successive_approximation_register.v:0$246 ($sub).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$263 ($mux).
+Removed top 31 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$267 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$269 ($mux).
+Removed top 30 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$273 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$275 ($mux).
+Removed top 30 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$279 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$281 ($mux).
+Removed top 29 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$285 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$287 ($mux).
+Removed top 29 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$291 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$293 ($mux).
+Removed top 29 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$297 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$299 ($mux).
+Removed top 29 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$303 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$305 ($mux).
+Removed top 28 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$309 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$311 ($mux).
+Removed top 28 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$eq$./successive_approximation_register.v:42$315 ($eq).
+Removed top 31 bits (of 32) from mux cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$ternary$./successive_approximation_register.v:42$317 ($mux).
+Removed top 27 bits (of 32) from wire $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.$add$./successive_approximation_register.v:26$230_Y.
+Removed top 1 bits (of 51) from port B of cell comparator_latch.$div$./comparator_latch.v:364$162 ($div).
+Removed top 1 bits (of 59) from port B of cell comparator_latch.$div$./comparator_latch.v:719$191 ($div).
+Removed top 54 bits (of 105) from port A of cell comparator_latch.$mul$./comparator_latch.v:105$136 ($mul).
+Removed top 52 bits (of 101) from port A of cell comparator_latch.$mul$./comparator_latch.v:140$139 ($mul).
+Removed top 33 bits (of 48) from port B of cell comparator_latch.$add$./comparator_latch.v:163$143 ($add).
+Removed top 82 bits (of 146) from port B of cell comparator_latch.$mul$./comparator_latch.v:181$144 ($mul).
+Removed top 67 bits (of 146) from port Y of cell comparator_latch.$mul$./comparator_latch.v:181$144 ($mul).
+Removed top 49 bits (of 95) from port A of cell comparator_latch.$mul$./comparator_latch.v:257$149 ($mul).
+Removed top 46 bits (of 92) from port A of cell comparator_latch.$mul$./comparator_latch.v:297$152 ($mul).
+Removed top 81 bits (of 92) from port B of cell comparator_latch.$mul$./comparator_latch.v:297$152 ($mul).
+Removed top 35 bits (of 92) from port Y of cell comparator_latch.$mul$./comparator_latch.v:297$152 ($mul).
+Removed top 31 bits (of 43) from port B of cell comparator_latch.$add$./comparator_latch.v:312$153 ($add).
+Removed top 32 bits (of 43) from port B of cell comparator_latch.$add$./comparator_latch.v:312$154 ($add).
+Removed top 3 bits (of 43) from port Y of cell comparator_latch.$add$./comparator_latch.v:312$154 ($add).
+Removed top 3 bits (of 43) from port A of cell comparator_latch.$add$./comparator_latch.v:312$154 ($add).
+Removed top 43 bits (of 83) from port B of cell comparator_latch.$mul$./comparator_latch.v:369$163 ($mul).
+Removed top 134 bits (of 152) from port A of cell comparator_latch.$mul$./comparator_latch.v:417$168 ($mul).
+Removed top 54 bits (of 105) from port A of cell comparator_latch.$mul$./comparator_latch.v:465$171 ($mul).
+Removed top 52 bits (of 101) from port A of cell comparator_latch.$mul$./comparator_latch.v:500$174 ($mul).
+Removed top 34 bits (of 47) from port B of cell comparator_latch.$add$./comparator_latch.v:523$178 ($add).
+Removed top 81 bits (of 144) from port B of cell comparator_latch.$mul$./comparator_latch.v:541$179 ($mul).
+Removed top 68 bits (of 144) from port Y of cell comparator_latch.$mul$./comparator_latch.v:541$179 ($mul).
+Removed top 47 bits (of 94) from port A of cell comparator_latch.$mul$./comparator_latch.v:621$184 ($mul).
+Removed top 83 bits (of 94) from port B of cell comparator_latch.$mul$./comparator_latch.v:621$184 ($mul).
+Removed top 36 bits (of 94) from port Y of cell comparator_latch.$mul$./comparator_latch.v:621$184 ($mul).
+Removed top 53 bits (of 103) from port A of cell comparator_latch.$mul$./comparator_latch.v:651$185 ($mul).
+Removed top 32 bits (of 47) from port A of cell comparator_latch.$add$./comparator_latch.v:673$188 ($add).
+Removed top 34 bits (of 47) from port B of cell comparator_latch.$add$./comparator_latch.v:673$189 ($add).
+Removed top 3 bits (of 47) from port Y of cell comparator_latch.$add$./comparator_latch.v:673$189 ($add).
+Removed top 3 bits (of 47) from port A of cell comparator_latch.$add$./comparator_latch.v:673$189 ($add).
+Removed top 3 bits (of 35) from port A of cell comparator_latch.$sub$./comparator_latch.v:706$190 ($sub).
+Removed top 66 bits (of 129) from port B of cell comparator_latch.$mul$./comparator_latch.v:724$192 ($mul).
+Removed top 135 bits (of 153) from port A of cell comparator_latch.$mul$./comparator_latch.v:769$197 ($mul).
+Removed top 29 bits (of 32) from port B of cell comparator_latch.$gt$./comparator_latch.v:812$210 ($gt).
+Removed top 31 bits (of 32) from port B of cell comparator_latch.$add$./comparator_latch.v:815$211 ($add).
+Removed top 15 bits (of 32) from port Y of cell comparator_latch.$add$./comparator_latch.v:815$211 ($add).
+Removed top 30 bits (of 32) from port B of cell comparator_latch.$gt$./comparator_latch.v:837$216 ($gt).
+Removed top 3 bits (of 35) from port B of cell comparator_latch.$gt$./comparator_latch.v:852$220 ($gt).
+Removed top 29 bits (of 32) from port B of cell comparator_latch.$procmux$369_CMP0 ($eq).
+Removed top 30 bits (of 32) from port B of cell comparator_latch.$procmux$372_CMP0 ($eq).
+Removed top 30 bits (of 32) from port B of cell comparator_latch.$procmux$375_CMP0 ($eq).
+Removed top 31 bits (of 32) from port B of cell comparator_latch.$procmux$378_CMP0 ($eq).
+Removed top 3 bits (of 43) from port Y of cell comparator_latch.$add$./comparator_latch.v:312$153 ($add).
+Removed top 3 bits (of 43) from port A of cell comparator_latch.$add$./comparator_latch.v:312$153 ($add).
+Removed top 3 bits (of 47) from port Y of cell comparator_latch.$add$./comparator_latch.v:673$188 ($add).
+Removed top 3 bits (of 47) from port B of cell comparator_latch.$add$./comparator_latch.v:673$188 ($add).
+Removed top 10 bits (of 95) from port Y of cell comparator_latch.$mul$./comparator_latch.v:257$149 ($mul).
+Removed top 10 bits (of 103) from port Y of cell comparator_latch.$mul$./comparator_latch.v:651$185 ($mul).
+Removed top 3 bits (of 43) from wire comparator_latch.$add$./comparator_latch.v:312$153_Y.
+Removed top 3 bits (of 47) from wire comparator_latch.$add$./comparator_latch.v:673$188_Y.
+Removed top 15 bits (of 32) from wire comparator_latch.$add$./comparator_latch.v:815$211_Y.
+Removed top 49 bits (of 95) from wire comparator_latch.padl_101.
+Removed top 31 bits (of 43) from wire comparator_latch.padl_115.
+Removed top 29 bits (of 32) from wire comparator_latch.padl_16.
+Removed top 43 bits (of 83) from wire comparator_latch.padl_160.
+Removed top 54 bits (of 105) from wire comparator_latch.padl_207.
+Removed top 52 bits (of 101) from wire comparator_latch.padl_225.
+Removed top 32 bits (of 44) from wire comparator_latch.padl_276.
+Removed top 54 bits (of 105) from wire comparator_latch.padl_29.
+Removed top 53 bits (of 103) from wire comparator_latch.padl_296.
+Removed top 94 bits (of 129) from wire comparator_latch.padl_336.
+Removed top 52 bits (of 101) from wire comparator_latch.padl_47.
+Removed top 1 bits (of 47) from wire comparator_latch.padl_bits_102.
+Removed top 30 bits (of 42) from wire comparator_latch.padl_bits_116.
+Removed top 40 bits (of 41) from wire comparator_latch.padl_bits_150.
+Removed top 11 bits (of 12) from wire comparator_latch.padl_bits_152.
+Removed top 15 bits (of 18) from wire comparator_latch.padl_bits_17.
+Removed top 1 bits (of 52) from wire comparator_latch.padl_bits_208.
+Removed top 1 bits (of 50) from wire comparator_latch.padl_bits_226.
+Removed top 31 bits (of 43) from wire comparator_latch.padl_bits_277.
+Removed top 1 bits (of 51) from wire comparator_latch.padl_bits_297.
+Removed top 1 bits (of 52) from wire comparator_latch.padl_bits_30.
+Removed top 1 bits (of 50) from wire comparator_latch.padl_bits_48.
+Removed top 1 bits (of 47) from wire comparator_latch.padr_103.
+Removed top 1 bits (of 52) from wire comparator_latch.padr_209.
+Removed top 1 bits (of 50) from wire comparator_latch.padr_227.
+Removed top 1 bits (of 59) from wire comparator_latch.padr_270.
+Removed top 32 bits (of 47) from wire comparator_latch.padr_274.
+Removed top 1 bits (of 51) from wire comparator_latch.padr_298.
+Removed top 1 bits (of 52) from wire comparator_latch.padr_31.
+Removed top 1 bits (of 50) from wire comparator_latch.padr_49.
+Removed top 1 bits (of 51) from wire comparator_latch.padr_93.
+Removed top 3 bits (of 43) from wire comparator_latch.padr_97.
+Removed top 1 bits (of 51) from wire comparator_latch.tau.
+Removed top 1 bits (of 59) from wire comparator_latch.tau_lh.
+Removed top 30 bits (of 42) from wire comparator_latch.toSInt_imm_118.
+Removed top 31 bits (of 43) from wire comparator_latch.toSInt_imm_279.
+Removed top 3 bits (of 47) from wire comparator_latch.toUsInt_273.
+Removed top 3 bits (of 43) from wire comparator_latch.toUsInt_96.
+Removed top 1 bits (of 13) from wire comparator_latch.truncR_10.
+Removed top 29 bits (of 86) from wire comparator_latch.truncR_119.
+Removed top 1 bits (of 13) from wire comparator_latch.truncR_138.
+Removed top 1 bits (of 13) from wire comparator_latch.truncR_264.
+Removed top 30 bits (of 88) from wire comparator_latch.truncR_280.
+Removed top 3 bits (of 96) from wire comparator_latch.truncR_294.
+Removed top 1 bits (of 33) from wire comparator_latch.truncR_317.
+Removed top 1 bits (of 13) from wire comparator_latch.truncR_87.
+Removed top 3 bits (of 47) from wire comparator_latch.truncR_imm_309.
+Removed top 3 bits (of 47) from wire comparator_latch.truncR_shift_308.
+Removed top 2 bits (of 14) from wire comparator_latch.truncval_11.
+Removed top 35 bits (of 92) from wire comparator_latch.truncval_120.
+Removed top 2 bits (of 14) from wire comparator_latch.truncval_139.
+Removed top 2 bits (of 14) from wire comparator_latch.truncval_265.
+Removed top 78 bits (of 94) from wire comparator_latch.truncval_281.
+Removed top 2 bits (of 34) from wire comparator_latch.truncval_318.
+Removed top 2 bits (of 14) from wire comparator_latch.truncval_88.
+Removed top 29 bits (of 32) from wire comparator_latch.wait_time.
+Removed top 29 bits (of 42) from port A of cell digital_to_analog_converter.$mul$./digital_to_analog_converter.v:52$223 ($mul).
+Removed top 21 bits (of 42) from port B of cell digital_to_analog_converter.$mul$./digital_to_analog_converter.v:52$223 ($mul).
+Removed top 8 bits (of 42) from port Y of cell digital_to_analog_converter.$mul$./digital_to_analog_converter.v:52$223 ($mul).
+Removed top 27 bits (of 52) from port A of cell digital_to_analog_converter.$mul$./digital_to_analog_converter.v:68$224 ($mul).
+Removed top 48 bits (of 52) from port B of cell digital_to_analog_converter.$mul$./digital_to_analog_converter.v:68$224 ($mul).
+Removed top 24 bits (of 52) from port Y of cell digital_to_analog_converter.$mul$./digital_to_analog_converter.v:68$224 ($mul).
+Removed top 27 bits (of 52) from wire digital_to_analog_converter.padl_6.
+Removed top 1 bits (of 26) from wire digital_to_analog_converter.padl_bits_7.
+Removed top 1 bits (of 10) from wire digital_to_analog_converter.padr_0.
+Removed top 1 bits (of 26) from wire digital_to_analog_converter.padr_8.
+Removed top 1 bits (of 13) from wire digital_to_analog_converter.toSInt_imm_11.
+Removed top 31 bits (of 32) from port B of cell sample_and_hold.$procmux$327_CMP0 ($eq).
+Removed top 31 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:35$25 ($add).
+Removed top 31 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:40$27 ($add).
+Removed top 30 bits (of 32) from port B of cell sar_tb_working.$lt$sar_adc_ideal_conv.sv:71$38 ($lt).
+Removed top 30 bits (of 32) from port B of cell sar_tb_working.$ge$sar_adc_ideal_conv.sv:72$40 ($ge).
+Removed top 31 bits (of 32) from port B of cell sar_tb_working.$gt$sar_adc_ideal_conv.sv:75$42 ($gt).
+Removed top 31 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:86$58 ($add).
+Removed top 27 bits (of 32) from port B of cell sar_tb_working.$eq$sar_adc_ideal_conv.sv:92$59 ($eq).
+Removed top 56 bits (of 64) from port B of cell sar_tb_working.$eq$sar_adc_ideal_conv.sv:102$70 ($eq).
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \sar_adc__N_BITS_10..
+Finding unused cells or wires in module \sar_tb_working..
+Removed 0 unused cells and 75 unused wires.
+<suppressed ~3 debug messages>
+
+2.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Optimizing module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010.
+Optimizing module comparator_latch.
+Optimizing module digital_to_analog_converter.
+Optimizing module sample_and_hold.
+Optimizing module sar_adc__N_BITS_10.
+Optimizing module sar_tb_working.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010'.
+Finding identical cells in module `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010'.
+Finding identical cells in module `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010'.
+Finding identical cells in module `\comparator_latch'.
+Finding identical cells in module `\digital_to_analog_converter'.
+Finding identical cells in module `\sample_and_hold'.
+Finding identical cells in module `\sar_adc__N_BITS_10'.
+Finding identical cells in module `\sar_tb_working'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \sar_adc__N_BITS_10..
+Finding unused cells or wires in module \sar_tb_working..
+
+2.12.4. Finished fast OPT passes.
+
+2.13. Printing statistics.
+
+=== $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 ===
+
+   Number of wires:                 14
+   Number of wire bits:            138
+   Number of public wires:           5
+   Number of public wire bits:      36
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     $add                            1
+     $assume                         1
+     $dff                            2
+     $eq                             1
+     $initstate                      1
+     $logic_not                      2
+     $mul                            1
+     $mux                            2
+     $ne                             1
+
+=== $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010 ===
+
+   Number of wires:                 14
+   Number of wire bits:             59
+   Number of public wires:          11
+   Number of public wire bits:      56
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  8
+     $dff                            1
+     $gt                             1
+     $mux                            2
+     $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010      1
+     comparator_latch                1
+     digital_to_analog_converter      1
+     sample_and_hold                 1
+
+=== $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010 ===
+
+   Number of wires:                 38
+   Number of wire bits:            287
+   Number of public wires:           8
+   Number of public wire bits:      30
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 43
+     $add                            1
+     $and                            1
+     $dff                            2
+     $div                            1
+     $eq                            10
+     $logic_and                      1
+     $logic_not                      3
+     $logic_or                       1
+     $mux                           14
+     $ne                             1
+     $neg                            1
+     $not                            1
+     $or                             1
+     $shift                          2
+     $sub                            3
+
+=== comparator_latch ===
+
+   Number of wires:                425
+   Number of wire bits:          17051
+   Number of public wires:         384
+   Number of public wire bits:   16292
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 65
+     $add                           11
+     $and                            5
+     $dff                            4
+     $div                            2
+     $eq                             4
+     $gt                             4
+     $le                             2
+     $logic_not                      1
+     $mul                           14
+     $mux                           10
+     $neg                            1
+     $not                            2
+     $pmux                           3
+     $reduce_or                      1
+     $sub                            1
+
+=== digital_to_analog_converter ===
+
+   Number of wires:                 36
+   Number of wire bits:            696
+   Number of public wires:          36
+   Number of public wire bits:     696
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     $mul                            2
+
+=== sample_and_hold ===
+
+   Number of wires:                 16
+   Number of wire bits:            216
+   Number of public wires:           8
+   Number of public wire bits:      66
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 10
+     $dff                            2
+     $eq                             1
+     $logic_not                      1
+     $mux                            5
+     $pmux                           1
+
+=== sar_adc__N_BITS_10 ===
+
+   Number of wires:                  7
+   Number of wire bits:             25
+   Number of public wires:           7
+   Number of public wire bits:      25
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010      1
+
+=== sar_tb_working ===
+
+   Number of wires:                 51
+   Number of wire bits:            350
+   Number of public wires:          11
+   Number of public wire bits:     154
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 60
+     $add                            3
+     $and                            2
+     $assert                         3
+     $assume                        11
+     $dff                            9
+     $eq                             2
+     $ge                             1
+     $gt                             1
+     $initstate                      1
+     $logic_not                      9
+     $logic_or                       1
+     $lt                             1
+     $mux                            2
+     $not                            2
+     $or                             9
+     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010      1
+     $reduce_bool                    1
+     sar_adc__N_BITS_10              1
+
+=== design hierarchy ===
+
+   sar_tb_working                    1
+     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010      1
+     sar_adc__N_BITS_10              1
+       $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010      1
+         $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010      1
+         comparator_latch            1
+         digital_to_analog_converter      1
+         sample_and_hold             1
+
+   Number of wires:                601
+   Number of wire bits:          18822
+   Number of public wires:         470
+   Number of public wire bits:   17355
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                194
+     $add                           16
+     $and                            8
+     $assert                         3
+     $assume                        12
+     $dff                           20
+     $div                            3
+     $eq                            18
+     $ge                             1
+     $gt                             6
+     $initstate                      2
+     $le                             2
+     $logic_and                      1
+     $logic_not                     16
+     $logic_or                       2
+     $lt                             1
+     $mul                           17
+     $mux                           35
+     $ne                             2
+     $neg                            2
+     $not                            5
+     $or                            10
+     $pmux                           4
+     $reduce_bool                    1
+     $reduce_or                      1
+     $shift                          2
+     $sub                            4
+
+2.14. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010...
+Checking module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010...
+Checking module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010...
+Checking module comparator_latch...
+Checking module digital_to_analog_converter...
+Checking module sample_and_hold...
+Checking module sar_adc__N_BITS_10...
+Checking module sar_tb_working...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     \sar_adc__N_BITS_10
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010
+Used module:             \digital_to_analog_converter
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010
+Used module:             \comparator_latch
+Used module:             \sample_and_hold
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
+
+3.2. Analyzing design hierarchy..
+Top module:  \sar_tb_working
+Used module:     \sar_adc__N_BITS_10
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000001010
+Used module:             \digital_to_analog_converter
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000001010
+Used module:             \comparator_latch
+Used module:             \sample_and_hold
+Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
+Removed 0 unused modules.
+Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module sar_tb_working directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 59fff42333, CPU: user 0.32s system 0.01s, MEM: 21.35 MB peak
+Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 32% 5x opt_clean (0 sec), 16% 2x check (0 sec), ...

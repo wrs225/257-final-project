@@ -1,0 +1,3965 @@
+{
+  "$schema": "https://raw.githubusercontent.com/YosysHQ/yosys/master/misc/jny.schema.json",
+  "generator": "Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)",
+  "version": "0.0.1",
+  "invocation": "write_jny -no-connections ../model/design.json ",
+  "features": ["attributes", "properties"],
+  "modules": [
+      {
+        "name": "$paramod\\frequency_divider\\DIVISION=s32'00000000000000000000000000000010",
+        "cell_sorts": [
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$427",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:132.8-132.29|sar_adc_ideal_conv.sv:132.5-132.73"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$430",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:125.8-125.31|sar_adc_ideal_conv.sv:125.5-127.27"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ne",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ne$sar_adc_ideal_conv.sv:125$118",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:125.8-125.31"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mul",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$mul$sar_adc_ideal_conv.sv:125$117",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:125.8-125.17"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$454",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:131.1-133.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$455",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:123.1-128.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$initstate",
+            "ports": [
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$initstate$115",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:0.0-0.0"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:119$128",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:119.16-119.28"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:132$123",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:132.53-132.72"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:132$122",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:132.8-132.29"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$assume",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:119$124",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:119.8-119.29"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$sar_adc_ideal_conv.sv:126$119",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:126.20-126.31"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "hdlname": "\\frequency_divider",
+            "src": "sar_adc_ideal_conv.sv:108.1-136.10"
+        }
+      },
+      {
+        "name": "$paramod\\sar_adc\\N_BITS=s32'00000000000000000000000000001010",
+        "cell_sorts": [
+          {
+            "type": "sample_and_hold",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_control_digital",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_voltage_real",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "output_voltage_real",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "sys_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "sah",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc.v:32.17-40.2"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "comparator_latch",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "n",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "out",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "p",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "sys_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "comparator_instance",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc.v:61.18-68.2"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$paramod\\successive_approximation_register\\N_BITS=s32'00000000000000000000000000001010",
+            "ports": [
+                {
+                  "name": "conduct_comparison",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "eoc",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "feedback_value",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "quantized_voltage",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "sys_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "SAR_instance",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc.v:44.3-51.2"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "digital_to_analog_converter",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_voltage_digital",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "output_voltage_real",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "DAC_instance",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc.v:54.29-59.2"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$422",
+                  "attributes": {
+                    "src": "sar_adc.v:74.17-74.29|sar_adc.v:74.14-76.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$425",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "sar_adc.v:72.8-72.13|sar_adc.v:72.5-76.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$453",
+                  "attributes": {
+                    "src": "sar_adc.v:71.1-77.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$gt",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$gt$sar_adc.v:75$131",
+                  "attributes": {
+                    "src": "sar_adc.v:75.38-75.66"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "dynports": "00000000000000000000000000000001",
+            "hdlname": "\\sar_adc",
+            "src": "sar_adc.v:7.1-79.10"
+        }
+      },
+      {
+        "name": "$paramod\\successive_approximation_register\\N_BITS=s32'00000000000000000000000000001010",
+        "cell_sorts": [
+          {
+            "type": "$sub",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [33, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$sub$./successive_approximation_register.v:0$246",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000100001"
+                  }
+                },
+                {
+                  "name": "$sub$./successive_approximation_register.v:35$244",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:35.37-35.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$sub$./successive_approximation_register.v:35$245",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:35.36-35.60"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$shift",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [33, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$shift$./successive_approximation_register.v:0$248",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100001",
+                    "Y_WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$shift$./successive_approximation_register.v:0$252",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100001",
+                    "Y_WIDTH": "00000000000000000000000000001010"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [5, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$./successive_approximation_register.v:26$230",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:26.50-26.61"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000101"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$neg",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [33, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [33, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$neg$./successive_approximation_register.v:0$247",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000001",
+                    "A_WIDTH": "00000000000000000000000000100001",
+                    "Y_WIDTH": "00000000000000000000000000100001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$./successive_approximation_register.v:0$254",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000001010"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$div",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$div$./successive_approximation_register.v:35$243",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:35.46-35.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$443",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:31.1-37.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procdff$448",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:22.1-29.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$261",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$./successive_approximation_register.v:32$237",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:32.17-32.36"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$./successive_approximation_register.v:46$319",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:46.45-46.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$267",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$273",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$279",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$285",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$291",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$297",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$303",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$309",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000100",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:42$315",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.33-42.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000100",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$./successive_approximation_register.v:46$318",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:46.15-46.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$or$./successive_approximation_register.v:0$255",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000001010"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$./successive_approximation_register.v:46$320",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:46.14-46.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$./successive_approximation_register.v:32$238",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:32.8-32.36"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$not$./successive_approximation_register.v:0$253",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000001010"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ne",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ne$./successive_approximation_register.v:26$229",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:26.12-26.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$347",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./successive_approximation_register.v:32.8-32.36|./successive_approximation_register.v:32.5-36.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$359",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./successive_approximation_register.v:26.12-26.37|./successive_approximation_register.v:26.9-27.27"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$361",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:25.17-25.35|./successive_approximation_register.v:25.14-28.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$364",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./successive_approximation_register.v:23.8-23.13|./successive_approximation_register.v:23.5-28.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$263",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$269",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$275",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$281",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$287",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$293",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$299",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$305",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$311",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$317",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "dynports": "00000000000000000000000000000001",
+            "hdlname": "\\successive_approximation_register",
+            "src": "./successive_approximation_register.v:2.1-49.10"
+        }
+      },
+      {
+        "name": "comparator_latch",
+        "cell_sorts": [
+          {
+            "type": "$sub",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [35, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [35, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$sub$./comparator_latch.v:706$190",
+                  "attributes": {
+                    "src": "./comparator_latch.v:706.26-706.38"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100011",
+                    "Y_WIDTH": "00000000000000000000000000100011"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$381_CMP0",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [3, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$369_CMP0",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$372_CMP0",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$375_CMP0",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$378_CMP0",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$pmux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [160, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$368",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000101",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$388",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000100",
+                    "WIDTH": "00000000000000000000000000100011"
+                  }
+                },
+                {
+                  "name": "$procmux$413",
+                  "attributes": {
+                    "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:795.7-856.14"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000010001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$366",
+                  "attributes": {
+                    "src": "./comparator_latch.v:852.14-852.59|./comparator_latch.v:852.11-854.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$370",
+                  "attributes": {
+                    "src": "./comparator_latch.v:842.14-842.48|./comparator_latch.v:842.11-844.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$373",
+                  "attributes": {
+                    "src": "./comparator_latch.v:827.14-827.37|./comparator_latch.v:827.11-829.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$376",
+                  "attributes": {
+                    "src": "./comparator_latch.v:817.14-817.45|./comparator_latch.v:817.11-819.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$379",
+                  "attributes": {
+                    "src": "./comparator_latch.v:802.14-802.66|./comparator_latch.v:802.11-804.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$383",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./comparator_latch.v:792.8-792.13|./comparator_latch.v:792.5-857.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$407",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./comparator_latch.v:792.8-792.13|./comparator_latch.v:792.5-857.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100011"
+                  }
+                },
+                {
+                  "name": "$procmux$411",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./comparator_latch.v:837.14-837.48|./comparator_latch.v:837.11-841.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000010001"
+                  }
+                },
+                {
+                  "name": "$procmux$416",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./comparator_latch.v:812.14-812.45|./comparator_latch.v:812.11-816.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000010001"
+                  }
+                },
+                {
+                  "name": "$procmux$420",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./comparator_latch.v:792.8-792.13|./comparator_latch.v:792.5-857.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000010001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [17, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [17, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$449",
+                  "attributes": {
+                    "src": "./comparator_latch.v:791.3-858.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000010001"
+                  }
+                },
+                {
+                  "name": "$procdff$450",
+                  "attributes": {
+                    "src": "./comparator_latch.v:791.3-858.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100011"
+                  }
+                },
+                {
+                  "name": "$procdff$451",
+                  "attributes": {
+                    "src": "./comparator_latch.v:791.3-858.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procdff$452",
+                  "attributes": {
+                    "src": "./comparator_latch.v:782.3-784.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$not$./comparator_latch.v:802$204",
+                  "attributes": {
+                    "src": "./comparator_latch.v:802.14-802.27"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$not$./comparator_latch.v:827$214",
+                  "attributes": {
+                    "src": "./comparator_latch.v:827.29-827.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$neg",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [12, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [12, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$neg$./comparator_latch.v:350$161",
+                  "attributes": {
+                    "src": "./comparator_latch.v:350.24-350.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001100",
+                    "Y_WIDTH": "00000000000000000000000000001100"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mul",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [51, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [105, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [105, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$mul$./comparator_latch.v:105$136",
+                  "attributes": {
+                    "src": "./comparator_latch.v:105.24-105.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000001101001",
+                    "Y_WIDTH": "00000000000000000000000001101001"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:140$139",
+                  "attributes": {
+                    "src": "./comparator_latch.v:140.24-140.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000001100101",
+                    "Y_WIDTH": "00000000000000000000000001100101"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:181$144",
+                  "attributes": {
+                    "src": "./comparator_latch.v:181.24-181.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000010010010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000001000000",
+                    "Y_WIDTH": "00000000000000000000000001001111"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:257$149",
+                  "attributes": {
+                    "src": "./comparator_latch.v:257.25-257.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000001011111",
+                    "Y_WIDTH": "00000000000000000000000001010101"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:297$152",
+                  "attributes": {
+                    "src": "./comparator_latch.v:297.25-297.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001011",
+                    "Y_WIDTH": "00000000000000000000000000111001"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:369$163",
+                  "attributes": {
+                    "src": "./comparator_latch.v:369.25-369.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000001010011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000101000",
+                    "Y_WIDTH": "00000000000000000000000001010011"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:417$168",
+                  "attributes": {
+                    "src": "./comparator_latch.v:417.25-417.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000010011000",
+                    "Y_WIDTH": "00000000000000000000000010011000"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:465$171",
+                  "attributes": {
+                    "src": "./comparator_latch.v:465.25-465.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000001101001",
+                    "Y_WIDTH": "00000000000000000000000001101001"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:500$174",
+                  "attributes": {
+                    "src": "./comparator_latch.v:500.25-500.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000001100101",
+                    "Y_WIDTH": "00000000000000000000000001100101"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:541$179",
+                  "attributes": {
+                    "src": "./comparator_latch.v:541.25-541.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000010010000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000111111",
+                    "Y_WIDTH": "00000000000000000000000001001100"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:621$184",
+                  "attributes": {
+                    "src": "./comparator_latch.v:621.25-621.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101111",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001011",
+                    "Y_WIDTH": "00000000000000000000000000111010"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:651$185",
+                  "attributes": {
+                    "src": "./comparator_latch.v:651.25-651.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000001100111",
+                    "Y_WIDTH": "00000000000000000000000001011101"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:724$192",
+                  "attributes": {
+                    "src": "./comparator_latch.v:724.25-724.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000010000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000111111",
+                    "Y_WIDTH": "00000000000000000000000010000001"
+                  }
+                },
+                {
+                  "name": "$mul$./comparator_latch.v:769$197",
+                  "attributes": {
+                    "src": "./comparator_latch.v:769.25-769.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000010011001",
+                    "Y_WIDTH": "00000000000000000000000010011001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$le",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$le$./comparator_latch.v:802$207",
+                  "attributes": {
+                    "src": "./comparator_latch.v:802.52-802.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$le$./comparator_latch.v:852$221",
+                  "attributes": {
+                    "src": "./comparator_latch.v:852.38-852.58"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$gt",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$gt$./comparator_latch.v:802$206",
+                  "attributes": {
+                    "src": "./comparator_latch.v:802.42-802.47"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$gt$./comparator_latch.v:812$210",
+                  "attributes": {
+                    "src": "./comparator_latch.v:812.14-812.45"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$gt$./comparator_latch.v:837$216",
+                  "attributes": {
+                    "src": "./comparator_latch.v:837.14-837.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$gt$./comparator_latch.v:852$220",
+                  "attributes": {
+                    "src": "./comparator_latch.v:852.15-852.33"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$reduce_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$auto$opt_reduce.cc:128:opt_pmux$467",
+                  "attributes": {
+
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$div",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [52, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [50, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [52, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$div$./comparator_latch.v:364$162",
+                  "attributes": {
+                    "src": "./comparator_latch.v:364.25-364.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000110010",
+                    "Y_WIDTH": "00000000000000000000000000110100"
+                  }
+                },
+                {
+                  "name": "$div$./comparator_latch.v:719$191",
+                  "attributes": {
+                    "src": "./comparator_latch.v:719.25-719.56"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000111100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000111010",
+                    "Y_WIDTH": "00000000000000000000000000111100"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$./comparator_latch.v:802$205",
+                  "attributes": {
+                    "src": "./comparator_latch.v:802.14-802.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$./comparator_latch.v:802$208",
+                  "attributes": {
+                    "src": "./comparator_latch.v:802.41-802.65"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$./comparator_latch.v:802$209",
+                  "attributes": {
+                    "src": "./comparator_latch.v:802.14-802.66"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$./comparator_latch.v:827$215",
+                  "attributes": {
+                    "src": "./comparator_latch.v:827.14-827.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$./comparator_latch.v:852$222",
+                  "attributes": {
+                    "src": "./comparator_latch.v:852.14-852.59"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [48, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [48, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [48, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$./comparator_latch.v:163$142",
+                  "attributes": {
+                    "src": "./comparator_latch.v:163.25-163.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000110000",
+                    "Y_WIDTH": "00000000000000000000000000110000"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:163$143",
+                  "attributes": {
+                    "src": "./comparator_latch.v:163.25-163.58"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000110000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001111",
+                    "Y_WIDTH": "00000000000000000000000000110000"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:312$153",
+                  "attributes": {
+                    "src": "./comparator_latch.v:312.23-312.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001100",
+                    "Y_WIDTH": "00000000000000000000000000101000"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:312$154",
+                  "attributes": {
+                    "src": "./comparator_latch.v:312.23-312.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001011",
+                    "Y_WIDTH": "00000000000000000000000000101000"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:523$177",
+                  "attributes": {
+                    "src": "./comparator_latch.v:523.26-523.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101111",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000101111",
+                    "Y_WIDTH": "00000000000000000000000000101111"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:523$178",
+                  "attributes": {
+                    "src": "./comparator_latch.v:523.26-523.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101111",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001101",
+                    "Y_WIDTH": "00000000000000000000000000101111"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:673$188",
+                  "attributes": {
+                    "src": "./comparator_latch.v:673.24-673.49"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001111",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000101100",
+                    "Y_WIDTH": "00000000000000000000000000101100"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:673$189",
+                  "attributes": {
+                    "src": "./comparator_latch.v:673.24-673.60"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000101100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001101",
+                    "Y_WIDTH": "00000000000000000000000000101100"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:815$211",
+                  "attributes": {
+                    "src": "./comparator_latch.v:815.36-815.59"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000010001"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:825$213",
+                  "attributes": {
+                    "src": "./comparator_latch.v:825.18-825.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100011",
+                    "Y_WIDTH": "00000000000000000000000000100011"
+                  }
+                },
+                {
+                  "name": "$add$./comparator_latch.v:850$219",
+                  "attributes": {
+                    "src": "./comparator_latch.v:850.18-850.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100011",
+                    "Y_WIDTH": "00000000000000000000000000100011"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "hdlname": "\\comparator_latch",
+            "src": "./comparator_latch.v:3.1-861.10"
+        }
+      },
+      {
+        "name": "digital_to_analog_converter",
+        "cell_sorts": [
+          {
+            "type": "$mul",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [13, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [21, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [34, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$mul$./digital_to_analog_converter.v:52$223",
+                  "attributes": {
+                    "src": "./digital_to_analog_converter.v:52.24-52.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000010101",
+                    "Y_WIDTH": "00000000000000000000000000100010"
+                  }
+                },
+                {
+                  "name": "$mul$./digital_to_analog_converter.v:68$224",
+                  "attributes": {
+                    "src": "./digital_to_analog_converter.v:68.23-68.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000011001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000100",
+                    "Y_WIDTH": "00000000000000000000000000011100"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "hdlname": "\\digital_to_analog_converter",
+            "src": "./digital_to_analog_converter.v:3.1-77.10"
+        }
+      },
+      {
+        "name": "sample_and_hold",
+        "cell_sorts": [
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$330_CMP0",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$327_CMP0",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$pmux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$326",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$324",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:47.14-47.36|./sample_and_hold.v:47.11-49.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$328",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:37.14-37.35|./sample_and_hold.v:37.11-39.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$332",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./sample_and_hold.v:27.8-27.13|./sample_and_hold.v:27.5-52.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$337",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$344",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./sample_and_hold.v:27.8-27.13|./sample_and_hold.v:27.5-52.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$440",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:26.3-53.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procdff$441",
+                  "attributes": {
+                    "src": "./sample_and_hold.v:26.3-53.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "hdlname": "\\sample_and_hold",
+            "src": "./sample_and_hold.v:3.1-56.10"
+        }
+      },
+      {
+        "name": "sar_adc__N_BITS_10",
+        "cell_sorts": [
+          {
+            "type": "$paramod\\sar_adc\\N_BITS=s32'00000000000000000000000000001010",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "eoc",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_hold_digital",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_voltage_real",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "output_result_digital",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "sys_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "v",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc.v:101.5-110.4"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "hdlname": "\\sar_adc__N_BITS_10",
+            "src": "sar_adc.v:88.1-111.10"
+        }
+      },
+      {
+        "name": "sar_tb_working",
+        "cell_sorts": [
+          {
+            "type": "sar_adc__N_BITS_10",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "eoc",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_hold_digital",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_voltage_real",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "output_result_digital",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "sys_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "adc_instance",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:15.20-23.2"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$435",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:97.8-97.26|sar_adc_ideal_conv.sv:97.5-97.41"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$438",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:86.8-86.44|sar_adc_ideal_conv.sv:86.5-87.30"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$456",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:101.1-104.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$457",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:101.1-104.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$458",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:85.1-99.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procdff$459",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:85.1-99.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$460",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:85.1-99.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$461",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:85.1-99.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$462",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:85.1-99.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$465",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:39.1-41.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procdff$466",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:34.1-36.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000001000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$paramod\\frequency_divider\\DIVISION=s32'00000000000000000000000000000010",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_clk_digital",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "output_clk_digital",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "fdiv",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:43.38-49.2"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:102$73",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:102.28-102.71"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:55$100",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:55.13-55.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:56$102",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:56.13-56.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:71$39",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:71.28-71.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:72$41",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:72.28-72.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:75$45",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:75.14-75.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:76$49",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:76.14-76.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:92$61",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:92.22-92.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$sar_adc_ideal_conv.sv:94$64",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:94.22-94.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$reduce_bool",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ne$sar_adc_ideal_conv.sv:56$101",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:56.14-56.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$initstate",
+            "ports": [
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$initstate$10",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:0.0-0.0"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$gt",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$gt$sar_adc_ideal_conv.sv:75$42",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:75.16-75.26"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000001000000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ge",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ge$sar_adc_ideal_conv.sv:72$40",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:72.29-72.45"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$sar_adc_ideal_conv.sv:86$55",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:86.9-86.34"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:62$105",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:62.13-62.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:64$107",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:64.13-64.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$lt",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$lt$sar_adc_ideal_conv.sv:71$38",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:71.38-71.53"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:55$99",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:55.23-55.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:60$104",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:60.13-60.24"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000001000000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:63$106",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:63.13-63.34"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:102$71",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:102.28-102.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:55$98",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:55.13-55.19"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:75$43",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:75.14-75.27"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:76$48",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:76.29-76.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:92$60",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:92.22-92.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:94$63",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:94.53-94.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:102$70",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:102.30-102.53"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000001000000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:92$59",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:92.24-92.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$assume",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:53$74",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:53.14-55.41"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:55$75",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:55.42-56.40"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:56$76",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:56.41-58.30"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:58$77",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:58.31-60.25"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:60$78",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:60.26-62.26"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:62$79",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:62.27-63.35"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:63$80",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:63.36-64.26"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:72$81",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:72.56-75.57"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:75$82",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:75.58-76.57"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "count_if_reset",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:71.5-71.55"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "reset_if_count",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:72.5-72.55"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$assert",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "bk_eoc",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:94.5-94.58"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "bmc_range_for",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:102.5-102.72"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "fwd_eoc",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:92.5-92.58"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$sar_adc_ideal_conv.sv:86$57",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:86.8-86.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$sar_adc_ideal_conv.sv:97$66",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:97.8-97.26"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [64, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$sar_adc_ideal_conv.sv:35$25",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:35.15-35.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000001000000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000001000000"
+                  }
+                },
+                {
+                  "name": "$add$sar_adc_ideal_conv.sv:40$27",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:40.20-40.35"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$add$sar_adc_ideal_conv.sv:86$58",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:86.66-86.86"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "hdlname": "\\sar_tb_working",
+            "top": "00000000000000000000000000000001",
+            "src": "sar_adc_ideal_conv.sv:5.1-106.10"
+        }
+      }
+  ]
+}
