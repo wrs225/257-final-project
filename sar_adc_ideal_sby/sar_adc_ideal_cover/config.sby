@@ -1,0 +1,13 @@
+[options]
+mode cover
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal sar_adc_ideal_conv.sv
+prep -top sar_tb_working
+
+[files]
+sar_adc_ideal_conv.sv
+sar_adc__N_BITS_10__pickled.v
