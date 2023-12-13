@@ -1,0 +1,62 @@
+$date
+  Wed Nov 15 13:06:49 2023
+$end
+$version
+  PyMTL 3 (Mamba)
+$end
+$timescale
+ 10ps
+$end
+
+$scope module top $end
+  $var reg 1 ! s_DOT_input_hold_digital $end
+  $var reg 10 " s_DOT_input_voltage_real $end
+  $var reg 1 # eoc $end
+  $var reg 1 $ input_hold_digital $end
+  $var reg 10 % output_result_digital $end
+  $var reg 10 & input_voltage_real $end
+  $var reg 1 ' clk $end
+  $var reg 1 ( s_DOT_eoc $end
+  $var reg 1 ) reset $end
+  $var reg 1 * s_DOT_reset $end
+  $var reg 10 + s_DOT_output_result_digital $end
+$upscope $end
+$enddefinitions $end
+
+b0b0 !
+b0b0000000000 "
+b0b0 #
+b0b0 $
+b0b0000000000 %
+b0b0000000000 &
+b0b0 '
+b0b0 (
+b0b0 )
+b0b0 *
+b0b0000000000 +
+
+#0
+b0b1 '
+
+b0b1000000000 %
+b0b1 )
+b0b1 *
+b0b1000000000 +
+
+#50
+b0b0 '
+#100
+b0b1 '
+
+
+#150
+b0b0 '
+#200
+b0b1 '
+
+
+#250
+b0b0 '
+#300
+b0b1 '
+

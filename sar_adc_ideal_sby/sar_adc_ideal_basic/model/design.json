@@ -34,7 +34,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$299",
+                  "name": "$procmux$287",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:152.8-152.29|sar_adc_ideal_conv.sv:152.5-152.73"
                   },
@@ -43,7 +43,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$302",
+                  "name": "$procmux$290",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "sar_adc_ideal_conv.sv:145.8-145.31|sar_adc_ideal_conv.sv:145.5-147.27"
@@ -145,7 +145,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$325",
+                  "name": "$procdff$310",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:151.1-153.4"
                   },
@@ -155,7 +155,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$326",
+                  "name": "$procdff$311",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:143.1-148.4"
                   },
@@ -331,7 +331,7 @@
         }
       },
       {
-        "name": "$paramod\\sar_adc\\N_BITS=s32'00000000000000000000000000000011",
+        "name": "$paramod\\sar_adc\\N_BITS=s32'00000000000000000000000000000001",
         "cell_sorts": [
           {
             "type": "sample_and_hold",
@@ -428,7 +428,7 @@
             ]
           },
           {
-            "type": "$paramod\\successive_approximation_register\\N_BITS=s32'00000000000000000000000000000011",
+            "type": "$paramod\\successive_approximation_register\\N_BITS=s32'00000000000000000000000000000001",
             "ports": [
                 {
                   "name": "conduct_comparison",
@@ -448,7 +448,7 @@
                 {
                   "name": "quantized_voltage",
                   "direction": "",
-                  "range": [3, 0]
+                  "range": [0, 0]
                 },
                 {
                   "name": "reset",
@@ -518,10 +518,10 @@
         }
       },
       {
-        "name": "$paramod\\sar_adc__N_BITS_10\\N_BITS=s32'00000000000000000000000000000011",
+        "name": "$paramod\\sar_adc__N_BITS_10\\N_BITS=s32'00000000000000000000000000000001",
         "cell_sorts": [
           {
-            "type": "$paramod\\sar_adc\\N_BITS=s32'00000000000000000000000000000011",
+            "type": "$paramod\\sar_adc\\N_BITS=s32'00000000000000000000000000000001",
             "ports": [
                 {
                   "name": "clk",
@@ -579,7 +579,7 @@
         }
       },
       {
-        "name": "$paramod\\successive_approximation_register\\N_BITS=s32'00000000000000000000000000000011",
+        "name": "$paramod\\successive_approximation_register\\N_BITS=s32'00000000000000000000000000000001",
         "cell_sorts": [
           {
             "type": "$sub",
@@ -621,7 +621,7 @@
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000010",
+                    "A_WIDTH": "00000000000000000000000000000001",
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000100000",
                     "Y_WIDTH": "00000000000000000000000000100000"
@@ -658,7 +658,7 @@
                 {
                   "name": "Y",
                   "direction": "",
-                  "range": [3, 0]
+                  "range": [0, 0]
                 }
             ],
             "cells": [
@@ -672,7 +672,7 @@
                     "A_WIDTH": "00000000000000000000000000000001",
                     "B_SIGNED": "00000000000000000000000000000001",
                     "B_WIDTH": "00000000000000000000000000100001",
-                    "Y_WIDTH": "00000000000000000000000000000011"
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
@@ -685,18 +685,93 @@
                     "A_WIDTH": "00000000000000000000000000000001",
                     "B_SIGNED": "00000000000000000000000000000001",
                     "B_WIDTH": "00000000000000000000000000100001",
-                    "Y_WIDTH": "00000000000000000000000000000011"
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]
           },
           {
-            "type": "$add",
+            "type": "$mux",
             "ports": [
                 {
                   "name": "A",
                   "direction": "io",
-                  "range": [3, 0]
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$258",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./successive_approximation_register.v:32.8-32.36|./successive_approximation_register.v:32.5-36.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$270",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./successive_approximation_register.v:26.12-26.37|./successive_approximation_register.v:26.9-27.27"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$272",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:25.17-25.35|./successive_approximation_register.v:25.14-28.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$275",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "./successive_approximation_register.v:23.8-23.13|./successive_approximation_register.v:23.5-28.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$./successive_approximation_register.v:42$228",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:42.32-42.97"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
                 },
                 {
                   "name": "B",
@@ -706,161 +781,119 @@
                 {
                   "name": "Y",
                   "direction": "",
-                  "range": [3, 0]
+                  "range": [0, 0]
                 }
             ],
             "cells": [
                 {
-                  "name": "$add$./successive_approximation_register.v:26$195",
+                  "name": "$or$./successive_approximation_register.v:0$220",
                   "attributes": {
-                    "src": "./successive_approximation_register.v:26.50-26.61"
+                    "src": "./successive_approximation_register.v:0.0-0.0"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000011",
+                    "A_WIDTH": "00000000000000000000000000000001",
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000011"
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]
           },
           {
-            "type": "$neg",
+            "type": "$not",
             "ports": [
                 {
                   "name": "A",
-                  "direction": "io",
-                  "range": [33, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [33, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$neg$./successive_approximation_register.v:0$212",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:0.0-0.0"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000001",
-                    "A_WIDTH": "00000000000000000000000000100001",
-                    "Y_WIDTH": "00000000000000000000000000100001"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$and",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [3, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$and$./successive_approximation_register.v:0$219",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:0.0-0.0"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000011",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000011",
-                    "Y_WIDTH": "00000000000000000000000000000011"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$div",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [2, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [32, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$div$./successive_approximation_register.v:35$208",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:35.46-35.55"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000011",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000010",
-                    "Y_WIDTH": "00000000000000000000000000100000"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$dff",
-            "ports": [
-                {
-                  "name": "CLK",
                   "direction": "io",
                   "range": [0, 0]
                 },
                 {
-                  "name": "D",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "Q",
+                  "name": "Y",
                   "direction": "",
-                  "range": [3, 0]
+                  "range": [0, 0]
                 }
             ],
             "cells": [
                 {
-                  "name": "$procdff$317",
+                  "name": "$not$./successive_approximation_register.v:0$218",
                   "attributes": {
-                    "src": "./successive_approximation_register.v:31.1-37.4"
+                    "src": "./successive_approximation_register.v:0.0-0.0"
                   },
                   "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000011"
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
                 },
                 {
-                  "name": "$procdff$322",
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$./successive_approximation_register.v:32$203",
                   "attributes": {
-                    "src": "./successive_approximation_register.v:22.1-29.4"
+                    "src": "./successive_approximation_register.v:32.8-32.36"
                   },
                   "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000011"
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$./successive_approximation_register.v:46$231",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:46.14-46.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]
@@ -903,7 +936,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$./successive_approximation_register.v:46$242",
+                  "name": "$logic_not$./successive_approximation_register.v:46$230",
                   "attributes": {
                     "src": "./successive_approximation_register.v:46.45-46.51"
                   },
@@ -916,125 +949,106 @@
             ]
           },
           {
-            "type": "$eq",
+            "type": "$dff",
             "ports": [
                 {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [32, 0]
-                },
-                {
-                  "name": "B",
+                  "name": "CLK",
                   "direction": "io",
                   "range": [0, 0]
                 },
                 {
-                  "name": "Y",
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
                   "direction": "",
                   "range": [0, 0]
                 }
             ],
             "cells": [
                 {
-                  "name": "$eq$./successive_approximation_register.v:42$232",
+                  "name": "$procdff$302",
                   "attributes": {
-                    "src": "./successive_approximation_register.v:42.33-42.62"
+                    "src": "./successive_approximation_register.v:31.1-37.4"
                   },
                   "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000100000",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
-                  "name": "$eq$./successive_approximation_register.v:42$238",
+                  "name": "$procdff$307",
                   "attributes": {
-                    "src": "./successive_approximation_register.v:42.33-42.62"
+                    "src": "./successive_approximation_register.v:22.1-29.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$div",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$div$./successive_approximation_register.v:35$208",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:35.46-35.55"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000100000",
+                    "A_WIDTH": "00000000000000000000000000000001",
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000000010",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$eq$./successive_approximation_register.v:46$241",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:46.15-46.40"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000011",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000011",
-                    "Y_WIDTH": "00000000000000000000000000000001"
+                    "Y_WIDTH": "00000000000000000000000000100000"
                   }
                 }
             ]
           },
           {
-            "type": "$or",
+            "type": "$and",
             "ports": [
                 {
                   "name": "A",
                   "direction": "io",
-                  "range": [3, 0]
+                  "range": [0, 0]
                 },
                 {
                   "name": "B",
                   "direction": "io",
-                  "range": [3, 0]
+                  "range": [0, 0]
                 },
                 {
                   "name": "Y",
                   "direction": "",
-                  "range": [3, 0]
+                  "range": [0, 0]
                 }
             ],
             "cells": [
                 {
-                  "name": "$or$./successive_approximation_register.v:0$220",
+                  "name": "$and$./successive_approximation_register.v:0$219",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000011",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000011",
-                    "Y_WIDTH": "00000000000000000000000000000011"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$logic_and",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$logic_and$./successive_approximation_register.v:46$243",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:46.14-46.51"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1047,7 +1061,35 @@
             ]
           },
           {
-            "type": "$logic_or",
+            "type": "$neg",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [33, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [33, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$neg$./successive_approximation_register.v:0$212",
+                  "attributes": {
+                    "src": "./successive_approximation_register.v:0.0-0.0"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000001",
+                    "A_WIDTH": "00000000000000000000000000100001",
+                    "Y_WIDTH": "00000000000000000000000000100001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
             "ports": [
                 {
                   "name": "A",
@@ -1067,9 +1109,9 @@
             ],
             "cells": [
                 {
-                  "name": "$logic_or$./successive_approximation_register.v:32$203",
+                  "name": "$add$./successive_approximation_register.v:26$195",
                   "attributes": {
-                    "src": "./successive_approximation_register.v:32.8-32.36"
+                    "src": "./successive_approximation_register.v:26.50-26.61"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1077,162 +1119,6 @@
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000000001",
                     "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$not",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [3, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$not$./successive_approximation_register.v:0$218",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:0.0-0.0"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000011",
-                    "Y_WIDTH": "00000000000000000000000000000011"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$ne",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$ne$./successive_approximation_register.v:26$194",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:26.12-26.37"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000011",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000011",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$mux",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "S",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [3, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$procmux$270",
-                  "attributes": {
-                    "full_case": "00000000000000000000000000000001",
-                    "src": "./successive_approximation_register.v:32.8-32.36|./successive_approximation_register.v:32.5-36.8"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000011"
-                  }
-                },
-                {
-                  "name": "$procmux$282",
-                  "attributes": {
-                    "full_case": "00000000000000000000000000000001",
-                    "src": "./successive_approximation_register.v:26.12-26.37|./successive_approximation_register.v:26.9-27.27"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000011"
-                  }
-                },
-                {
-                  "name": "$procmux$284",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:25.17-25.35|./successive_approximation_register.v:25.14-28.8"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000011"
-                  }
-                },
-                {
-                  "name": "$procmux$287",
-                  "attributes": {
-                    "full_case": "00000000000000000000000000000001",
-                    "src": "./successive_approximation_register.v:23.8-23.13|./successive_approximation_register.v:23.5-28.8"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000011"
-                  }
-                },
-                {
-                  "name": "$ternary$./successive_approximation_register.v:42$228",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:42.32-42.97"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$ternary$./successive_approximation_register.v:42$234",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:42.32-42.97"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$ternary$./successive_approximation_register.v:42$240",
-                  "attributes": {
-                    "src": "./successive_approximation_register.v:42.32-42.97"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]
@@ -1268,7 +1154,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$292_CMP0",
+                  "name": "$procmux$280_CMP0",
                   "attributes": {
                     "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:41.7-52.14"
                   },
@@ -1308,12 +1194,44 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$291",
+                  "name": "$procmux$279",
                   "attributes": {
                     "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:41.7-52.14"
                   },
                   "parameters": {
                     "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$308",
+                  "attributes": {
+                    "src": "./comparator_latch.v:37.3-54.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
                     "WIDTH": "00000000000000000000000000100000"
                   }
                 }
@@ -1345,7 +1263,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$289",
+                  "name": "$procmux$277",
                   "attributes": {
                     "src": "./comparator_latch.v:48.14-48.38|./comparator_latch.v:48.11-50.14"
                   },
@@ -1354,7 +1272,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$293",
+                  "name": "$procmux$281",
                   "attributes": {
                     "src": "./comparator_latch.v:43.14-43.36|./comparator_latch.v:43.11-45.14"
                   },
@@ -1363,7 +1281,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$297",
+                  "name": "$procmux$285",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./comparator_latch.v:38.8-38.13|./comparator_latch.v:38.5-53.8"
@@ -1379,38 +1297,6 @@
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$dff",
-            "ports": [
-                {
-                  "name": "CLK",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "D",
-                  "direction": "io",
-                  "range": [32, 0]
-                },
-                {
-                  "name": "Q",
-                  "direction": "",
-                  "range": [32, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$procdff$323",
-                  "attributes": {
-                    "src": "./comparator_latch.v:37.3-54.6"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000100000"
                   }
                 }
             ]
@@ -1669,7 +1555,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$253_CMP0",
+                  "name": "$procmux$241_CMP0",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1702,7 +1588,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$250_CMP0",
+                  "name": "$procmux$238_CMP0",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1742,7 +1628,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$249",
+                  "name": "$procmux$237",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1779,7 +1665,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$247",
+                  "name": "$procmux$235",
                   "attributes": {
                     "src": "./sample_and_hold.v:47.14-47.36|./sample_and_hold.v:47.11-49.14"
                   },
@@ -1788,7 +1674,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$251",
+                  "name": "$procmux$239",
                   "attributes": {
                     "src": "./sample_and_hold.v:37.14-37.35|./sample_and_hold.v:37.11-39.14"
                   },
@@ -1797,7 +1683,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$255",
+                  "name": "$procmux$243",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./sample_and_hold.v:27.8-27.13|./sample_and_hold.v:27.5-52.8"
@@ -1807,7 +1693,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$260",
+                  "name": "$procmux$248",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1816,7 +1702,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$267",
+                  "name": "$procmux$255",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./sample_and_hold.v:27.8-27.13|./sample_and_hold.v:27.5-52.8"
@@ -1848,7 +1734,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$314",
+                  "name": "$procdff$299",
                   "attributes": {
                     "src": "./sample_and_hold.v:26.3-53.6"
                   },
@@ -1858,7 +1744,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$315",
+                  "name": "$procdff$300",
                   "attributes": {
                     "src": "./sample_and_hold.v:26.3-53.6"
                   },
@@ -1889,7 +1775,7 @@
                 {
                   "name": "B",
                   "direction": "io",
-                  "range": [8, 0]
+                  "range": [10, 0]
                 },
                 {
                   "name": "Y",
@@ -1907,60 +1793,8 @@
                     "A_SIGNED": "00000000000000000000000000000000",
                     "A_WIDTH": "00000000000000000000000000010100",
                     "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000001000",
+                    "B_WIDTH": "00000000000000000000000000001010",
                     "Y_WIDTH": "00000000000000000000000000010101"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$paramod\\sar_adc__N_BITS_10\\N_BITS=s32'00000000000000000000000000000011",
-            "ports": [
-                {
-                  "name": "clk",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "eoc",
-                  "direction": "",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "input_hold_digital",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "input_voltage_real",
-                  "direction": "io",
-                  "range": [10, 0]
-                },
-                {
-                  "name": "output_result_digital",
-                  "direction": "",
-                  "range": [10, 0]
-                },
-                {
-                  "name": "reset",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "sys_clk",
-                  "direction": "io",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "adc_instance",
-                  "attributes": {
-                    "module_not_derived": "00000000000000000000000000000001",
-                    "src": "sar_adc_ideal_conv.sv:20.42-28.2"
-                  },
-                  "parameters": {
-
                   }
                 }
             ]
@@ -1991,7 +1825,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$304",
+                  "name": "$procmux$292",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:123.8-123.53|sar_adc_ideal_conv.sv:123.5-123.88"
                   },
@@ -2000,22 +1834,22 @@
                   }
                 },
                 {
-                  "name": "$procmux$309",
+                  "name": "$procmux$295",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:95.8-95.44|sar_adc_ideal_conv.sv:95.5-96.32"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$297",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:108.8-108.26|sar_adc_ideal_conv.sv:108.5-108.41"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$procmux$312",
-                  "attributes": {
-                    "full_case": "00000000000000000000000000000001",
-                    "src": "sar_adc_ideal_conv.sv:95.8-95.44|sar_adc_ideal_conv.sv:95.5-96.30"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000100000"
                   }
                 }
             ]
@@ -2041,7 +1875,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$327",
+                  "name": "$procdff$312",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:119.1-124.4"
                   },
@@ -2051,7 +1885,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$328",
+                  "name": "$procdff$313",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:119.1-124.4"
                   },
@@ -2061,7 +1895,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$329",
+                  "name": "$procdff$314",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:119.1-124.4"
                   },
@@ -2071,7 +1905,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$330",
+                  "name": "$procdff$315",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:113.1-117.4"
                   },
@@ -2081,7 +1915,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$331",
+                  "name": "$procdff$316",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:113.1-117.4"
                   },
@@ -2091,7 +1925,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$332",
+                  "name": "$procdff$317",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:113.1-117.4"
                   },
@@ -2101,7 +1935,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$334",
+                  "name": "$procdff$319",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:113.1-117.4"
                   },
@@ -2111,7 +1945,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$336",
+                  "name": "$procdff$321",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:94.1-109.4"
                   },
@@ -2121,7 +1955,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$337",
+                  "name": "$procdff$322",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:94.1-109.4"
                   },
@@ -2131,7 +1965,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$338",
+                  "name": "$procdff$323",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:94.1-109.4"
                   },
@@ -2141,7 +1975,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$339",
+                  "name": "$procdff$324",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:94.1-109.4"
                   },
@@ -2151,7 +1985,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$340",
+                  "name": "$procdff$325",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:94.1-109.4"
                   },
@@ -2161,7 +1995,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$343",
+                  "name": "$procdff$327",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:43.1-45.4"
                   },
@@ -2171,7 +2005,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$344",
+                  "name": "$procdff$328",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:38.1-40.4"
                   },
@@ -2448,7 +2282,7 @@
             ]
           },
           {
-            "type": "$le",
+            "type": "$add",
             "ports": [
                 {
                   "name": "A",
@@ -2458,135 +2292,65 @@
                 {
                   "name": "B",
                   "direction": "io",
-                  "range": [8, 0]
+                  "range": [10, 0]
                 },
                 {
                   "name": "Y",
                   "direction": "",
-                  "range": [0, 0]
+                  "range": [21, 0]
                 }
             ],
             "cells": [
                 {
-                  "name": "$le$sar_adc_ideal_conv.sv:116$94",
+                  "name": "$add$sar_adc_ideal_conv.sv:114$87",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:116.15-116.64"
+                    "src": "sar_adc_ideal_conv.sv:114.39-114.87"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
                     "A_WIDTH": "00000000000000000000000000010100",
                     "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000001000",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$initstate",
-            "ports": [
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$initstate$10",
-                  "attributes": {
-                    "module_not_derived": "00000000000000000000000000000001",
-                    "src": "sar_adc_ideal_conv.sv:0.0-0.0"
-                  },
-                  "parameters": {
-
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$gt",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [20, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [8, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$gt$sar_adc_ideal_conv.sv:115$89",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:115.15-115.63"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000010100",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000001000",
-                    "Y_WIDTH": "00000000000000000000000000000001"
+                    "B_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000010101"
                   }
                 },
                 {
-                  "name": "$gt$sar_adc_ideal_conv.sv:115$92",
+                  "name": "$add$sar_adc_ideal_conv.sv:39$31",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:115.69-115.141"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000001010",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000100000",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$gt$sar_adc_ideal_conv.sv:116$96",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:116.70-116.95"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000001010",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$gt$sar_adc_ideal_conv.sv:80$50",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:80.16-80.26"
+                    "src": "sar_adc_ideal_conv.sv:39.15-39.25"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
                     "A_WIDTH": "00000000000000000000000001000000",
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
+                    "Y_WIDTH": "00000000000000000000000001000000"
                   }
                 },
                 {
-                  "name": "$gt$sar_adc_ideal_conv.sv:83$58",
+                  "name": "$add$sar_adc_ideal_conv.sv:44$33",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:83.14-83.38"
+                    "src": "sar_adc_ideal_conv.sv:44.20-44.35"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000001010",
+                    "A_WIDTH": "00000000000000000000000000100000",
                     "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000111",
-                    "Y_WIDTH": "00000000000000000000000000000001"
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$add$sar_adc_ideal_conv.sv:95$69",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:95.66-95.86"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000100000"
                   }
                 }
             ]
@@ -2627,7 +2391,189 @@
             ]
           },
           {
-            "type": "$logic_or",
+            "type": "$assume",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:57$109",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:57.14-59.41"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:59$110",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:59.42-60.40"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:60$111",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:60.41-62.30"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:62$112",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:62.31-64.25"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:64$113",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:64.26-66.26"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:66$114",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:66.27-67.35"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:67$115",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:67.36-68.26"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:68$116",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:68.27-69.29"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:77$117",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:77.56-80.57"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:80$118",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:80.58-81.57"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$sar_adc_ideal_conv.sv:81$119",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:81.58-83.69"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "count_if_reset",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:76.5-76.55"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "reset_if_count",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:77.5-77.55"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:101$70",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:101.24-101.61"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:120$101",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:120.30-120.53"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000001000000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000100",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
             "ports": [
                 {
                   "name": "A",
@@ -2647,9 +2593,61 @@
             ],
             "cells": [
                 {
-                  "name": "$logic_or$sar_adc_ideal_conv.sv:95$66",
+                  "name": "$and$sar_adc_ideal_conv.sv:108$77",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:95.9-95.34"
+                    "src": "sar_adc_ideal_conv.sv:108.8-108.26"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$sar_adc_ideal_conv.sv:123$106",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:123.8-123.35"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$sar_adc_ideal_conv.sv:123$108",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:123.8-123.53"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$sar_adc_ideal_conv.sv:83$60",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:83.13-83.68"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$sar_adc_ideal_conv.sv:95$68",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:95.8-95.44"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -2662,13 +2660,114 @@
             ]
           },
           {
-            "type": "$not",
+            "type": "$assert",
             "ports": [
                 {
                   "name": "A",
                   "direction": "io",
                   "range": [0, 0]
                 },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$assert$sar_adc_ideal_conv.sv:113$120",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:113.28-114.91"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$sar_adc_ideal_conv.sv:114$121",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:114.92-115.143"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$sar_adc_ideal_conv.sv:115$122",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:115.144-116.97"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "bk_eoc",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:103.5-103.69"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "bmc_range_for",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:120.5-120.72"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "fwd_eoc",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:101.5-101.69"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$div",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [9, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$div$sar_adc_ideal_conv.sv:111$79",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:111.26-111.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001001",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$initstate",
+            "ports": [
                 {
                   "name": "Y",
                   "direction": "",
@@ -2677,25 +2776,65 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:66$147",
+                  "name": "$initstate$10",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:66.13-66.25"
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:0.0-0.0"
                   },
                   "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
+
                   }
+                }
+            ]
+          },
+          {
+            "type": "$paramod\\sar_adc__N_BITS_10\\N_BITS=s32'00000000000000000000000000000001",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
                 },
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:68$149",
+                  "name": "eoc",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_hold_digital",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "input_voltage_real",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "output_result_digital",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "reset",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "sys_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "adc_instance",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:68.13-68.25"
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "sar_adc_ideal_conv.sv:20.42-28.2"
                   },
                   "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
+
                   }
                 }
             ]
@@ -2911,382 +3050,7 @@
             ]
           },
           {
-            "type": "$eq",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [32, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [3, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$eq$sar_adc_ideal_conv.sv:101$70",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:101.24-101.61"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000100000",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000011",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$eq$sar_adc_ideal_conv.sv:120$101",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:120.30-120.53"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000001000000",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000110",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$assume",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "EN",
-                  "direction": "io",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:57$109",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:57.14-59.41"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:59$110",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:59.42-60.40"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:60$111",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:60.41-62.30"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:62$112",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:62.31-64.25"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:64$113",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:64.26-66.26"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:66$114",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:66.27-67.35"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:67$115",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:67.36-68.26"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:68$116",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:68.27-69.29"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:77$117",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:77.56-80.57"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:80$118",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:80.58-81.57"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assume$sar_adc_ideal_conv.sv:81$119",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:81.58-83.69"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "count_if_reset",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:76.5-76.55"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "reset_if_count",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:77.5-77.55"
-                  },
-                  "parameters": {
-
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$div",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [32, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [9, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [32, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$div$sar_adc_ideal_conv.sv:111$79",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:111.26-111.51"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000100000",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000001001",
-                    "Y_WIDTH": "00000000000000000000000000100000"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$assert",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "EN",
-                  "direction": "io",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$assert$sar_adc_ideal_conv.sv:113$120",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:113.28-114.91"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assert$sar_adc_ideal_conv.sv:114$121",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:114.92-115.143"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "$assert$sar_adc_ideal_conv.sv:115$122",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:115.144-116.97"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "bk_eoc",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:103.5-103.69"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "bmc_range_for",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:120.5-120.72"
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "fwd_eoc",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:101.5-101.69"
-                  },
-                  "parameters": {
-
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$and",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "B",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "Y",
-                  "direction": "",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "$and$sar_adc_ideal_conv.sv:108$77",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:108.8-108.26"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$and$sar_adc_ideal_conv.sv:123$106",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:123.8-123.35"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$and$sar_adc_ideal_conv.sv:123$108",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:123.8-123.53"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$and$sar_adc_ideal_conv.sv:83$60",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:83.13-83.68"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$and$sar_adc_ideal_conv.sv:95$68",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:95.8-95.44"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                }
-            ]
-          },
-          {
-            "type": "$add",
+            "type": "$gt",
             "ports": [
                 {
                   "name": "A",
@@ -3296,65 +3060,187 @@
                 {
                   "name": "B",
                   "direction": "io",
-                  "range": [8, 0]
+                  "range": [10, 0]
                 },
                 {
                   "name": "Y",
                   "direction": "",
-                  "range": [21, 0]
+                  "range": [0, 0]
                 }
             ],
             "cells": [
                 {
-                  "name": "$add$sar_adc_ideal_conv.sv:114$87",
+                  "name": "$gt$sar_adc_ideal_conv.sv:115$89",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:114.39-114.87"
+                    "src": "sar_adc_ideal_conv.sv:115.15-115.63"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
                     "A_WIDTH": "00000000000000000000000000010100",
                     "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000001000",
-                    "Y_WIDTH": "00000000000000000000000000010101"
+                    "B_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
-                  "name": "$add$sar_adc_ideal_conv.sv:39$31",
+                  "name": "$gt$sar_adc_ideal_conv.sv:115$92",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:39.15-39.25"
+                    "src": "sar_adc_ideal_conv.sv:115.69-115.141"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$gt$sar_adc_ideal_conv.sv:116$96",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:116.70-116.95"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$gt$sar_adc_ideal_conv.sv:80$50",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:80.16-80.26"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
                     "A_WIDTH": "00000000000000000000000001000000",
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000001000000"
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
-                  "name": "$add$sar_adc_ideal_conv.sv:44$33",
+                  "name": "$gt$sar_adc_ideal_conv.sv:83$58",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:44.20-44.35"
+                    "src": "sar_adc_ideal_conv.sv:83.14-83.38"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000100000",
+                    "A_WIDTH": "00000000000000000000000000001010",
                     "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000100000"
+                    "B_WIDTH": "00000000000000000000000000000111",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$le",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [20, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$le$sar_adc_ideal_conv.sv:116$94",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:116.15-116.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$sar_adc_ideal_conv.sv:66$147",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:66.13-66.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
-                  "name": "$add$sar_adc_ideal_conv.sv:95$69",
+                  "name": "$eq$sar_adc_ideal_conv.sv:68$149",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:95.66-95.86"
+                    "src": "sar_adc_ideal_conv.sv:68.13-68.25"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000100000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$sar_adc_ideal_conv.sv:95$66",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:95.9-95.34"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000100000"
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]

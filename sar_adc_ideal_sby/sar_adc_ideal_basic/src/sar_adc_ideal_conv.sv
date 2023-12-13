@@ -13,8 +13,8 @@ module sar_tb_working(
 
 
 localparam div = 2;
-localparam bmc_range = 40;
-localparam adc_nbits = 3;
+localparam bmc_range = 10;
+localparam adc_nbits = 1;
 
 // Instance of sar_adc__N_BITS_10
 sar_adc__N_BITS_10 #(.N_BITS(adc_nbits)) adc_instance (
@@ -93,7 +93,7 @@ logic [20 - 1:0] digitized_value;
 
 always@(posedge sys_clk) begin
     if((input_hold_digital || eoc) & !reset) eoc_high_counter <= eoc_high_counter + 1;
-    else eoc_high_cycle <= 0;
+    else eoc_high_counter <= 0;
 
     
     //eoc <-> eoc_high_counter = 18

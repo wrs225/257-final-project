@@ -32,21 +32,21 @@ Input filename: design_prep.il
 2.1. Analyzing design hierarchy..
 Top module:  \sar_tb_working
 Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
-Used module:     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011
-Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011
+Used module:     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000001
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000001
 Used module:             \sample_and_hold
 Used module:             \comparator_latch
-Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001
 Used module:             \digital_to_analog_converter
 
 2.2. Analyzing design hierarchy..
 Top module:  \sar_tb_working
 Used module:     $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
-Used module:     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011
-Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011
+Used module:     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000001
+Used module:         $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000001
 Used module:             \sample_and_hold
 Used module:             \comparator_latch
-Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011
+Used module:             $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001
 Used module:             \digital_to_analog_converter
 Removed 0 unused modules.
 Module sar_tb_working directly or indirectly contains formal properties -> setting "keep" attribute.
@@ -88,7 +88,7 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
      $not                            2
      $or                            11
      $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010      1
-     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011      1
+     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000001      1
      $reduce_bool                    1
      $sub                            1
 
@@ -143,34 +143,26 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
      $mux                            5
      $pmux                           1
 
-=== $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011 ===
+=== $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001 ===
 
-   Number of wires:                 35
-   Number of wire bits:            164
+   Number of wires:                 22
+   Number of wire bits:             22
    Number of public wires:           8
-   Number of public wire bits:      14
+   Number of public wire bits:       8
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 33
+   Number of cells:                 17
      $add                            1
-     $and                            1
      $anyinit                        2
-     $eq                             3
      $eqx                            1
      $ff                             3
      $logic_and                      1
-     $logic_not                      3
+     $logic_not                      2
      $logic_or                       1
-     $mux                            9
-     $ne                             1
-     $neg                            1
-     $not                            1
-     $or                             1
-     $shift                          2
-     $sub                            2
+     $mux                            6
 
-=== $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011 ===
+=== $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000001 ===
 
    Number of wires:                  7
    Number of wire bits:             25
@@ -180,19 +172,19 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
    Number of memory bits:            0
    Number of processes:              0
    Number of cells:                  1
-     $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011      1
+     $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000001      1
 
-=== $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011 ===
+=== $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000001 ===
 
    Number of wires:                 13
-   Number of wire bits:             69
+   Number of wire bits:             67
    Number of public wires:          13
-   Number of public wire bits:      69
+   Number of public wire bits:      67
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
    Number of cells:                  4
-     $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011      1
+     $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001      1
      comparator_latch                1
      digital_to_analog_converter      1
      sample_and_hold                 1
@@ -222,28 +214,28 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
 
    sar_tb_working                    1
      $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010      1
-     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011      1
-       $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011      1
-         $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011      1
+     $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000001      1
+       $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000001      1
+         $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001      1
          comparator_latch            1
          digital_to_analog_converter      1
          sample_and_hold             1
 
-   Number of wires:                274
-   Number of wire bits:           2558
+   Number of wires:                261
+   Number of wire bits:           2414
    Number of public wires:         108
-   Number of public wire bits:    1222
+   Number of public wire bits:    1214
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                204
+   Number of cells:                188
      $add                            6
-     $and                            8
+     $and                            7
      $anyinit                       18
      $assert                         6
      $assume                        14
      $div                            1
-     $eq                             8
+     $eq                             5
      $eqx                            7
      $ff                            29
      $ge                             1
@@ -251,19 +243,17 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
      $initstate                      2
      $le                             3
      $logic_and                      1
-     $logic_not                     19
+     $logic_not                     18
      $logic_or                       2
      $lt                             3
      $mul                            1
-     $mux                           42
-     $ne                             2
-     $neg                            1
-     $not                            3
-     $or                            12
+     $mux                           39
+     $ne                             1
+     $not                            2
+     $or                            11
      $pmux                           2
      $reduce_bool                    1
-     $shift                          2
-     $sub                            3
+     $sub                            1
 
 6. Executing SMT2 backend.
 
@@ -271,14 +261,14 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
 
 6.2. Executing DEMUXMAP pass.
 Creating SMT-LIBv2 representation of module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
-Creating SMT-LIBv2 representation of module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011.
+Creating SMT-LIBv2 representation of module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.
 Creating SMT-LIBv2 representation of module comparator_latch.
 Creating SMT-LIBv2 representation of module digital_to_analog_converter.
 Creating SMT-LIBv2 representation of module sample_and_hold.
-Creating SMT-LIBv2 representation of module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011.
-Creating SMT-LIBv2 representation of module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011.
+Creating SMT-LIBv2 representation of module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000001.
+Creating SMT-LIBv2 representation of module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000001.
 Creating SMT-LIBv2 representation of module sar_tb_working.
 
-End of script. Logfile hash: 307c869008, CPU: user 0.02s system 0.00s, MEM: 11.46 MB peak
+End of script. Logfile hash: cc510919a6, CPU: user 0.04s system 0.00s, MEM: 11.39 MB peak
 Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 66% 2x write_smt2 (0 sec), 22% 2x read_ilang (0 sec), ...
+Time spent: 76% 2x write_smt2 (0 sec), 14% 2x read_ilang (0 sec), ...

@@ -1,0 +1,5 @@
+read -sv sar_adc_inst.v
+hierarchy -top sar_adc
+proc; opt; techmap; opt
+write_verilog synth.v
+stat

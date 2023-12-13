@@ -1,0 +1,186 @@
+$date
+  Wed Nov 15 12:31:57 2023
+$end
+$version
+  PyMTL 3 (Mamba)
+$end
+$timescale
+ 10ps
+$end
+
+$scope module top $end
+  $var reg 10 ! s_DOT_output_result_digital $end
+  $var reg 1 " input_hold_digital $end
+  $var reg 10 # input_voltage_real $end
+  $var reg 1 $ s_DOT_input_hold_digital $end
+  $var reg 10 % s_DOT_input_voltage_real $end
+  $var reg 1 & reset $end
+  $var reg 1 ' eoc $end
+  $var reg 1 ( s_DOT_reset $end
+  $var reg 1 ) s_DOT_eoc $end
+  $var reg 1 * clk $end
+  $var reg 10 + output_result_digital $end
+$upscope $end
+$enddefinitions $end
+
+b0b0000000000 !
+b0b0 "
+b0b0000000000 #
+b0b0 $
+b0b0000000000 %
+b0b0 &
+b0b0 '
+b0b0 (
+b0b0 )
+b0b0 *
+b0b0000000000 +
+
+#0
+b0b1 *
+
+b0b1000000000 !
+b0b1 &
+b0b1 (
+b0b1000000000 +
+
+#50
+b0b0 *
+#100
+b0b1 *
+
+
+#150
+b0b0 *
+#200
+b0b1 *
+
+
+#250
+b0b0 *
+#300
+b0b1 *
+
+b0b0101110011 #
+b0b0101110011 %
+b0b0 &
+b0b0 (
+
+#350
+b0b0 *
+#400
+b0b1 *
+
+
+#450
+b0b0 *
+#500
+b0b1 *
+
+
+#550
+b0b0 *
+#600
+b0b1 *
+
+b0b1 "
+b0b1 $
+
+#650
+b0b0 *
+#700
+b0b1 *
+
+b0b1100000000 !
+b0b1100000000 +
+
+#750
+b0b0 *
+#800
+b0b1 *
+
+b0b1110000000 !
+b0b1110000000 +
+
+#850
+b0b0 *
+#900
+b0b1 *
+
+b0b1111000000 !
+b0b1111000000 +
+
+#950
+b0b0 *
+#1000
+b0b1 *
+
+b0b1110100000 !
+b0b1110100000 +
+
+#1050
+b0b0 *
+#1100
+b0b1 *
+
+b0b1110010000 !
+b0b1110010000 +
+
+#1150
+b0b0 *
+#1200
+b0b1 *
+
+b0b1110001000 !
+b0b1110001000 +
+
+#1250
+b0b0 *
+#1300
+b0b1 *
+
+b0b1110000100 !
+b0b1110000100 +
+
+#1350
+b0b0 *
+#1400
+b0b1 *
+
+b0b1110000110 !
+b0b1110000110 +
+
+#1450
+b0b0 *
+#1500
+b0b1 *
+
+b0b1110000101 !
+b0b1 '
+b0b1 )
+b0b1110000101 +
+
+#1550
+b0b0 *
+#1600
+b0b1 *
+
+b0b0 '
+b0b0 )
+
+#1650
+b0b0 *
+#1700
+b0b1 *
+
+
+#1750
+b0b0 *
+#1800
+b0b1 *
+
+
+#1850
+b0b0 *
+#1900
+b0b1 *
+

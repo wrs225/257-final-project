@@ -1,0 +1,24 @@
+[tasks]
+basic bmc
+
+
+[options]
+
+bmc:
+mode bmc
+depth 40
+multiclock on
+fst on
+
+[engines]
+bmc: smtbmc boolector
+
+
+[script]
+
+read -formal -sv sar_adc_nonideal_conv.sv
+prep -top sar_tb_working
+
+[files]
+sar_adc_nonideal_conv.sv
+sar_adc__N_BITS_10__pickled.v

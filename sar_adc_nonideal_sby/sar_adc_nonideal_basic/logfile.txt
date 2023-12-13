@@ -1,0 +1,76 @@
+SBY 15:54:55 [sar_adc_nonideal_basic] Removing directory '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_nonideal_sby/sar_adc_nonideal_basic'.
+SBY 15:54:55 [sar_adc_nonideal_basic] Copy '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_nonideal_sby/sar_adc_nonideal_conv.sv' to '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_nonideal_sby/sar_adc_nonideal_basic/src/sar_adc_nonideal_conv.sv'.
+SBY 15:54:55 [sar_adc_nonideal_basic] Copy '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_nonideal_sby/sar_adc__N_BITS_10__pickled.v' to '/home/will/Desktop/F2023/CS257/257-final-project/sar_adc_nonideal_sby/sar_adc_nonideal_basic/src/sar_adc__N_BITS_10__pickled.v'.
+SBY 15:54:55 [sar_adc_nonideal_basic] engine_0: smtbmc boolector
+SBY 15:54:55 [sar_adc_nonideal_basic] base: starting process "cd sar_adc_nonideal_basic/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 15:54:56 [sar_adc_nonideal_basic] base: Warning: Resizing cell port $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000010.SAR_instance.quantized_voltage from 10 bits to 2 bits.
+SBY 15:54:57 [sar_adc_nonideal_basic] base: finished (returncode=0)
+SBY 15:54:57 [sar_adc_nonideal_basic] prep: starting process "cd sar_adc_nonideal_basic/model; yosys -ql design_prep.log design_prep.ys"
+SBY 15:54:58 [sar_adc_nonideal_basic] prep: finished (returncode=0)
+SBY 15:54:58 [sar_adc_nonideal_basic] smt2: starting process "cd sar_adc_nonideal_basic/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 15:54:59 [sar_adc_nonideal_basic] smt2: finished (returncode=0)
+SBY 15:54:59 [sar_adc_nonideal_basic] engine_0: starting process "cd sar_adc_nonideal_basic; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 40  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 15:54:59 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Solver: boolector
+SBY 15:54:59 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 15:54:59 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assumptions in step 5..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assertions in step 5..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assumptions in step 6..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assertions in step 6..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assumptions in step 7..
+SBY 15:55:00 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assertions in step 7..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assumptions in step 8..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assertions in step 8..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assumptions in step 9..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assertions in step 9..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assumptions in step 10..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:01  Checking assertions in step 10..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assumptions in step 11..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assertions in step 11..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assumptions in step 12..
+SBY 15:55:01 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assertions in step 12..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assumptions in step 13..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assertions in step 13..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assumptions in step 14..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:02  Checking assertions in step 14..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assumptions in step 15..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assertions in step 15..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assumptions in step 16..
+SBY 15:55:02 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assertions in step 16..
+SBY 15:55:03 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assumptions in step 17..
+SBY 15:55:03 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assertions in step 17..
+SBY 15:55:03 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assumptions in step 18..
+SBY 15:55:03 [sar_adc_nonideal_basic] engine_0: ##   0:00:03  Checking assertions in step 18..
+SBY 15:55:12 [sar_adc_nonideal_basic] engine_0: ##   0:00:12  Checking assumptions in step 19..
+SBY 15:55:14 [sar_adc_nonideal_basic] engine_0: ##   0:00:14  Checking assertions in step 19..
+SBY 15:55:27 [sar_adc_nonideal_basic] engine_0: ##   0:00:27  Checking assumptions in step 20..
+SBY 15:55:28 [sar_adc_nonideal_basic] engine_0: ##   0:00:28  Checking assertions in step 20..
+SBY 15:55:46 [sar_adc_nonideal_basic] engine_0: ##   0:00:47  Checking assumptions in step 21..
+SBY 15:56:46 [sar_adc_nonideal_basic] engine_0: ##   0:01:47  waiting for solver (1 minute)
+SBY 16:00:46 [sar_adc_nonideal_basic] engine_0: ##   0:05:47  waiting for solver (5 minutes)
+SBY 16:01:25 [sar_adc_nonideal_basic] engine_0: ##   0:06:26  Checking assertions in step 21..
+SBY 16:01:27 [sar_adc_nonideal_basic] engine_0: ##   0:06:27  Checking assumptions in step 22..
+SBY 16:02:27 [sar_adc_nonideal_basic] engine_0: ##   0:07:27  waiting for solver (1 minute)
+SBY 16:04:55 [sar_adc_nonideal_basic] engine_0: ##   0:09:55  Checking assertions in step 22..
+SBY 16:04:56 [sar_adc_nonideal_basic] engine_0: ##   0:09:56  Checking assumptions in step 23..
+SBY 16:05:17 [sar_adc_nonideal_basic] engine_0: ##   0:10:17  Checking assertions in step 23..
+SBY 16:05:17 [sar_adc_nonideal_basic] engine_0: ##   0:10:18  Checking assumptions in step 24..
+SBY 16:05:18 [sar_adc_nonideal_basic] engine_0: ##   0:10:18  Checking assertions in step 24..
+SBY 16:05:18 [sar_adc_nonideal_basic] engine_0: ##   0:10:19  Checking assumptions in step 25..
+SBY 16:06:18 [sar_adc_nonideal_basic] engine_0: ##   0:11:19  waiting for solver (1 minute)
+SBY 16:10:18 [sar_adc_nonideal_basic] engine_0: ##   0:15:19  waiting for solver (5 minutes)
+SBY 16:14:51 [sar_adc_nonideal_basic] engine_0: ##   0:19:51  Checking assertions in step 25..
+SBY 16:15:00 [sar_adc_nonideal_basic] engine_0: ##   0:20:00  Checking assumptions in step 26..
+SBY 16:16:00 [sar_adc_nonideal_basic] engine_0: ##   0:21:00  waiting for solver (1 minute)
+SBY 16:20:00 [sar_adc_nonideal_basic] engine_0: ##   0:25:00  waiting for solver (5 minutes)
+SBY 16:20:48 [sar_adc_nonideal_basic] engine_0: ##   0:25:48  Checking assertions in step 26..
+SBY 16:21:13 [sar_adc_nonideal_basic] engine_0: ##   0:26:13  Checking assumptions in step 27..
+SBY 16:22:13 [sar_adc_nonideal_basic] engine_0: ##   0:27:13  waiting for solver (1 minute)

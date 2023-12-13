@@ -7,15 +7,15 @@
 ; yosys-smt2-wire reset 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\reset"], "smtname": "reset", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n reset| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#0| state))
-; yosys-smt2-anyinit $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1 1 $auto$clk2fflogic.cc:95:sample_data$556
+; yosys-smt2-anyinit $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1 1 $auto$clk2fflogic.cc:95:sample_data$540
 ; yosys-smt2-witness {"offset": 0, "path": ["\\output_clk_digital"], "smtname": 1, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$\output_clk_digital#sampled$555
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\output_clk_digital[0:0]#sampled$557"], "smtname": 2, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0\output_clk_digital[0:0]#sampled$557
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\input_clk_digital#sampled$549"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\input_clk_digital#sampled$549
+(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$\output_clk_digital#sampled$539
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\output_clk_digital[0:0]#sampled$541"], "smtname": 2, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0\output_clk_digital[0:0]#sampled$541
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\input_clk_digital#sampled$533"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\input_clk_digital#sampled$533
 (declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#4| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 1)) ; \input_clk_digital
-(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#5| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= (concat (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#4| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$552
+(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#5| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= (concat (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#4| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$536
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#6| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) (_ BitVec 1) (ite (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#5| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1| state))) ; \output_clk_digital
 ; yosys-smt2-output output_clk_digital 1
 ; yosys-smt2-wire output_clk_digital 1
@@ -24,11 +24,11 @@
 ; yosys-smt2-wire input_clk_digital 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\input_clk_digital"], "smtname": "input_clk_digital", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n input_clk_digital| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#4| state)) #b1))
-; yosys-smt2-anyinit $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7 32 $auto$clk2fflogic.cc:95:sample_data$546
+; yosys-smt2-anyinit $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7 32 $auto$clk2fflogic.cc:95:sample_data$530
 ; yosys-smt2-witness {"offset": 0, "path": ["\\counter"], "smtname": 7, "smtoffset": 0, "type": "init", "width": 32}
-(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$545
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\counter[31:0]#sampled$547"], "smtname": 8, "smtoffset": 0, "type": "reg", "width": 32}
-(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\counter[31:0]#sampled$547
+(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$529
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\counter[31:0]#sampled$531"], "smtname": 8, "smtoffset": 0, "type": "reg", "width": 32}
+(declare-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\counter[31:0]#sampled$531
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) (_ BitVec 32) (ite (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#5| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7| state))) ; \counter
 ; yosys-smt2-wire counter 32
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n counter| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) (_ BitVec 32) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state))
@@ -37,16 +37,16 @@
 ; yosys-smt2-wire clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n clk| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#10| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/output_clk_digital#sampled$555 1
-(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$/output_clk_digital#sampled$555| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$545 32
-(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$545| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) (_ BitVec 32) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/output_clk_digital[0:0]#sampled$557 1
-(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$$0/output_clk_digital[0:0]#sampled$557| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/counter[31:0]#sampled$547 32
-(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$$0/counter[31:0]#sampled$547| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) (_ BitVec 32) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/input_clk_digital#sampled$549 1
-(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:74:sample_control_edge$/input_clk_digital#sampled$549| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/output_clk_digital#sampled$539 1
+(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$/output_clk_digital#sampled$539| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$529 32
+(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$529| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) (_ BitVec 32) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/output_clk_digital[0:0]#sampled$541 1
+(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$$0/output_clk_digital[0:0]#sampled$541| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/counter[31:0]#sampled$531 32
+(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:88:sample_data$$0/counter[31:0]#sampled$531| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) (_ BitVec 32) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/input_clk_digital#sampled$533 1
+(define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n $auto$clk2fflogic.cc:74:sample_control_edge$/input_clk_digital#sampled$533| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| state)) #b1))
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#11| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (not (or  (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 1 1) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 2 2) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 3 3) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 4 4) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 5 5) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 6 6) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 7 7) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 8 8) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 9 9) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 10 10) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 11 11) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 12 12) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 13 13) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 14 14) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 15 15) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 16 16) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 17 17) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 18 18) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 19 19) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 20 20) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 21 21) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 22 22) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 23 23) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 24 24) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 25 25) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 26 26) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 27 27) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 28 28) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 29 29) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 30 30) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1) (= ((_ extract 31 31) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state)) #b1)))) ; $0$formal$sar_adc_ideal_conv.sv:139$163_CHECK[0:0]$175
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#12| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_is| state)) ; $0$formal$sar_adc_ideal_conv.sv:139$163_EN[0:0]$176
 ; yosys-smt2-assume 0 $assume$sar_adc_ideal_conv.sv:139$173 sar_adc_ideal_conv.sv:139.8-139.29
@@ -62,116 +62,100 @@
   (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_u 0| state)
 )
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_i| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (and
-  (= (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0/output_clk_digital[0:0]#sampled$557
-  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/counter[31:0]#sampled$547
-  (= (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/input_clk_digital#sampled$549
+  (= (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0/output_clk_digital[0:0]#sampled$541
+  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/counter[31:0]#sampled$531
+  (= (= ((_ extract 0 0) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/input_clk_digital#sampled$533
 ))
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_h| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool true)
 (define-fun |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_t| ((state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|) (next_state |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)) Bool (and
-  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#15| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$548 $auto$clk2fflogic.cc:88:sample_data$$0\counter[31:0]#sampled$547
-  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$546 $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$545
-  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#4| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$550 $auto$clk2fflogic.cc:74:sample_control_edge$\input_clk_digital#sampled$549
-  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#18| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$558 $auto$clk2fflogic.cc:88:sample_data$$0\output_clk_digital[0:0]#sampled$557
-  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#6| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$556 $auto$clk2fflogic.cc:88:sample_data$\output_clk_digital#sampled$555
+  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#15| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#8| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$532 $auto$clk2fflogic.cc:88:sample_data$$0\counter[31:0]#sampled$531
+  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#9| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#7| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$530 $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$529
+  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#4| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#3| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$534 $auto$clk2fflogic.cc:74:sample_control_edge$\input_clk_digital#sampled$533
+  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#18| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#2| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$542 $auto$clk2fflogic.cc:88:sample_data$$0\output_clk_digital[0:0]#sampled$541
+  (= (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#6| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010#1| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$540 $auto$clk2fflogic.cc:88:sample_data$\output_clk_digital#sampled$539
 )) ; end of module $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010
-; yosys-smt2-module $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011
-(declare-sort |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s| 0)
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_is| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) Bool)
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#0| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \sys_clk
+; yosys-smt2-module $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001
+(declare-sort |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s| 0)
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_is| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) Bool)
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#0| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \sys_clk
 ; yosys-smt2-input sys_clk 1
 ; yosys-smt2-wire sys_clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\sys_clk"], "smtname": "sys_clk", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n sys_clk| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#0| state))
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#1| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \reset
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n sys_clk| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#0| state))
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#1| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \reset
 ; yosys-smt2-input reset 1
 ; yosys-smt2-wire reset 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\reset"], "smtname": "reset", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n reset| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#1| state))
-; yosys-smt2-anyinit $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#2 3 $auto$clk2fflogic.cc:95:sample_data$536
-; yosys-smt2-witness {"offset": 0, "path": ["\\quantized_voltage_register"], "smtname": 2, "smtoffset": 0, "type": "init", "width": 3}
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#2| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 3)) ; $auto$clk2fflogic.cc:88:sample_data$\quantized_voltage_register#sampled$535
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$lookahead\\quantized_voltage_register$196[2:0]$201#sampled$537"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 3}
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#3| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 3)) ; $auto$clk2fflogic.cc:88:sample_data$$0$lookahead\quantized_voltage_register$196[2:0]$201#sampled$537
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\sys_clk#sampled$529"], "smtname": 4, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#4| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$529
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#5| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (= (concat (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#4| state) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#0| state) #b1 #b0)) #b01)) ; $auto$rtlil.cc:2501:Eqx$532
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#6| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#5| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#3| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#2| state))) ; \quantized_voltage_register
-; yosys-smt2-wire quantized_voltage_register 3
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n quantized_voltage_register| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#6| state))
-; yosys-smt2-anyinit $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#7 3 $auto$clk2fflogic.cc:95:sample_data$526
-; yosys-smt2-witness {"offset": 0, "path": ["\\counter"], "smtname": 7, "smtoffset": 0, "type": "init", "width": 3}
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#7| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 3)) ; $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$525
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\counter[2:0]#sampled$527"], "smtname": 8, "smtoffset": 0, "type": "reg", "width": 3}
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#8| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 3)) ; $auto$clk2fflogic.cc:88:sample_data$$0\counter[2:0]#sampled$527
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#5| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#8| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#7| state))) ; \counter
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#10| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 32) (bvsub #b00000000000000000000000000000011 (concat #b000000000000000000000000000000 ((_ extract 2 1) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| state))))) ; $sub$./successive_approximation_register.v:35$209_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 32) (bvsub (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#10| state) #b00000000000000000000000000000001)) ; $sub$./successive_approximation_register.v:0$211_Y [31:0]
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#12| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (not (or  (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 1 1) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 2 2) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 3 3) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 4 4) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 5 5) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 6 6) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 7 7) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 8 8) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 9 9) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 10 10) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 11 11) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 12 12) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 13 13) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 14 14) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 15 15) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 16 16) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 17 17) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 18 18) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 19 19) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 20 20) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 21 21) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 22 22) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 23 23) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 24 24) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 25 25) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 26 26) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 27 27) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 28 28) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 29 29) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 30 30) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1) (= ((_ extract 31 31) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)) #b1)))) ; $eq$./successive_approximation_register.v:42$226_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#13| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#12| state) #b1 ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#6| state)))) ; \quantized_voltage [0]
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#14| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state) #b00000000000000000000000000000001)) ; $eq$./successive_approximation_register.v:42$232_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#15| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#14| state) #b1 ((_ extract 1 1) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#6| state)))) ; \quantized_voltage [1]
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#16| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state) #b00000000000000000000000000000010)) ; $eq$./successive_approximation_register.v:42$238_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#17| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#16| state) #b1 ((_ extract 2 2) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#6| state)))) ; \quantized_voltage [2]
-; yosys-smt2-output quantized_voltage 3
-; yosys-smt2-wire quantized_voltage 3
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n quantized_voltage| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (concat (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#17| state) (concat (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#15| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#13| state))))
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#18| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \feedback_value
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n reset| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#1| state))
+; yosys-smt2-anyinit $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#2 1 $auto$clk2fflogic.cc:95:sample_data$520
+; yosys-smt2-witness {"offset": 0, "path": ["\\quantized_voltage_register"], "smtname": 2, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#2| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$\quantized_voltage_register#sampled$519
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$lookahead\\quantized_voltage_register$196[0:0]$201#sampled$521"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#3| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$lookahead\quantized_voltage_register$196[0:0]$201#sampled$521
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\sys_clk#sampled$513"], "smtname": 4, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#4| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$513
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#5| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= (concat (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#4| state) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#0| state) #b1 #b0)) #b01)) ; $auto$rtlil.cc:2501:Eqx$516
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#6| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#5| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#3| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#2| state))) ; \quantized_voltage_register
+; yosys-smt2-wire quantized_voltage_register 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n quantized_voltage_register| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#6| state)) #b1))
+; yosys-smt2-output quantized_voltage 1
+; yosys-smt2-wire quantized_voltage 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n quantized_voltage| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool true)
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#7| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \feedback_value
 ; yosys-smt2-input feedback_value 1
 ; yosys-smt2-wire feedback_value 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\feedback_value"], "smtname": "feedback_value", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n feedback_value| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#18| state))
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#19| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| state) #b101)) ; $eq$./successive_approximation_register.v:46$241_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#20| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (not (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#1| state) false))) ; $logic_not$./successive_approximation_register.v:46$242_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#21| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#19| state) false) (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#20| state) false))) ; \eoc
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n feedback_value| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#7| state))
+; yosys-smt2-anyinit $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#8 1 $auto$clk2fflogic.cc:95:sample_data$510
+; yosys-smt2-witness {"offset": 0, "path": ["\\counter"], "smtname": 8, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#8| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$509
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\counter[0:0]#sampled$511"], "smtname": 9, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#9| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0\counter[0:0]#sampled$511
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#10| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#5| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#9| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#8| state))) ; \counter
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#11| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (not (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#1| state) false))) ; $logic_not$./successive_approximation_register.v:46$230_Y
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#12| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and (or  (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#10| state)) #b1) false) (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#11| state) false))) ; \eoc
 ; yosys-smt2-output eoc 1
 ; yosys-smt2-wire eoc 1
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n eoc| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#21| state))
-; yosys-smt2-wire counter 3
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n counter| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| state))
-(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#22| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \conduct_comparison
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n eoc| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#12| state))
+; yosys-smt2-wire counter 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n counter| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#10| state)) #b1))
+(declare-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#13| (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \conduct_comparison
 ; yosys-smt2-input conduct_comparison 1
 ; yosys-smt2-wire conduct_comparison 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\conduct_comparison"], "smtname": "conduct_comparison", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n conduct_comparison| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#22| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/quantized_voltage_register#sampled$535 3
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n $auto$clk2fflogic.cc:88:sample_data$/quantized_voltage_register#sampled$535| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#2| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$525 3
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$525| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#7| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/counter[2:0]#sampled$527 3
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n $auto$clk2fflogic.cc:88:sample_data$$0/counter[2:0]#sampled$527| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#8| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$lookahead/quantized_voltage_register$196[2:0]$201#sampled$537 3
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n $auto$clk2fflogic.cc:88:sample_data$$0$lookahead/quantized_voltage_register$196[2:0]$201#sampled$537| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#3| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$529 1
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$529| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#4| state)) #b1))
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#23| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (bvadd (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| state) #b001)) ; $add$./successive_approximation_register.v:26$195_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#24| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (distinct (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| state) #b101)) ; $ne$./successive_approximation_register.v:26$194_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#25| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#24| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#23| state) #b000)) ; $procmux$282_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#26| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#22| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#25| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| state))) ; $procmux$284_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#27| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#1| state) #b000 (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#26| state))) ; $0\counter[2:0]
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#28| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 33) (bvneg (concat #b0 (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#11| state)))) ; $neg$./successive_approximation_register.v:0$212_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#29| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) ((_ extract 2 0) (ite (bvsge (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#28| state) #b000000000000000000000000000000000) (bvlshr #b000000000000000000000000000000001 (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#28| state)) (bvshl #b000000000000000000000000000000001 (bvneg (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#28| state)))))) ; $shift$./successive_approximation_register.v:0$213_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#30| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (bvnot (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#29| state))) ; $not$./successive_approximation_register.v:0$218_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#31| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (bvand (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#6| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#30| state))) ; $and$./successive_approximation_register.v:0$219_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#32| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) ((_ extract 2 0) (ite (bvsge (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#28| state) #b000000000000000000000000000000000) (bvlshr (concat #b00000000000000000000000000000000 (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#18| state) #b1 #b0)) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#28| state)) (bvshl (concat #b00000000000000000000000000000000 (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#18| state) #b1 #b0)) (bvneg (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#28| state)))))) ; $shift$./successive_approximation_register.v:0$217_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#33| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (bvor (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#31| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#32| state))) ; $or$./successive_approximation_register.v:0$220_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#34| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (not (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#22| state) false))) ; $logic_not$./successive_approximation_register.v:32$202_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#35| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#1| state) false  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#34| state) false)) ; $logic_or$./successive_approximation_register.v:32$203_Y
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#36| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#35| state) #b000 (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#33| state))) ; $0$lookahead\quantized_voltage_register$196[2:0]$201
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_a| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool true)
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_u| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool true)
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_i| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#8| state) #b000) ; $auto$clk2fflogic.cc:88:sample_data$$0/counter[2:0]#sampled$527
-  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#3| state) #b000) ; $auto$clk2fflogic.cc:88:sample_data$$0$lookahead/quantized_voltage_register$196[2:0]$201#sampled$537
-  (= (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#4| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$529
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n conduct_comparison| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#13| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/quantized_voltage_register#sampled$519 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n $auto$clk2fflogic.cc:88:sample_data$/quantized_voltage_register#sampled$519| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#2| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$509 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n $auto$clk2fflogic.cc:88:sample_data$/counter#sampled$509| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#8| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/counter[0:0]#sampled$511 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n $auto$clk2fflogic.cc:88:sample_data$$0/counter[0:0]#sampled$511| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#9| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$lookahead/quantized_voltage_register$196[0:0]$201#sampled$521 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n $auto$clk2fflogic.cc:88:sample_data$$0$lookahead/quantized_voltage_register$196[0:0]$201#sampled$521| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#3| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$513 1
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$513| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#4| state)) #b1))
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#14| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 1) (bvadd (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#10| state) #b1)) ; $add$./successive_approximation_register.v:26$195_Y
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#15| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#10| state)) #b1) #b0 (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#14| state))) ; $procmux$270_Y
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#16| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#13| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#15| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#10| state))) ; $procmux$272_Y
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#17| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#1| state) #b0 (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#16| state))) ; $0\counter[0:0]
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#18| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (not (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#13| state) false))) ; $logic_not$./successive_approximation_register.v:32$202_Y
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#19| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (or  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#1| state) false  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#18| state) false)) ; $logic_or$./successive_approximation_register.v:32$203_Y
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#20| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 1) (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#19| state) #b0 (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#7| state) #b1 #b0))) ; $0$lookahead\quantized_voltage_register$196[0:0]$201
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_a| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool true)
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_u| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool true)
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_i| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (= (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#9| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0/counter[0:0]#sampled$511
+  (= (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#3| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$lookahead/quantized_voltage_register$196[0:0]$201#sampled$521
+  (= (= ((_ extract 0 0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#4| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$513
 ))
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_h| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool true)
-(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_t| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|) (next_state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#27| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#8| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$528 $auto$clk2fflogic.cc:88:sample_data$$0\counter[2:0]#sampled$527
-  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#9| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#7| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$526 $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$525
-  (= (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#0| state) #b1 #b0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#4| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$530 $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$529
-  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#36| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#3| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$538 $auto$clk2fflogic.cc:88:sample_data$$0$lookahead\quantized_voltage_register$196[2:0]$201#sampled$537
-  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#6| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011#2| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$536 $auto$clk2fflogic.cc:88:sample_data$\quantized_voltage_register#sampled$535
-)) ; end of module $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_h| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool true)
+(define-fun |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_t| ((state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|) (next_state |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#17| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#9| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$512 $auto$clk2fflogic.cc:88:sample_data$$0\counter[0:0]#sampled$511
+  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#10| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#8| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$510 $auto$clk2fflogic.cc:88:sample_data$\counter#sampled$509
+  (= (ite (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#0| state) #b1 #b0) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#4| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$514 $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$513
+  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#20| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#3| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$522 $auto$clk2fflogic.cc:88:sample_data$$0$lookahead\quantized_voltage_register$196[0:0]$201#sampled$521
+  (= (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#6| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001#2| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$520 $auto$clk2fflogic.cc:88:sample_data$\quantized_voltage_register#sampled$519
+)) ; end of module $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001
 ; yosys-smt2-module comparator_latch
 (declare-sort |comparator_latch_s| 0)
 (declare-fun |comparator_latch_is| (|comparator_latch_s|) Bool)
@@ -196,15 +180,15 @@
 ; yosys-smt2-wire p 10
 ; yosys-smt2-witness {"offset": 0, "path": ["\\p"], "smtname": "p", "smtoffset": 0, "type": "input", "width": 10}
 (define-fun |comparator_latch_n p| ((state |comparator_latch_s|)) (_ BitVec 10) (|comparator_latch#2| state))
-; yosys-smt2-anyinit comparator_latch#3 32 $auto$clk2fflogic.cc:95:sample_data$516
+; yosys-smt2-anyinit comparator_latch#3 32 $auto$clk2fflogic.cc:95:sample_data$500
 ; yosys-smt2-witness {"offset": 0, "path": ["\\fsm"], "smtname": 3, "smtoffset": 0, "type": "init", "width": 32}
-(declare-fun |comparator_latch#3| (|comparator_latch_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$515
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\fsm[31:0]#sampled$517"], "smtname": 4, "smtoffset": 0, "type": "reg", "width": 32}
-(declare-fun |comparator_latch#4| (|comparator_latch_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$517
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\clk#sampled$519"], "smtname": 5, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |comparator_latch#5| (|comparator_latch_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$519
+(declare-fun |comparator_latch#3| (|comparator_latch_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$499
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\fsm[31:0]#sampled$501"], "smtname": 4, "smtoffset": 0, "type": "reg", "width": 32}
+(declare-fun |comparator_latch#4| (|comparator_latch_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$501
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\clk#sampled$503"], "smtname": 5, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |comparator_latch#5| (|comparator_latch_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$503
 (declare-fun |comparator_latch#6| (|comparator_latch_s|) (_ BitVec 1)) ; \clk
-(define-fun |comparator_latch#7| ((state |comparator_latch_s|)) Bool (= (concat (|comparator_latch#5| state) (|comparator_latch#6| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$522
+(define-fun |comparator_latch#7| ((state |comparator_latch_s|)) Bool (= (concat (|comparator_latch#5| state) (|comparator_latch#6| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$506
 (define-fun |comparator_latch#8| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (|comparator_latch#7| state) (|comparator_latch#4| state) (|comparator_latch#3| state))) ; \fsm
 (define-fun |comparator_latch#9| ((state |comparator_latch_s|)) Bool (not (or  (= ((_ extract 0 0) (|comparator_latch#8| state)) #b1) (= ((_ extract 1 1) (|comparator_latch#8| state)) #b1) (= ((_ extract 2 2) (|comparator_latch#8| state)) #b1) (= ((_ extract 3 3) (|comparator_latch#8| state)) #b1) (= ((_ extract 4 4) (|comparator_latch#8| state)) #b1) (= ((_ extract 5 5) (|comparator_latch#8| state)) #b1) (= ((_ extract 6 6) (|comparator_latch#8| state)) #b1) (= ((_ extract 7 7) (|comparator_latch#8| state)) #b1) (= ((_ extract 8 8) (|comparator_latch#8| state)) #b1) (= ((_ extract 9 9) (|comparator_latch#8| state)) #b1) (= ((_ extract 10 10) (|comparator_latch#8| state)) #b1) (= ((_ extract 11 11) (|comparator_latch#8| state)) #b1) (= ((_ extract 12 12) (|comparator_latch#8| state)) #b1) (= ((_ extract 13 13) (|comparator_latch#8| state)) #b1) (= ((_ extract 14 14) (|comparator_latch#8| state)) #b1) (= ((_ extract 15 15) (|comparator_latch#8| state)) #b1) (= ((_ extract 16 16) (|comparator_latch#8| state)) #b1) (= ((_ extract 17 17) (|comparator_latch#8| state)) #b1) (= ((_ extract 18 18) (|comparator_latch#8| state)) #b1) (= ((_ extract 19 19) (|comparator_latch#8| state)) #b1) (= ((_ extract 20 20) (|comparator_latch#8| state)) #b1) (= ((_ extract 21 21) (|comparator_latch#8| state)) #b1) (= ((_ extract 22 22) (|comparator_latch#8| state)) #b1) (= ((_ extract 23 23) (|comparator_latch#8| state)) #b1) (= ((_ extract 24 24) (|comparator_latch#8| state)) #b1) (= ((_ extract 25 25) (|comparator_latch#8| state)) #b1) (= ((_ extract 26 26) (|comparator_latch#8| state)) #b1) (= ((_ extract 27 27) (|comparator_latch#8| state)) #b1) (= ((_ extract 28 28) (|comparator_latch#8| state)) #b1) (= ((_ extract 29 29) (|comparator_latch#8| state)) #b1) (= ((_ extract 30 30) (|comparator_latch#8| state)) #b1) (= ((_ extract 31 31) (|comparator_latch#8| state)) #b1)))) ; $eq$./comparator_latch.v:29$178_Y
 (define-fun |comparator_latch#10| ((state |comparator_latch_s|)) (_ BitVec 1) (ite (|comparator_latch#9| state) #b1 #b0)) ; \out
@@ -226,34 +210,34 @@
 ; yosys-smt2-wire clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |comparator_latch_n clk| ((state |comparator_latch_s|)) Bool (= ((_ extract 0 0) (|comparator_latch#6| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$515 32
-(define-fun |comparator_latch_n $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$515| ((state |comparator_latch_s|)) (_ BitVec 32) (|comparator_latch#3| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$517 32
-(define-fun |comparator_latch_n $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$517| ((state |comparator_latch_s|)) (_ BitVec 32) (|comparator_latch#4| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$519 1
-(define-fun |comparator_latch_n $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$519| ((state |comparator_latch_s|)) Bool (= ((_ extract 0 0) (|comparator_latch#5| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$499 32
+(define-fun |comparator_latch_n $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$499| ((state |comparator_latch_s|)) (_ BitVec 32) (|comparator_latch#3| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$501 32
+(define-fun |comparator_latch_n $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$501| ((state |comparator_latch_s|)) (_ BitVec 32) (|comparator_latch#4| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$503 1
+(define-fun |comparator_latch_n $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$503| ((state |comparator_latch_s|)) Bool (= ((_ extract 0 0) (|comparator_latch#5| state)) #b1))
 (define-fun |comparator_latch#12| ((state |comparator_latch_s|)) Bool (bvugt (|comparator_latch#2| state) (|comparator_latch#11| state))) ; $gt$./comparator_latch.v:48$185_Y
 (define-fun |comparator_latch#13| ((state |comparator_latch_s|)) Bool (bvule (|comparator_latch#2| state) #b1000000000)) ; $le$./comparator_latch.v:48$186_Y
 (define-fun |comparator_latch#14| ((state |comparator_latch_s|)) (_ BitVec 1) (bvand (ite (|comparator_latch#12| state) #b1 #b0) (ite (|comparator_latch#13| state) #b1 #b0))) ; $and$./comparator_latch.v:48$187_Y
-(define-fun |comparator_latch#15| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (= ((_ extract 0 0) (|comparator_latch#14| state)) #b1) #b00000000000000000000000000000000 (|comparator_latch#8| state))) ; $procmux$289_Y
+(define-fun |comparator_latch#15| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (= ((_ extract 0 0) (|comparator_latch#14| state)) #b1) #b00000000000000000000000000000000 (|comparator_latch#8| state))) ; $procmux$277_Y
 (define-fun |comparator_latch#16| ((state |comparator_latch_s|)) Bool (bvugt (|comparator_latch#2| state) #b0000000000)) ; $gt$./comparator_latch.v:43$182_Y
 (define-fun |comparator_latch#17| ((state |comparator_latch_s|)) Bool (bvule (|comparator_latch#2| state) (|comparator_latch#11| state))) ; $le$./comparator_latch.v:43$183_Y
 (define-fun |comparator_latch#18| ((state |comparator_latch_s|)) (_ BitVec 1) (bvand (ite (|comparator_latch#16| state) #b1 #b0) (ite (|comparator_latch#17| state) #b1 #b0))) ; $and$./comparator_latch.v:43$184_Y
-(define-fun |comparator_latch#19| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (= ((_ extract 0 0) (|comparator_latch#18| state)) #b1) #b00000000000000000000000000000001 (|comparator_latch#8| state))) ; $procmux$293_Y
-(define-fun |comparator_latch#20| ((state |comparator_latch_s|)) Bool (= (|comparator_latch#8| state) #b00000000000000000000000000000001)) ; $procmux$292_CMP
-(define-fun |comparator_latch#21| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (|comparator_latch#9| state) (|comparator_latch#19| state) (ite (|comparator_latch#20| state) (|comparator_latch#15| state) (|comparator_latch#8| state)))) ; $procmux$291_Y
+(define-fun |comparator_latch#19| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (= ((_ extract 0 0) (|comparator_latch#18| state)) #b1) #b00000000000000000000000000000001 (|comparator_latch#8| state))) ; $procmux$281_Y
+(define-fun |comparator_latch#20| ((state |comparator_latch_s|)) Bool (= (|comparator_latch#8| state) #b00000000000000000000000000000001)) ; $procmux$280_CMP
+(define-fun |comparator_latch#21| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (|comparator_latch#9| state) (|comparator_latch#19| state) (ite (|comparator_latch#20| state) (|comparator_latch#15| state) (|comparator_latch#8| state)))) ; $procmux$279_Y
 (define-fun |comparator_latch#22| ((state |comparator_latch_s|)) (_ BitVec 32) (ite (|comparator_latch#1| state) #b00000000000000000000000000000000 (|comparator_latch#21| state))) ; $0\fsm[31:0]
 (define-fun |comparator_latch_a| ((state |comparator_latch_s|)) Bool true)
 (define-fun |comparator_latch_u| ((state |comparator_latch_s|)) Bool true)
 (define-fun |comparator_latch_i| ((state |comparator_latch_s|)) Bool (and
-  (= (|comparator_latch#4| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$517
-  (= (= ((_ extract 0 0) (|comparator_latch#5| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$519
+  (= (|comparator_latch#4| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$501
+  (= (= ((_ extract 0 0) (|comparator_latch#5| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$503
 ))
 (define-fun |comparator_latch_h| ((state |comparator_latch_s|)) Bool true)
 (define-fun |comparator_latch_t| ((state |comparator_latch_s|) (next_state |comparator_latch_s|)) Bool (and
-  (= (|comparator_latch#6| state) (|comparator_latch#5| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$520 $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$519
-  (= (|comparator_latch#22| state) (|comparator_latch#4| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$518 $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$517
-  (= (|comparator_latch#8| state) (|comparator_latch#3| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$516 $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$515
+  (= (|comparator_latch#6| state) (|comparator_latch#5| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$504 $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$503
+  (= (|comparator_latch#22| state) (|comparator_latch#4| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$502 $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$501
+  (= (|comparator_latch#8| state) (|comparator_latch#3| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$500 $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$499
 )) ; end of module comparator_latch
 ; yosys-smt2-module digital_to_analog_converter
 (declare-sort |digital_to_analog_converter_s| 0)
@@ -356,15 +340,15 @@
 ; yosys-smt2-wire sys_clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\sys_clk"], "smtname": "sys_clk", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |sample_and_hold_n sys_clk| ((state |sample_and_hold_s|)) Bool (|sample_and_hold#0| state))
-; yosys-smt2-anyinit sample_and_hold#1 10 $auto$clk2fflogic.cc:95:sample_data$506
+; yosys-smt2-anyinit sample_and_hold#1 10 $auto$clk2fflogic.cc:95:sample_data$490
 ; yosys-smt2-witness {"offset": 0, "path": ["\\state_cap"], "smtname": 1, "smtoffset": 0, "type": "init", "width": 10}
-(declare-fun |sample_and_hold#1| (|sample_and_hold_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$\state_cap#sampled$505
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\state_cap[9:0]#sampled$507"], "smtname": 2, "smtoffset": 0, "type": "reg", "width": 10}
-(declare-fun |sample_and_hold#2| (|sample_and_hold_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$$0\state_cap[9:0]#sampled$507
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\clk#sampled$499"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sample_and_hold#3| (|sample_and_hold_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$499
+(declare-fun |sample_and_hold#1| (|sample_and_hold_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$\state_cap#sampled$489
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\state_cap[9:0]#sampled$491"], "smtname": 2, "smtoffset": 0, "type": "reg", "width": 10}
+(declare-fun |sample_and_hold#2| (|sample_and_hold_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$$0\state_cap[9:0]#sampled$491
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\clk#sampled$483"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sample_and_hold#3| (|sample_and_hold_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$483
 (declare-fun |sample_and_hold#4| (|sample_and_hold_s|) (_ BitVec 1)) ; \clk
-(define-fun |sample_and_hold#5| ((state |sample_and_hold_s|)) Bool (= (concat (|sample_and_hold#3| state) (|sample_and_hold#4| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$502
+(define-fun |sample_and_hold#5| ((state |sample_and_hold_s|)) Bool (= (concat (|sample_and_hold#3| state) (|sample_and_hold#4| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$486
 (define-fun |sample_and_hold#6| ((state |sample_and_hold_s|)) (_ BitVec 10) (ite (|sample_and_hold#5| state) (|sample_and_hold#2| state) (|sample_and_hold#1| state))) ; \state_cap
 ; yosys-smt2-wire state_cap 10
 (define-fun |sample_and_hold_n state_cap| ((state |sample_and_hold_s|)) (_ BitVec 10) (|sample_and_hold#6| state))
@@ -386,11 +370,11 @@
 ; yosys-smt2-wire input_control_digital 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\input_control_digital"], "smtname": "input_control_digital", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |sample_and_hold_n input_control_digital| ((state |sample_and_hold_s|)) Bool (|sample_and_hold#9| state))
-; yosys-smt2-anyinit sample_and_hold#10 32 $auto$clk2fflogic.cc:95:sample_data$496
+; yosys-smt2-anyinit sample_and_hold#10 32 $auto$clk2fflogic.cc:95:sample_data$480
 ; yosys-smt2-witness {"offset": 0, "path": ["\\fsm"], "smtname": 10, "smtoffset": 0, "type": "init", "width": 32}
-(declare-fun |sample_and_hold#10| (|sample_and_hold_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$495
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\fsm[31:0]#sampled$497"], "smtname": 11, "smtoffset": 0, "type": "reg", "width": 32}
-(declare-fun |sample_and_hold#11| (|sample_and_hold_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$497
+(declare-fun |sample_and_hold#10| (|sample_and_hold_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$479
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\fsm[31:0]#sampled$481"], "smtname": 11, "smtoffset": 0, "type": "reg", "width": 32}
+(declare-fun |sample_and_hold#11| (|sample_and_hold_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$481
 (define-fun |sample_and_hold#12| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#5| state) (|sample_and_hold#11| state) (|sample_and_hold#10| state))) ; \fsm
 ; yosys-smt2-wire fsm 32
 (define-fun |sample_and_hold_n fsm| ((state |sample_and_hold_s|)) (_ BitVec 32) (|sample_and_hold#12| state))
@@ -398,235 +382,235 @@
 ; yosys-smt2-wire clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |sample_and_hold_n clk| ((state |sample_and_hold_s|)) Bool (= ((_ extract 0 0) (|sample_and_hold#4| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/state_cap#sampled$505 10
-(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$/state_cap#sampled$505| ((state |sample_and_hold_s|)) (_ BitVec 10) (|sample_and_hold#1| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$495 32
-(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$495| ((state |sample_and_hold_s|)) (_ BitVec 32) (|sample_and_hold#10| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/state_cap[9:0]#sampled$507 10
-(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$$0/state_cap[9:0]#sampled$507| ((state |sample_and_hold_s|)) (_ BitVec 10) (|sample_and_hold#2| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$497 32
-(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$497| ((state |sample_and_hold_s|)) (_ BitVec 32) (|sample_and_hold#11| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$499 1
-(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$499| ((state |sample_and_hold_s|)) Bool (= ((_ extract 0 0) (|sample_and_hold#3| state)) #b1))
-(define-fun |sample_and_hold#13| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#9| state) (|sample_and_hold#12| state) #b00000000000000000000000000000000)) ; $procmux$247_Y
-(define-fun |sample_and_hold#14| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#9| state) #b00000000000000000000000000000001 (|sample_and_hold#12| state))) ; $procmux$251_Y
-(define-fun |sample_and_hold#15| ((state |sample_and_hold_s|)) Bool (= (|sample_and_hold#12| state) #b00000000000000000000000000000001)) ; $procmux$250_CMP
-(define-fun |sample_and_hold#16| ((state |sample_and_hold_s|)) Bool (not (or  (= ((_ extract 0 0) (|sample_and_hold#12| state)) #b1) (= ((_ extract 1 1) (|sample_and_hold#12| state)) #b1) (= ((_ extract 2 2) (|sample_and_hold#12| state)) #b1) (= ((_ extract 3 3) (|sample_and_hold#12| state)) #b1) (= ((_ extract 4 4) (|sample_and_hold#12| state)) #b1) (= ((_ extract 5 5) (|sample_and_hold#12| state)) #b1) (= ((_ extract 6 6) (|sample_and_hold#12| state)) #b1) (= ((_ extract 7 7) (|sample_and_hold#12| state)) #b1) (= ((_ extract 8 8) (|sample_and_hold#12| state)) #b1) (= ((_ extract 9 9) (|sample_and_hold#12| state)) #b1) (= ((_ extract 10 10) (|sample_and_hold#12| state)) #b1) (= ((_ extract 11 11) (|sample_and_hold#12| state)) #b1) (= ((_ extract 12 12) (|sample_and_hold#12| state)) #b1) (= ((_ extract 13 13) (|sample_and_hold#12| state)) #b1) (= ((_ extract 14 14) (|sample_and_hold#12| state)) #b1) (= ((_ extract 15 15) (|sample_and_hold#12| state)) #b1) (= ((_ extract 16 16) (|sample_and_hold#12| state)) #b1) (= ((_ extract 17 17) (|sample_and_hold#12| state)) #b1) (= ((_ extract 18 18) (|sample_and_hold#12| state)) #b1) (= ((_ extract 19 19) (|sample_and_hold#12| state)) #b1) (= ((_ extract 20 20) (|sample_and_hold#12| state)) #b1) (= ((_ extract 21 21) (|sample_and_hold#12| state)) #b1) (= ((_ extract 22 22) (|sample_and_hold#12| state)) #b1) (= ((_ extract 23 23) (|sample_and_hold#12| state)) #b1) (= ((_ extract 24 24) (|sample_and_hold#12| state)) #b1) (= ((_ extract 25 25) (|sample_and_hold#12| state)) #b1) (= ((_ extract 26 26) (|sample_and_hold#12| state)) #b1) (= ((_ extract 27 27) (|sample_and_hold#12| state)) #b1) (= ((_ extract 28 28) (|sample_and_hold#12| state)) #b1) (= ((_ extract 29 29) (|sample_and_hold#12| state)) #b1) (= ((_ extract 30 30) (|sample_and_hold#12| state)) #b1) (= ((_ extract 31 31) (|sample_and_hold#12| state)) #b1)))) ; $procmux$253_CMP
-(define-fun |sample_and_hold#17| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#16| state) (|sample_and_hold#14| state) (ite (|sample_and_hold#15| state) (|sample_and_hold#13| state) (|sample_and_hold#12| state)))) ; $procmux$249_Y
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/state_cap#sampled$489 10
+(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$/state_cap#sampled$489| ((state |sample_and_hold_s|)) (_ BitVec 10) (|sample_and_hold#1| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$479 32
+(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$/fsm#sampled$479| ((state |sample_and_hold_s|)) (_ BitVec 32) (|sample_and_hold#10| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/state_cap[9:0]#sampled$491 10
+(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$$0/state_cap[9:0]#sampled$491| ((state |sample_and_hold_s|)) (_ BitVec 10) (|sample_and_hold#2| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$481 32
+(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$481| ((state |sample_and_hold_s|)) (_ BitVec 32) (|sample_and_hold#11| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$483 1
+(define-fun |sample_and_hold_n $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$483| ((state |sample_and_hold_s|)) Bool (= ((_ extract 0 0) (|sample_and_hold#3| state)) #b1))
+(define-fun |sample_and_hold#13| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#9| state) (|sample_and_hold#12| state) #b00000000000000000000000000000000)) ; $procmux$235_Y
+(define-fun |sample_and_hold#14| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#9| state) #b00000000000000000000000000000001 (|sample_and_hold#12| state))) ; $procmux$239_Y
+(define-fun |sample_and_hold#15| ((state |sample_and_hold_s|)) Bool (= (|sample_and_hold#12| state) #b00000000000000000000000000000001)) ; $procmux$238_CMP
+(define-fun |sample_and_hold#16| ((state |sample_and_hold_s|)) Bool (not (or  (= ((_ extract 0 0) (|sample_and_hold#12| state)) #b1) (= ((_ extract 1 1) (|sample_and_hold#12| state)) #b1) (= ((_ extract 2 2) (|sample_and_hold#12| state)) #b1) (= ((_ extract 3 3) (|sample_and_hold#12| state)) #b1) (= ((_ extract 4 4) (|sample_and_hold#12| state)) #b1) (= ((_ extract 5 5) (|sample_and_hold#12| state)) #b1) (= ((_ extract 6 6) (|sample_and_hold#12| state)) #b1) (= ((_ extract 7 7) (|sample_and_hold#12| state)) #b1) (= ((_ extract 8 8) (|sample_and_hold#12| state)) #b1) (= ((_ extract 9 9) (|sample_and_hold#12| state)) #b1) (= ((_ extract 10 10) (|sample_and_hold#12| state)) #b1) (= ((_ extract 11 11) (|sample_and_hold#12| state)) #b1) (= ((_ extract 12 12) (|sample_and_hold#12| state)) #b1) (= ((_ extract 13 13) (|sample_and_hold#12| state)) #b1) (= ((_ extract 14 14) (|sample_and_hold#12| state)) #b1) (= ((_ extract 15 15) (|sample_and_hold#12| state)) #b1) (= ((_ extract 16 16) (|sample_and_hold#12| state)) #b1) (= ((_ extract 17 17) (|sample_and_hold#12| state)) #b1) (= ((_ extract 18 18) (|sample_and_hold#12| state)) #b1) (= ((_ extract 19 19) (|sample_and_hold#12| state)) #b1) (= ((_ extract 20 20) (|sample_and_hold#12| state)) #b1) (= ((_ extract 21 21) (|sample_and_hold#12| state)) #b1) (= ((_ extract 22 22) (|sample_and_hold#12| state)) #b1) (= ((_ extract 23 23) (|sample_and_hold#12| state)) #b1) (= ((_ extract 24 24) (|sample_and_hold#12| state)) #b1) (= ((_ extract 25 25) (|sample_and_hold#12| state)) #b1) (= ((_ extract 26 26) (|sample_and_hold#12| state)) #b1) (= ((_ extract 27 27) (|sample_and_hold#12| state)) #b1) (= ((_ extract 28 28) (|sample_and_hold#12| state)) #b1) (= ((_ extract 29 29) (|sample_and_hold#12| state)) #b1) (= ((_ extract 30 30) (|sample_and_hold#12| state)) #b1) (= ((_ extract 31 31) (|sample_and_hold#12| state)) #b1)))) ; $procmux$241_CMP
+(define-fun |sample_and_hold#17| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#16| state) (|sample_and_hold#14| state) (ite (|sample_and_hold#15| state) (|sample_and_hold#13| state) (|sample_and_hold#12| state)))) ; $procmux$237_Y
 (define-fun |sample_and_hold#18| ((state |sample_and_hold_s|)) (_ BitVec 32) (ite (|sample_and_hold#7| state) #b00000000000000000000000000000000 (|sample_and_hold#17| state))) ; $0\fsm[31:0]
-(define-fun |sample_and_hold#19| ((state |sample_and_hold_s|)) (_ BitVec 10) (ite (|sample_and_hold#16| state) (|sample_and_hold#8| state) (|sample_and_hold#6| state))) ; $procmux$260_Y
+(define-fun |sample_and_hold#19| ((state |sample_and_hold_s|)) (_ BitVec 10) (ite (|sample_and_hold#16| state) (|sample_and_hold#8| state) (|sample_and_hold#6| state))) ; $procmux$248_Y
 (define-fun |sample_and_hold#20| ((state |sample_and_hold_s|)) (_ BitVec 10) (ite (|sample_and_hold#7| state) (|sample_and_hold#6| state) (|sample_and_hold#19| state))) ; $0\state_cap[9:0]
 (define-fun |sample_and_hold_a| ((state |sample_and_hold_s|)) Bool true)
 (define-fun |sample_and_hold_u| ((state |sample_and_hold_s|)) Bool true)
 (define-fun |sample_and_hold_i| ((state |sample_and_hold_s|)) Bool (and
-  (= (|sample_and_hold#2| state) #b0000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/state_cap[9:0]#sampled$507
-  (= (|sample_and_hold#11| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$497
-  (= (= ((_ extract 0 0) (|sample_and_hold#3| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$499
+  (= (|sample_and_hold#2| state) #b0000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/state_cap[9:0]#sampled$491
+  (= (|sample_and_hold#11| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/fsm[31:0]#sampled$481
+  (= (= ((_ extract 0 0) (|sample_and_hold#3| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$483
 ))
 (define-fun |sample_and_hold_h| ((state |sample_and_hold_s|)) Bool true)
 (define-fun |sample_and_hold_t| ((state |sample_and_hold_s|) (next_state |sample_and_hold_s|)) Bool (and
-  (= (|sample_and_hold#18| state) (|sample_and_hold#11| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$498 $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$497
-  (= (|sample_and_hold#12| state) (|sample_and_hold#10| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$496 $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$495
-  (= (|sample_and_hold#4| state) (|sample_and_hold#3| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$500 $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$499
-  (= (|sample_and_hold#20| state) (|sample_and_hold#2| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$508 $auto$clk2fflogic.cc:88:sample_data$$0\state_cap[9:0]#sampled$507
-  (= (|sample_and_hold#6| state) (|sample_and_hold#1| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$506 $auto$clk2fflogic.cc:88:sample_data$\state_cap#sampled$505
+  (= (|sample_and_hold#18| state) (|sample_and_hold#11| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$482 $auto$clk2fflogic.cc:88:sample_data$$0\fsm[31:0]#sampled$481
+  (= (|sample_and_hold#12| state) (|sample_and_hold#10| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$480 $auto$clk2fflogic.cc:88:sample_data$\fsm#sampled$479
+  (= (|sample_and_hold#4| state) (|sample_and_hold#3| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$484 $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$483
+  (= (|sample_and_hold#20| state) (|sample_and_hold#2| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$492 $auto$clk2fflogic.cc:88:sample_data$$0\state_cap[9:0]#sampled$491
+  (= (|sample_and_hold#6| state) (|sample_and_hold#1| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$490 $auto$clk2fflogic.cc:88:sample_data$\state_cap#sampled$489
 )) ; end of module sample_and_hold
-; yosys-smt2-module $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011
-(declare-sort |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s| 0)
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) Bool)
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#0| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \sys_clk
+; yosys-smt2-module $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001
+(declare-sort |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s| 0)
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool)
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#0| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \sys_clk
 ; yosys-smt2-input sys_clk 1
 ; yosys-smt2-wire sys_clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\sys_clk"], "smtname": "sys_clk", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n sys_clk| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#0| state))
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#1| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \reset
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n sys_clk| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#0| state))
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#1| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \reset
 ; yosys-smt2-input reset 1
 ; yosys-smt2-wire reset 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\reset"], "smtname": "reset", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n reset| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#1| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n reset| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#1| state))
 ; yosys-smt2-cell sample_and_hold sah
 ; yosys-smt2-witness {"path": ["\\sah"], "smtname": "sah", "type": "cell"}
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#2| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 10)) ; \p_voltage_real
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) |sample_and_hold_s|)
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#2| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 10)) ; \p_voltage_real
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) |sample_and_hold_s|)
 ; yosys-smt2-wire p_voltage_real 10
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n p_voltage_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#2| state))
-; yosys-smt2-cell $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011 SAR_instance
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n p_voltage_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#2| state))
+; yosys-smt2-cell $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001 SAR_instance
 ; yosys-smt2-witness {"path": ["\\SAR_instance"], "smtname": "SAR_instance", "type": "cell"}
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#3| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 3)) ; \output_result_digital_prescale
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#4| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \eoc
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_s|)
-; yosys-smt2-wire output_result_digital_prescale 3
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n output_result_digital_prescale| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 3) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#3| state))
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#3| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \output_result_digital_prescale
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#4| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \eoc
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) |$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_s|)
+; yosys-smt2-wire output_result_digital_prescale 1
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n output_result_digital_prescale| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#3| state))
 ; yosys-smt2-output output_result_digital 10
 ; yosys-smt2-wire output_result_digital 10
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n output_result_digital| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (concat (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#3| state) #b0000000))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n output_result_digital| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (concat (ite (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#3| state) #b1 #b0) #b000000000))
 ; yosys-smt2-cell digital_to_analog_converter DAC_instance
 ; yosys-smt2-witness {"path": ["\\DAC_instance"], "smtname": "DAC_instance", "type": "cell"}
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#5| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 10)) ; \n_voltage_real
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) |digital_to_analog_converter_s|)
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#5| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 10)) ; \n_voltage_real
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) |digital_to_analog_converter_s|)
 ; yosys-smt2-wire n_voltage_real 10
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n n_voltage_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#5| state))
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#6| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 10)) ; \input_voltage_real
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n n_voltage_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#5| state))
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#6| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 10)) ; \input_voltage_real
 ; yosys-smt2-input input_voltage_real 10
 ; yosys-smt2-wire input_voltage_real 10
 ; yosys-smt2-witness {"offset": 0, "path": ["\\input_voltage_real"], "smtname": "input_voltage_real", "smtoffset": 0, "type": "input", "width": 10}
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n input_voltage_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#6| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n input_voltage_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#6| state))
 ; yosys-smt2-wire input_voltage_dac_shift 10
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n input_voltage_dac_shift| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (concat (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#3| state) #b0000000))
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#7| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \input_hold_digital
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n input_voltage_dac_shift| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (concat (ite (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#3| state) #b1 #b0) #b000000000))
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#7| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \input_hold_digital
 ; yosys-smt2-input input_hold_digital 1
 ; yosys-smt2-wire input_hold_digital 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\input_hold_digital"], "smtname": "input_hold_digital", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n input_hold_digital| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#7| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n input_hold_digital| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#7| state))
 ; yosys-smt2-output eoc 1
 ; yosys-smt2-wire eoc 1
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n eoc| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#4| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n eoc| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#4| state))
 ; yosys-smt2-cell comparator_latch comparator_instance
 ; yosys-smt2-witness {"path": ["\\comparator_instance"], "smtname": "comparator_instance", "type": "cell"}
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#8| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \comparator_output_digital
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) |comparator_latch_s|)
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#8| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \comparator_output_digital
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) |comparator_latch_s|)
 ; yosys-smt2-wire comparator_output_real 10
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n comparator_output_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (concat #b000000000 (ite (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#8| state) #b1 #b0)))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n comparator_output_real| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (concat #b000000000 (ite (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#8| state) #b1 #b0)))
 ; yosys-smt2-wire comparator_output_digital 1
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n comparator_output_digital| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#8| state))
-(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#9| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \clk
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n comparator_output_digital| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#8| state))
+(declare-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#9| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \clk
 ; yosys-smt2-input clk 1
 ; yosys-smt2-wire clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n clk| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#9| state))
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_a| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (|digital_to_analog_converter_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))
-  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))
-  (|comparator_latch_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))
-  (|sample_and_hold_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n clk| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#9| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_a| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (|digital_to_analog_converter_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))
+  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))
+  (|comparator_latch_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))
+  (|sample_and_hold_a| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))
 ))
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_u| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (|digital_to_analog_converter_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))
-  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))
-  (|comparator_latch_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))
-  (|sample_and_hold_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_u| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (|digital_to_analog_converter_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))
+  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))
+  (|comparator_latch_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))
+  (|sample_and_hold_u| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))
 ))
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_i| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (|digital_to_analog_converter_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))
-  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))
-  (|comparator_latch_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))
-  (|sample_and_hold_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_i| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (|digital_to_analog_converter_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))
+  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))
+  (|comparator_latch_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))
+  (|sample_and_hold_i| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))
 ))
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_is| state) (|digital_to_analog_converter_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state)))
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#1| state) (|digital_to_analog_converter_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))) ; digital_to_analog_converter.reset
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#5| state) (|digital_to_analog_converter_n output_voltage_real| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))) ; digital_to_analog_converter.output_voltage_real
-  (= (concat (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#3| state) #b0000000) (|digital_to_analog_converter_n input_voltage_digital| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))) ; digital_to_analog_converter.input_voltage_digital
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#9| state) (|digital_to_analog_converter_n clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))) ; digital_to_analog_converter.clk
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_is| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state)))
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#0| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n sys_clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011.sys_clk
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#1| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011.reset
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#3| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n quantized_voltage| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011.quantized_voltage
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#8| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n feedback_value| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011.feedback_value
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#4| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n eoc| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011.eoc
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#7| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_n conduct_comparison| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011.conduct_comparison
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_is| state) (|comparator_latch_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state)))
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#0| state) (|comparator_latch_n sys_clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))) ; comparator_latch.sys_clk
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#1| state) (|comparator_latch_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))) ; comparator_latch.reset
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#2| state) (|comparator_latch_n p| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))) ; comparator_latch.p
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#8| state) (|comparator_latch_n out| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))) ; comparator_latch.out
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#5| state) (|comparator_latch_n n| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))) ; comparator_latch.n
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#9| state) (|comparator_latch_n clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))) ; comparator_latch.clk
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_is| state) (|sample_and_hold_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state)))
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#0| state) (|sample_and_hold_n sys_clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))) ; sample_and_hold.sys_clk
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#1| state) (|sample_and_hold_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))) ; sample_and_hold.reset
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#2| state) (|sample_and_hold_n output_voltage_real| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))) ; sample_and_hold.output_voltage_real
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#6| state) (|sample_and_hold_n input_voltage_real| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))) ; sample_and_hold.input_voltage_real
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#7| state) (|sample_and_hold_n input_control_digital| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))) ; sample_and_hold.input_control_digital
-  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011#9| state) (|sample_and_hold_n clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))) ; sample_and_hold.clk
-  (|digital_to_analog_converter_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state))
-  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state))
-  (|comparator_latch_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state))
-  (|sample_and_hold_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state))
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_is| state) (|digital_to_analog_converter_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state)))
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#1| state) (|digital_to_analog_converter_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))) ; digital_to_analog_converter.reset
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#5| state) (|digital_to_analog_converter_n output_voltage_real| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))) ; digital_to_analog_converter.output_voltage_real
+  (= (concat (ite (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#3| state) #b1 #b0) #b000000000) (|digital_to_analog_converter_n input_voltage_digital| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))) ; digital_to_analog_converter.input_voltage_digital
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#9| state) (|digital_to_analog_converter_n clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))) ; digital_to_analog_converter.clk
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_is| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state)))
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#0| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n sys_clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001.sys_clk
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#1| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001.reset
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#3| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n quantized_voltage| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001.quantized_voltage
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#8| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n feedback_value| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001.feedback_value
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#4| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n eoc| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001.eoc
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#7| state) (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_n conduct_comparison| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))) ; $paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001.conduct_comparison
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_is| state) (|comparator_latch_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state)))
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#0| state) (|comparator_latch_n sys_clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))) ; comparator_latch.sys_clk
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#1| state) (|comparator_latch_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))) ; comparator_latch.reset
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#2| state) (|comparator_latch_n p| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))) ; comparator_latch.p
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#8| state) (|comparator_latch_n out| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))) ; comparator_latch.out
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#5| state) (|comparator_latch_n n| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))) ; comparator_latch.n
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#9| state) (|comparator_latch_n clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))) ; comparator_latch.clk
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_is| state) (|sample_and_hold_is| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state)))
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#0| state) (|sample_and_hold_n sys_clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))) ; sample_and_hold.sys_clk
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#1| state) (|sample_and_hold_n reset| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))) ; sample_and_hold.reset
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#2| state) (|sample_and_hold_n output_voltage_real| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))) ; sample_and_hold.output_voltage_real
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#6| state) (|sample_and_hold_n input_voltage_real| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))) ; sample_and_hold.input_voltage_real
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#7| state) (|sample_and_hold_n input_control_digital| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))) ; sample_and_hold.input_control_digital
+  (= (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001#9| state) (|sample_and_hold_n clk| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))) ; sample_and_hold.clk
+  (|digital_to_analog_converter_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state))
+  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state))
+  (|comparator_latch_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state))
+  (|sample_and_hold_h| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state))
 ))
-(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_t| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|) (next_state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (|digital_to_analog_converter_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h DAC_instance| next_state))
-  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000011_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h SAR_instance| next_state))
-  (|comparator_latch_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h comparator_instance| next_state))
-  (|sample_and_hold_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h sah| next_state))
-)) ; end of module $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011
-; yosys-smt2-module $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011
-(declare-sort |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s| 0)
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_is| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) Bool)
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#0| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \sys_clk
+(define-fun |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_t| ((state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|) (next_state |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (|digital_to_analog_converter_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h DAC_instance| next_state))
+  (|$paramod/successive_approximation_register/N_BITS=s32'00000000000000000000000000000001_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h SAR_instance| next_state))
+  (|comparator_latch_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h comparator_instance| next_state))
+  (|sample_and_hold_t| (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h sah| next_state))
+)) ; end of module $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001
+; yosys-smt2-module $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001
+(declare-sort |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s| 0)
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_is| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) Bool)
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#0| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \sys_clk
 ; yosys-smt2-input sys_clk 1
 ; yosys-smt2-wire sys_clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\sys_clk"], "smtname": "sys_clk", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n sys_clk| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#0| state))
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#1| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \reset
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n sys_clk| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#0| state))
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#1| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \reset
 ; yosys-smt2-input reset 1
 ; yosys-smt2-wire reset 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\reset"], "smtname": "reset", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n reset| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#1| state))
-; yosys-smt2-cell $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011 v
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n reset| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#1| state))
+; yosys-smt2-cell $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001 v
 ; yosys-smt2-witness {"path": ["\\v"], "smtname": "v", "type": "cell"}
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#2| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 10)) ; \output_result_digital
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#3| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \eoc
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_s|)
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#2| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 10)) ; \output_result_digital
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#3| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \eoc
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) |$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_s|)
 ; yosys-smt2-output output_result_digital 10
 ; yosys-smt2-wire output_result_digital 10
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n output_result_digital| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#2| state))
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#4| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) (_ BitVec 10)) ; \input_voltage_real
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n output_result_digital| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#2| state))
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#4| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) (_ BitVec 10)) ; \input_voltage_real
 ; yosys-smt2-input input_voltage_real 10
 ; yosys-smt2-wire input_voltage_real 10
 ; yosys-smt2-witness {"offset": 0, "path": ["\\input_voltage_real"], "smtname": "input_voltage_real", "smtoffset": 0, "type": "input", "width": 10}
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n input_voltage_real| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) (_ BitVec 10) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#4| state))
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#5| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \input_hold_digital
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n input_voltage_real| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) (_ BitVec 10) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#4| state))
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#5| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \input_hold_digital
 ; yosys-smt2-input input_hold_digital 1
 ; yosys-smt2-wire input_hold_digital 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\input_hold_digital"], "smtname": "input_hold_digital", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n input_hold_digital| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#5| state))
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n input_hold_digital| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#5| state))
 ; yosys-smt2-output eoc 1
 ; yosys-smt2-wire eoc 1
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n eoc| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#3| state))
-(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#6| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) Bool) ; \clk
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n eoc| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#3| state))
+(declare-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#6| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) Bool) ; \clk
 ; yosys-smt2-input clk 1
 ; yosys-smt2-wire clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "input", "width": 1}
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n clk| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#6| state))
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_a| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool 
-  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_a| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n clk| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#6| state))
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_a| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool 
+  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_a| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))
 )
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_u| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool 
-  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_u| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_u| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool 
+  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_u| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))
 )
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_i| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool 
-  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_i| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_i| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool 
+  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_i| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))
 )
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool (and
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_is| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_is| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state)))
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#0| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n sys_clk| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011.sys_clk
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#1| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n reset| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011.reset
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#2| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n output_result_digital| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011.output_result_digital
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#4| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n input_voltage_real| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011.input_voltage_real
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#5| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n input_hold_digital| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011.input_hold_digital
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#3| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n eoc| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011.eoc
-  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011#6| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_n clk| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011.clk
-  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_h| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state))
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool (and
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_is| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_is| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state)))
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#0| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n sys_clk| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001.sys_clk
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#1| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n reset| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001.reset
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#2| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n output_result_digital| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001.output_result_digital
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#4| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n input_voltage_real| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001.input_voltage_real
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#5| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n input_hold_digital| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001.input_hold_digital
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#3| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n eoc| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001.eoc
+  (= (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001#6| state) (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_n clk| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))) ; $paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001.clk
+  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_h| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state))
 ))
-(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_t| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|) (next_state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)) Bool 
-  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000011_t| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h v| next_state))
-) ; end of module $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011
+(define-fun |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_t| ((state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|) (next_state |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)) Bool 
+  (|$paramod/sar_adc/N_BITS=s32'00000000000000000000000000000001_t| (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h v| next_state))
+) ; end of module $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001
 ; yosys-smt2-module sar_tb_working
 (declare-sort |sar_tb_working_s| 0)
 (declare-fun |sar_tb_working_is| (|sar_tb_working_s|) Bool)
-; yosys-smt2-anyinit sar_tb_working#0 32 $auto$clk2fflogic.cc:95:sample_data$366
+; yosys-smt2-anyinit sar_tb_working#0 32 $auto$clk2fflogic.cc:95:sample_data$350
 ; yosys-smt2-witness {"offset": 0, "path": ["\\sys_counter"], "smtname": 0, "smtoffset": 0, "type": "init", "width": 32}
-(declare-fun |sar_tb_working#0| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\sys_counter#sampled$365
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\sys_counter[31:0]#sampled$367"], "smtname": 1, "smtoffset": 0, "type": "reg", "width": 32}
-(declare-fun |sar_tb_working#1| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\sys_counter[31:0]#sampled$367
+(declare-fun |sar_tb_working#0| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\sys_counter#sampled$349
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\sys_counter[31:0]#sampled$351"], "smtname": 1, "smtoffset": 0, "type": "reg", "width": 32}
+(declare-fun |sar_tb_working#1| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\sys_counter[31:0]#sampled$351
 ; yosys-smt2-cell $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010 fdiv
 ; yosys-smt2-witness {"path": ["\\fdiv"], "smtname": "fdiv", "type": "cell"}
 (declare-fun |sar_tb_working#2| (|sar_tb_working_s|) Bool) ; \sys_clk
 (declare-fun |sar_tb_working_h fdiv| (|sar_tb_working_s|) |$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_s|)
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\sys_clk#sampled$369"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#3| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$369
-(define-fun |sar_tb_working#4| ((state |sar_tb_working_s|)) Bool (= (concat (|sar_tb_working#3| state) (ite (|sar_tb_working#2| state) #b1 #b0)) #b01)) ; $auto$rtlil.cc:2501:Eqx$372
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\sys_clk#sampled$353"], "smtname": 3, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#3| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$353
+(define-fun |sar_tb_working#4| ((state |sar_tb_working_s|)) Bool (= (concat (|sar_tb_working#3| state) (ite (|sar_tb_working#2| state) #b1 #b0)) #b01)) ; $auto$rtlil.cc:2501:Eqx$356
 (define-fun |sar_tb_working#5| ((state |sar_tb_working_s|)) (_ BitVec 32) (ite (|sar_tb_working#4| state) (|sar_tb_working#1| state) (|sar_tb_working#0| state))) ; \sys_counter
 ; yosys-smt2-wire sys_counter 32
 (define-fun |sar_tb_working_n sys_counter| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#5| state))
@@ -637,11 +621,11 @@
 ; yosys-smt2-wire reset 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\reset"], "smtname": "reset", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |sar_tb_working_n reset| ((state |sar_tb_working_s|)) Bool (|sar_tb_working#6| state))
-; yosys-smt2-cell $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011 adc_instance
+; yosys-smt2-cell $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001 adc_instance
 ; yosys-smt2-witness {"path": ["\\adc_instance"], "smtname": "adc_instance", "type": "cell"}
 (declare-fun |sar_tb_working#7| (|sar_tb_working_s|) (_ BitVec 10)) ; \output_result_digital
 (declare-fun |sar_tb_working#8| (|sar_tb_working_s|) Bool) ; \eoc
-(declare-fun |sar_tb_working_h adc_instance| (|sar_tb_working_s|) |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_s|)
+(declare-fun |sar_tb_working_h adc_instance| (|sar_tb_working_s|) |$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_s|)
 ; yosys-smt2-output output_result_digital 10
 ; yosys-smt2-wire output_result_digital 10
 (define-fun |sar_tb_working_n output_result_digital| ((state |sar_tb_working_s|)) (_ BitVec 10) (|sar_tb_working#7| state))
@@ -655,45 +639,45 @@
 ; yosys-smt2-wire input_hold_digital 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\input_hold_digital"], "smtname": "input_hold_digital", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |sar_tb_working_n input_hold_digital| ((state |sar_tb_working_s|)) Bool (|sar_tb_working#10| state))
-; yosys-smt2-anyinit sar_tb_working#11 1 $auto$clk2fflogic.cc:95:sample_data$406
+; yosys-smt2-anyinit sar_tb_working#11 1 $auto$clk2fflogic.cc:95:sample_data$390
 ; yosys-smt2-witness {"offset": 0, "path": ["\\hit_eoc"], "smtname": 11, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |sar_tb_working#11| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$\hit_eoc#sampled$405
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\hit_eoc[0:0]#sampled$407"], "smtname": 12, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#12| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0\hit_eoc[0:0]#sampled$407
+(declare-fun |sar_tb_working#11| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$\hit_eoc#sampled$389
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\hit_eoc[0:0]#sampled$391"], "smtname": 12, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#12| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0\hit_eoc[0:0]#sampled$391
 (define-fun |sar_tb_working#13| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#4| state) (|sar_tb_working#12| state) (|sar_tb_working#11| state))) ; \hit_eoc
 ; yosys-smt2-wire hit_eoc 1
 (define-fun |sar_tb_working_n hit_eoc| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#13| state)) #b1))
-; yosys-smt2-anyinit sar_tb_working#14 10 $auto$clk2fflogic.cc:95:sample_data$486
+; yosys-smt2-anyinit sar_tb_working#14 10 $auto$clk2fflogic.cc:95:sample_data$470
 ; yosys-smt2-witness {"offset": 0, "path": ["\\held_value"], "smtname": 14, "smtoffset": 0, "type": "init", "width": 10}
-(declare-fun |sar_tb_working#14| (|sar_tb_working_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$\held_value#sampled$485
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\held_value[9:0]#sampled$487"], "smtname": 15, "smtoffset": 0, "type": "reg", "width": 10}
-(declare-fun |sar_tb_working#15| (|sar_tb_working_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$$0\held_value[9:0]#sampled$487
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\clk#sampled$359"], "smtname": 16, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#16| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$359
+(declare-fun |sar_tb_working#14| (|sar_tb_working_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$\held_value#sampled$469
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\held_value[9:0]#sampled$471"], "smtname": 15, "smtoffset": 0, "type": "reg", "width": 10}
+(declare-fun |sar_tb_working#15| (|sar_tb_working_s|) (_ BitVec 10)) ; $auto$clk2fflogic.cc:88:sample_data$$0\held_value[9:0]#sampled$471
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\clk#sampled$343"], "smtname": 16, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#16| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$343
 (declare-fun |sar_tb_working#17| (|sar_tb_working_s|) (_ BitVec 1)) ; \clk
-(define-fun |sar_tb_working#18| ((state |sar_tb_working_s|)) Bool (= (concat (|sar_tb_working#16| state) (|sar_tb_working#17| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$362
+(define-fun |sar_tb_working#18| ((state |sar_tb_working_s|)) Bool (= (concat (|sar_tb_working#16| state) (|sar_tb_working#17| state)) #b01)) ; $auto$rtlil.cc:2501:Eqx$346
 (define-fun |sar_tb_working#19| ((state |sar_tb_working_s|)) (_ BitVec 10) (ite (|sar_tb_working#18| state) (|sar_tb_working#15| state) (|sar_tb_working#14| state))) ; \held_value
 ; yosys-smt2-wire held_value 10
 (define-fun |sar_tb_working_n held_value| ((state |sar_tb_working_s|)) (_ BitVec 10) (|sar_tb_working#19| state))
-; yosys-smt2-anyinit sar_tb_working#20 32 $auto$clk2fflogic.cc:95:sample_data$416
+; yosys-smt2-anyinit sar_tb_working#20 32 $auto$clk2fflogic.cc:95:sample_data$400
 ; yosys-smt2-witness {"offset": 0, "path": ["\\eoc_high_counter"], "smtname": 20, "smtoffset": 0, "type": "init", "width": 32}
-(declare-fun |sar_tb_working#20| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\eoc_high_counter#sampled$415
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\eoc_high_counter[31:0]#sampled$417"], "smtname": 21, "smtoffset": 0, "type": "reg", "width": 32}
-(declare-fun |sar_tb_working#21| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\eoc_high_counter[31:0]#sampled$417
+(declare-fun |sar_tb_working#20| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$\eoc_high_counter#sampled$399
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\eoc_high_counter[31:0]#sampled$401"], "smtname": 21, "smtoffset": 0, "type": "reg", "width": 32}
+(declare-fun |sar_tb_working#21| (|sar_tb_working_s|) (_ BitVec 32)) ; $auto$clk2fflogic.cc:88:sample_data$$0\eoc_high_counter[31:0]#sampled$401
 (define-fun |sar_tb_working#22| ((state |sar_tb_working_s|)) (_ BitVec 32) (ite (|sar_tb_working#4| state) (|sar_tb_working#21| state) (|sar_tb_working#20| state))) ; \eoc_high_counter
 ; yosys-smt2-wire eoc_high_counter 32
 (define-fun |sar_tb_working_n eoc_high_counter| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#22| state))
 ; yosys-smt2-output eoc 1
 ; yosys-smt2-wire eoc 1
 (define-fun |sar_tb_working_n eoc| ((state |sar_tb_working_s|)) Bool (|sar_tb_working#8| state))
-(define-fun |sar_tb_working#23| ((state |sar_tb_working_s|)) (_ BitVec 32) (bvudiv (concat #b000000000000 (concat (|sar_tb_working#19| state) #b0000000000)) #b00000000000000000000000110100111)) ; { $auto$wreduce.cc:461:run$353 [31:20] \digitized_value }
+(define-fun |sar_tb_working#23| ((state |sar_tb_working_s|)) (_ BitVec 32) (bvudiv (concat #b000000000000 (concat (|sar_tb_working#19| state) #b0000000000)) #b00000000000000000000000110100111)) ; { $auto$wreduce.cc:461:run$337 [31:20] \digitized_value }
 ; yosys-smt2-wire digitized_value 20
 (define-fun |sar_tb_working_n digitized_value| ((state |sar_tb_working_s|)) (_ BitVec 20) ((_ extract 19 0) (|sar_tb_working#23| state)))
-; yosys-smt2-anyinit sar_tb_working#24 64 $auto$clk2fflogic.cc:95:sample_data$356
+; yosys-smt2-anyinit sar_tb_working#24 64 $auto$clk2fflogic.cc:95:sample_data$340
 ; yosys-smt2-witness {"offset": 0, "path": ["\\cycles"], "smtname": 24, "smtoffset": 0, "type": "init", "width": 64}
-(declare-fun |sar_tb_working#24| (|sar_tb_working_s|) (_ BitVec 64)) ; $auto$clk2fflogic.cc:88:sample_data$\cycles#sampled$355
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\cycles[63:0]#sampled$357"], "smtname": 25, "smtoffset": 0, "type": "reg", "width": 64}
-(declare-fun |sar_tb_working#25| (|sar_tb_working_s|) (_ BitVec 64)) ; $auto$clk2fflogic.cc:88:sample_data$$0\cycles[63:0]#sampled$357
+(declare-fun |sar_tb_working#24| (|sar_tb_working_s|) (_ BitVec 64)) ; $auto$clk2fflogic.cc:88:sample_data$\cycles#sampled$339
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0\\cycles[63:0]#sampled$341"], "smtname": 25, "smtoffset": 0, "type": "reg", "width": 64}
+(declare-fun |sar_tb_working#25| (|sar_tb_working_s|) (_ BitVec 64)) ; $auto$clk2fflogic.cc:88:sample_data$$0\cycles[63:0]#sampled$341
 (define-fun |sar_tb_working#26| ((state |sar_tb_working_s|)) (_ BitVec 64) (ite (|sar_tb_working#18| state) (|sar_tb_working#25| state) (|sar_tb_working#24| state))) ; \cycles
 ; yosys-smt2-wire cycles 64
 (define-fun |sar_tb_working_n cycles| ((state |sar_tb_working_s|)) (_ BitVec 64) (|sar_tb_working#26| state))
@@ -701,61 +685,61 @@
 ; yosys-smt2-wire clk 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |sar_tb_working_n clk| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#17| state)) #b1))
-; yosys-smt2-anyinit sar_tb_working#27 1 $auto$clk2fflogic.cc:95:sample_data$476
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_476"], "smtname": 27, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |sar_tb_working#27| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$475
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$477"], "smtname": 28, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#28| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$477
-(define-fun |sar_tb_working#29| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#18| state) (|sar_tb_working#28| state) (|sar_tb_working#27| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_476
-; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_476 1
-(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_476| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#29| state)) #b1))
-; yosys-smt2-anyinit sar_tb_working#30 1 $auto$clk2fflogic.cc:95:sample_data$456
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_456"], "smtname": 30, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |sar_tb_working#30| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$455
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$457"], "smtname": 31, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#31| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$457
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\eoc#sampled$429"], "smtname": 32, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#32| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\eoc#sampled$429
-(define-fun |sar_tb_working#33| ((state |sar_tb_working_s|)) Bool (= (concat (|sar_tb_working#32| state) (ite (|sar_tb_working#8| state) #b1 #b0)) #b01)) ; $auto$rtlil.cc:2501:Eqx$432
-(define-fun |sar_tb_working#34| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#33| state) (|sar_tb_working#31| state) (|sar_tb_working#30| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_456
-; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_456 1
-(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_456| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#34| state)) #b1))
-; yosys-smt2-anyinit sar_tb_working#35 1 $auto$clk2fflogic.cc:95:sample_data$436
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_436"], "smtname": 35, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |sar_tb_working#35| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$435
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$437"], "smtname": 36, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#36| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$437
-(define-fun |sar_tb_working#37| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#33| state) (|sar_tb_working#36| state) (|sar_tb_working#35| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_436
-; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_436 1
-(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_436| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#37| state)) #b1))
-; yosys-smt2-anyinit sar_tb_working#38 1 $auto$clk2fflogic.cc:95:sample_data$426
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_426"], "smtname": 38, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |sar_tb_working#38| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$425
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$427"], "smtname": 39, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#39| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$427
-(define-fun |sar_tb_working#40| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#33| state) (|sar_tb_working#39| state) (|sar_tb_working#38| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_426
-; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_426 1
-(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_426| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#40| state)) #b1))
-; yosys-smt2-anyinit sar_tb_working#41 1 $auto$clk2fflogic.cc:95:sample_data$396
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_396"], "smtname": 41, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |sar_tb_working#41| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$395
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$397"], "smtname": 42, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#42| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$397
-(define-fun |sar_tb_working#43| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#4| state) (|sar_tb_working#42| state) (|sar_tb_working#41| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_396
-; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_396 1
-(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_396| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#43| state)) #b1))
-; yosys-smt2-anyinit sar_tb_working#44 1 $auto$clk2fflogic.cc:95:sample_data$376
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_376"], "smtname": 44, "smtoffset": 0, "type": "init", "width": 1}
-(declare-fun |sar_tb_working#44| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$375
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$377"], "smtname": 45, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#45| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$377
-(define-fun |sar_tb_working#46| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#4| state) (|sar_tb_working#45| state) (|sar_tb_working#44| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_376
-; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_376 1
-(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_376| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#46| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$465"], "smtname": 47, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#47| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$465
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$1'1#sampled$387"], "smtname": 48, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#48| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$387
+; yosys-smt2-anyinit sar_tb_working#27 1 $auto$clk2fflogic.cc:95:sample_data$460
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_460"], "smtname": 27, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |sar_tb_working#27| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$459
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$461"], "smtname": 28, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#28| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$461
+(define-fun |sar_tb_working#29| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#18| state) (|sar_tb_working#28| state) (|sar_tb_working#27| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_460
+; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_460 1
+(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_460| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#29| state)) #b1))
+; yosys-smt2-anyinit sar_tb_working#30 1 $auto$clk2fflogic.cc:95:sample_data$440
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_440"], "smtname": 30, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |sar_tb_working#30| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$439
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$441"], "smtname": 31, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#31| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$441
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:74:sample_control_edge$\\eoc#sampled$413"], "smtname": 32, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#32| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:74:sample_control_edge$\eoc#sampled$413
+(define-fun |sar_tb_working#33| ((state |sar_tb_working_s|)) Bool (= (concat (|sar_tb_working#32| state) (ite (|sar_tb_working#8| state) #b1 #b0)) #b01)) ; $auto$rtlil.cc:2501:Eqx$416
+(define-fun |sar_tb_working#34| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#33| state) (|sar_tb_working#31| state) (|sar_tb_working#30| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_440
+; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_440 1
+(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_440| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#34| state)) #b1))
+; yosys-smt2-anyinit sar_tb_working#35 1 $auto$clk2fflogic.cc:95:sample_data$420
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_420"], "smtname": 35, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |sar_tb_working#35| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$419
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$421"], "smtname": 36, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#36| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$421
+(define-fun |sar_tb_working#37| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#33| state) (|sar_tb_working#36| state) (|sar_tb_working#35| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_420
+; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_420 1
+(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_420| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#37| state)) #b1))
+; yosys-smt2-anyinit sar_tb_working#38 1 $auto$clk2fflogic.cc:95:sample_data$410
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_410"], "smtname": 38, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |sar_tb_working#38| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$409
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$411"], "smtname": 39, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#39| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$411
+(define-fun |sar_tb_working#40| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#33| state) (|sar_tb_working#39| state) (|sar_tb_working#38| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_410
+; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_410 1
+(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_410| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#40| state)) #b1))
+; yosys-smt2-anyinit sar_tb_working#41 1 $auto$clk2fflogic.cc:95:sample_data$380
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_380"], "smtname": 41, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |sar_tb_working#41| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$379
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$381"], "smtname": 42, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#42| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$381
+(define-fun |sar_tb_working#43| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#4| state) (|sar_tb_working#42| state) (|sar_tb_working#41| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_380
+; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_380 1
+(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_380| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#43| state)) #b1))
+; yosys-smt2-anyinit sar_tb_working#44 1 $auto$clk2fflogic.cc:95:sample_data$360
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_auto_clk2fflogic_cc_95_sample_data_360"], "smtname": 44, "smtoffset": 0, "type": "init", "width": 1}
+(declare-fun |sar_tb_working#44| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$359
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$361"], "smtname": 45, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#45| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$361
+(define-fun |sar_tb_working#46| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#4| state) (|sar_tb_working#45| state) (|sar_tb_working#44| state))) ; \_witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_360
+; yosys-smt2-wire _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_360 1
+(define-fun |sar_tb_working_n _witness_.anyinit_auto_clk2fflogic_cc_95_sample_data_360| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#46| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$449"], "smtname": 47, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#47| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$449
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$1'1#sampled$371"], "smtname": 48, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#48| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$371
 (define-fun |sar_tb_working#49| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#18| state) (|sar_tb_working#48| state) (|sar_tb_working#47| state))) ; $formal$sar_adc_ideal_conv.sv:120$29_EN
 ; yosys-smt2-wire $formal$sar_adc_ideal_conv.sv:120$29_EN 1
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:120$29_EN| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#49| state)) #b1))
@@ -765,8 +749,8 @@
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:115$28_CHECK| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#40| state)) #b1))
 ; yosys-smt2-wire $formal$sar_adc_ideal_conv.sv:114$27_CHECK 1
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:114$27_CHECK| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#37| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$445"], "smtname": 50, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#50| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$445
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$429"], "smtname": 50, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#50| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$429
 (define-fun |sar_tb_working#51| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#33| state) (|sar_tb_working#48| state) (|sar_tb_working#50| state))) ; $formal$sar_adc_ideal_conv.sv:113$26_EN
 ; yosys-smt2-wire $formal$sar_adc_ideal_conv.sv:113$26_EN 1
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:113$26_EN| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#51| state)) #b1))
@@ -774,71 +758,71 @@
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:113$26_CHECK| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#34| state)) #b1))
 ; yosys-smt2-wire $formal$sar_adc_ideal_conv.sv:103$25_CHECK 1
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:103$25_CHECK| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#46| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$385"], "smtname": 52, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |sar_tb_working#52| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$385
+; yosys-smt2-witness {"offset": 0, "path": ["$auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$369"], "smtname": 52, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |sar_tb_working#52| (|sar_tb_working_s|) (_ BitVec 1)) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$369
 (define-fun |sar_tb_working#53| ((state |sar_tb_working_s|)) (_ BitVec 1) (ite (|sar_tb_working#4| state) (|sar_tb_working#48| state) (|sar_tb_working#52| state))) ; $formal$sar_adc_ideal_conv.sv:101$24_EN
 ; yosys-smt2-wire $formal$sar_adc_ideal_conv.sv:101$24_EN 1
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:101$24_EN| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#53| state)) #b1))
 ; yosys-smt2-wire $formal$sar_adc_ideal_conv.sv:101$24_CHECK 1
 (define-fun |sar_tb_working_n $formal$sar_adc_ideal_conv.sv:101$24_CHECK| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#43| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/sys_counter#sampled$365 32
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/sys_counter#sampled$365| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#0| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/hit_eoc#sampled$405 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/hit_eoc#sampled$405| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#11| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/held_value#sampled$485 10
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/held_value#sampled$485| ((state |sar_tb_working_s|)) (_ BitVec 10) (|sar_tb_working#14| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/eoc_high_counter#sampled$415 32
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/eoc_high_counter#sampled$415| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#20| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/cycles#sampled$355 64
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/cycles#sampled$355| ((state |sar_tb_working_s|)) (_ BitVec 64) (|sar_tb_working#24| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$387 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$387| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#48| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$465 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$465| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#47| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$475 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$475| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#27| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$425 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$425| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#38| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$435 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$435| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#35| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$445 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$445| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#50| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$455 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$455| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#30| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$375 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$375| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#44| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$385 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$385| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#52| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$395 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$395| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#41| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/sys_counter[31:0]#sampled$367 32
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/sys_counter[31:0]#sampled$367| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#1| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/hit_eoc[0:0]#sampled$407 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/hit_eoc[0:0]#sampled$407| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#12| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/held_value[9:0]#sampled$487 10
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/held_value[9:0]#sampled$487| ((state |sar_tb_working_s|)) (_ BitVec 10) (|sar_tb_working#15| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/eoc_high_counter[31:0]#sampled$417 32
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/eoc_high_counter[31:0]#sampled$417| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#21| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/cycles[63:0]#sampled$357 64
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/cycles[63:0]#sampled$357| ((state |sar_tb_working_s|)) (_ BitVec 64) (|sar_tb_working#25| state))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$477 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$477| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#28| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$427 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$427| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#39| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$437 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$437| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#36| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$457 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$457| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#31| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$377 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$377| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#45| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$397 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$397| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#42| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$369 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$369| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#3| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/eoc#sampled$429 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:74:sample_control_edge$/eoc#sampled$429| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#32| state)) #b1))
-; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$359 1
-(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$359| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#16| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/sys_counter#sampled$349 32
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/sys_counter#sampled$349| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#0| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/hit_eoc#sampled$389 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/hit_eoc#sampled$389| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#11| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/held_value#sampled$469 10
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/held_value#sampled$469| ((state |sar_tb_working_s|)) (_ BitVec 10) (|sar_tb_working#14| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/eoc_high_counter#sampled$399 32
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/eoc_high_counter#sampled$399| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#20| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$/cycles#sampled$339 64
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$/cycles#sampled$339| ((state |sar_tb_working_s|)) (_ BitVec 64) (|sar_tb_working#24| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$371 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$371| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#48| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$449 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$449| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#47| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$459 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$459| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#27| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$409 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$409| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#38| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$419 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$419| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#35| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$429 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$429| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#50| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$439 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$439| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#30| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$359 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$359| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#44| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$369 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$369| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#52| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$379 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$379| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#41| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/sys_counter[31:0]#sampled$351 32
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/sys_counter[31:0]#sampled$351| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#1| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/hit_eoc[0:0]#sampled$391 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/hit_eoc[0:0]#sampled$391| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#12| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/held_value[9:0]#sampled$471 10
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/held_value[9:0]#sampled$471| ((state |sar_tb_working_s|)) (_ BitVec 10) (|sar_tb_working#15| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/eoc_high_counter[31:0]#sampled$401 32
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/eoc_high_counter[31:0]#sampled$401| ((state |sar_tb_working_s|)) (_ BitVec 32) (|sar_tb_working#21| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0/cycles[63:0]#sampled$341 64
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0/cycles[63:0]#sampled$341| ((state |sar_tb_working_s|)) (_ BitVec 64) (|sar_tb_working#25| state))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$461 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$461| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#28| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$411 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$411| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#39| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$421 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$421| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#36| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$441 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$441| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#31| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$361 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$361| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#45| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$381 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$381| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#42| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$353 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$353| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#3| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/eoc#sampled$413 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:74:sample_control_edge$/eoc#sampled$413| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#32| state)) #b1))
+; yosys-smt2-register $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$343 1
+(define-fun |sar_tb_working_n $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$343| ((state |sar_tb_working_s|)) Bool (= ((_ extract 0 0) (|sar_tb_working#16| state)) #b1))
 (define-fun |sar_tb_working#54| ((state |sar_tb_working_s|)) Bool (bvuge (|sar_tb_working#5| state) #b00000000000000000000000000000010)) ; $ge$sar_adc_ideal_conv.sv:77$48_Y
 (define-fun |sar_tb_working#55| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#54| state) #b1 #b0) (ite (|sar_tb_working#6| state) #b1 #b0))) ; $0$formal$sar_adc_ideal_conv.sv:77$20_CHECK[0:0]$37
 ; yosys-smt2-assume 0 reset_if_count
@@ -900,30 +884,30 @@
 (define-fun |sar_tb_working_a 4| ((state |sar_tb_working_s|)) Bool (or (= ((_ extract 0 0) (|sar_tb_working#37| state)) #b1) (not (= ((_ extract 0 0) (|sar_tb_working#51| state)) #b1)))) ; $assert$sar_adc_ideal_conv.sv:114$121
 ; yosys-smt2-assert 5 $assert$sar_adc_ideal_conv.sv:113$120 sar_adc_ideal_conv.sv:113.28-114.91
 (define-fun |sar_tb_working_a 5| ((state |sar_tb_working_s|)) Bool (or (= ((_ extract 0 0) (|sar_tb_working#34| state)) #b1) (not (= ((_ extract 0 0) (|sar_tb_working#51| state)) #b1)))) ; $assert$sar_adc_ideal_conv.sv:113$120
-(define-fun |sar_tb_working#77| ((state |sar_tb_working_s|)) Bool (= (|sar_tb_working#22| state) #b00000000000000000000000000000101)) ; $eq$sar_adc_ideal_conv.sv:101$70_Y
+(define-fun |sar_tb_working#77| ((state |sar_tb_working_s|)) Bool (= (|sar_tb_working#22| state) #b00000000000000000000000000000001)) ; $eq$sar_adc_ideal_conv.sv:101$70_Y
 (define-fun |sar_tb_working#78| ((state |sar_tb_working_s|)) Bool (not (or  (|sar_tb_working#8| state) false))) ; $logic_not$sar_adc_ideal_conv.sv:103$74_Y
 (define-fun |sar_tb_working#79| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#77| state) #b1 #b0) (ite (|sar_tb_working#78| state) #b1 #b0))) ; $0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64
 (define-fun |sar_tb_working#80| ((state |sar_tb_working_s|)) Bool (not (or  (|sar_tb_working#77| state) false))) ; $logic_not$sar_adc_ideal_conv.sv:101$71_Y
 (define-fun |sar_tb_working#81| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#80| state) #b1 #b0) (ite (|sar_tb_working#8| state) #b1 #b0))) ; $0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62
-(define-fun |sar_tb_working#82| ((state |sar_tb_working_s|)) Bool (bvule ((_ extract 19 0) (|sar_tb_working#23| state)) #b00000000000010011110)) ; $le$sar_adc_ideal_conv.sv:116$94_Y
+(define-fun |sar_tb_working#82| ((state |sar_tb_working_s|)) Bool (bvule ((_ extract 19 0) (|sar_tb_working#23| state)) #b00000000001000011110)) ; $le$sar_adc_ideal_conv.sv:116$94_Y
 (define-fun |sar_tb_working#83| ((state |sar_tb_working_s|)) Bool (not (or  (|sar_tb_working#82| state) false))) ; $logic_not$sar_adc_ideal_conv.sv:116$95_Y
 (define-fun |sar_tb_working#84| ((state |sar_tb_working_s|)) Bool (bvugt (|sar_tb_working#7| state) #b0000000000)) ; $gt$sar_adc_ideal_conv.sv:116$96_Y
 (define-fun |sar_tb_working#85| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#83| state) #b1 #b0) (ite (|sar_tb_working#84| state) #b1 #b0))) ; $0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85
-(define-fun |sar_tb_working#86| ((state |sar_tb_working_s|)) Bool (bvugt ((_ extract 19 0) (|sar_tb_working#23| state)) #b00000000000010011110)) ; $gt$sar_adc_ideal_conv.sv:115$89_Y
+(define-fun |sar_tb_working#86| ((state |sar_tb_working_s|)) Bool (bvugt ((_ extract 19 0) (|sar_tb_working#23| state)) #b00000000001000011110)) ; $gt$sar_adc_ideal_conv.sv:115$89_Y
 (define-fun |sar_tb_working#87| ((state |sar_tb_working_s|)) Bool (not (or  (|sar_tb_working#86| state) false))) ; $logic_not$sar_adc_ideal_conv.sv:115$90_Y
-(define-fun |sar_tb_working#88| ((state |sar_tb_working_s|)) (_ BitVec 21) (bvsub (concat #b0 ((_ extract 19 0) (|sar_tb_working#23| state))) #b000000000000010011110)) ; { $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [19:0] }
+(define-fun |sar_tb_working#88| ((state |sar_tb_working_s|)) (_ BitVec 21) (bvsub (concat #b0 ((_ extract 19 0) (|sar_tb_working#23| state))) #b000000000001000011110)) ; { $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [19:0] }
 (define-fun |sar_tb_working#89| ((state |sar_tb_working_s|)) Bool (bvugt (concat #b0000000000000000000000 (|sar_tb_working#7| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (concat ((_ extract 20 20) (|sar_tb_working#88| state)) (|sar_tb_working#88| state)))))))))))))) ; $gt$sar_adc_ideal_conv.sv:115$92_Y
 (define-fun |sar_tb_working#90| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#87| state) #b1 #b0) (ite (|sar_tb_working#89| state) #b1 #b0))) ; $0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83
-(define-fun |sar_tb_working#91| ((state |sar_tb_working_s|)) (_ BitVec 21) (bvadd (concat #b0 ((_ extract 19 0) (|sar_tb_working#23| state))) #b000000000000010011110)) ; $add$sar_adc_ideal_conv.sv:114$87_Y
+(define-fun |sar_tb_working#91| ((state |sar_tb_working_s|)) (_ BitVec 21) (bvadd (concat #b0 ((_ extract 19 0) (|sar_tb_working#23| state))) #b000000000001000011110)) ; $add$sar_adc_ideal_conv.sv:114$87_Y
 (define-fun |sar_tb_working#92| ((state |sar_tb_working_s|)) Bool (bvult (concat #b00000000000 (|sar_tb_working#7| state)) (|sar_tb_working#91| state))) ; $0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81
-(define-fun |sar_tb_working#93| ((state |sar_tb_working_s|)) Bool (= (|sar_tb_working#26| state) #b0000000000000000000000000000000000000000000000000000000000100111)) ; $eq$sar_adc_ideal_conv.sv:120$101_Y
+(define-fun |sar_tb_working#93| ((state |sar_tb_working_s|)) Bool (= (|sar_tb_working#26| state) #b0000000000000000000000000000000000000000000000000000000000001001)) ; $eq$sar_adc_ideal_conv.sv:120$101_Y
 (define-fun |sar_tb_working#94| ((state |sar_tb_working_s|)) Bool (not (or  (|sar_tb_working#93| state) false))) ; $logic_not$sar_adc_ideal_conv.sv:120$102_Y
 (define-fun |sar_tb_working#95| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#94| state) #b1 #b0) (|sar_tb_working#13| state))) ; $0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99
 (define-fun |sar_tb_working#96| ((state |sar_tb_working_s|)) (_ BitVec 64) (bvadd (|sar_tb_working#26| state) #b0000000000000000000000000000000000000000000000000000000000000001)) ; $0\cycles[63:0]
 (define-fun |sar_tb_working#97| ((state |sar_tb_working_s|)) (_ BitVec 32) (bvadd (|sar_tb_working#22| state) #b00000000000000000000000000000001)) ; $add$sar_adc_ideal_conv.sv:95$69_Y
 (define-fun |sar_tb_working#98| ((state |sar_tb_working_s|)) Bool (or  (|sar_tb_working#10| state) false  (|sar_tb_working#8| state) false)) ; $logic_or$sar_adc_ideal_conv.sv:95$66_Y
 (define-fun |sar_tb_working#99| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvand (ite (|sar_tb_working#98| state) #b1 #b0) (ite (|sar_tb_working#56| state) #b1 #b0))) ; $and$sar_adc_ideal_conv.sv:95$68_Y
-(define-fun |sar_tb_working#100| ((state |sar_tb_working_s|)) (_ BitVec 32) (ite (= ((_ extract 0 0) (|sar_tb_working#99| state)) #b1) (|sar_tb_working#97| state) (|sar_tb_working#22| state))) ; $0\eoc_high_counter[31:0]
+(define-fun |sar_tb_working#100| ((state |sar_tb_working_s|)) (_ BitVec 32) (ite (= ((_ extract 0 0) (|sar_tb_working#99| state)) #b1) (|sar_tb_working#97| state) #b00000000000000000000000000000000)) ; $0\eoc_high_counter[31:0]
 (define-fun |sar_tb_working#101| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvand (ite (|sar_tb_working#10| state) #b1 #b0) (ite (|sar_tb_working#56| state) #b1 #b0))) ; $and$sar_adc_ideal_conv.sv:123$106_Y
 (define-fun |sar_tb_working#102| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvand (|sar_tb_working#101| state) (ite (|sar_tb_working#67| state) #b1 #b0))) ; $and$sar_adc_ideal_conv.sv:123$108_Y
 (define-fun |sar_tb_working#103| ((state |sar_tb_working_s|)) (_ BitVec 10) (ite (= ((_ extract 0 0) (|sar_tb_working#102| state)) #b1) (|sar_tb_working#9| state) (|sar_tb_working#19| state))) ; $0\held_value[9:0]
@@ -937,7 +921,7 @@
   (|sar_tb_working_a 3| state)
   (|sar_tb_working_a 4| state)
   (|sar_tb_working_a 5| state)
-  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_a| (|sar_tb_working_h adc_instance| state))
+  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_a| (|sar_tb_working_h adc_instance| state))
   (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_a| (|sar_tb_working_h fdiv| state))
 ))
 (define-fun |sar_tb_working_u| ((state |sar_tb_working_s|)) Bool (and
@@ -954,79 +938,79 @@
   (|sar_tb_working_u 10| state)
   (|sar_tb_working_u 11| state)
   (|sar_tb_working_u 12| state)
-  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_u| (|sar_tb_working_h adc_instance| state))
+  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_u| (|sar_tb_working_h adc_instance| state))
   (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_u| (|sar_tb_working_h fdiv| state))
 ))
 (define-fun |sar_tb_working_i| ((state |sar_tb_working_s|)) Bool (and
-  (= (= ((_ extract 0 0) (|sar_tb_working#48| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$387
-  (= (= ((_ extract 0 0) (|sar_tb_working#47| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$465
-  (= (= ((_ extract 0 0) (|sar_tb_working#50| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$445
-  (= (= ((_ extract 0 0) (|sar_tb_working#52| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$385
-  (= (|sar_tb_working#1| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/sys_counter[31:0]#sampled$367
-  (= (= ((_ extract 0 0) (|sar_tb_working#12| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0/hit_eoc[0:0]#sampled$407
-  (= (|sar_tb_working#15| state) #b0000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/held_value[9:0]#sampled$487
-  (= (|sar_tb_working#21| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/eoc_high_counter[31:0]#sampled$417
-  (= (|sar_tb_working#25| state) #b0000000000000000000000000000000000000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/cycles[63:0]#sampled$357
-  (= (= ((_ extract 0 0) (|sar_tb_working#28| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$477
-  (= (= ((_ extract 0 0) (|sar_tb_working#39| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$427
-  (= (= ((_ extract 0 0) (|sar_tb_working#36| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$437
-  (= (= ((_ extract 0 0) (|sar_tb_working#31| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$457
-  (= (= ((_ extract 0 0) (|sar_tb_working#45| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$377
-  (= (= ((_ extract 0 0) (|sar_tb_working#42| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$397
-  (= (= ((_ extract 0 0) (|sar_tb_working#3| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$369
-  (= (= ((_ extract 0 0) (|sar_tb_working#32| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/eoc#sampled$429
-  (= (= ((_ extract 0 0) (|sar_tb_working#16| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$359
-  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_i| (|sar_tb_working_h adc_instance| state))
+  (= (= ((_ extract 0 0) (|sar_tb_working#48| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$371
+  (= (= ((_ extract 0 0) (|sar_tb_working#47| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$449
+  (= (= ((_ extract 0 0) (|sar_tb_working#50| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$429
+  (= (= ((_ extract 0 0) (|sar_tb_working#52| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$369
+  (= (|sar_tb_working#1| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/sys_counter[31:0]#sampled$351
+  (= (= ((_ extract 0 0) (|sar_tb_working#12| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0/hit_eoc[0:0]#sampled$391
+  (= (|sar_tb_working#15| state) #b0000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/held_value[9:0]#sampled$471
+  (= (|sar_tb_working#21| state) #b00000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/eoc_high_counter[31:0]#sampled$401
+  (= (|sar_tb_working#25| state) #b0000000000000000000000000000000000000000000000000000000000000000) ; $auto$clk2fflogic.cc:88:sample_data$$0/cycles[63:0]#sampled$341
+  (= (= ((_ extract 0 0) (|sar_tb_working#28| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$461
+  (= (= ((_ extract 0 0) (|sar_tb_working#39| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$411
+  (= (= ((_ extract 0 0) (|sar_tb_working#36| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$421
+  (= (= ((_ extract 0 0) (|sar_tb_working#31| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$441
+  (= (= ((_ extract 0 0) (|sar_tb_working#45| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$361
+  (= (= ((_ extract 0 0) (|sar_tb_working#42| state)) #b1) false) ; $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$381
+  (= (= ((_ extract 0 0) (|sar_tb_working#3| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/sys_clk#sampled$353
+  (= (= ((_ extract 0 0) (|sar_tb_working#32| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/eoc#sampled$413
+  (= (= ((_ extract 0 0) (|sar_tb_working#16| state)) #b1) true) ; $auto$clk2fflogic.cc:74:sample_control_edge$/clk#sampled$343
+  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_i| (|sar_tb_working_h adc_instance| state))
   (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_i| (|sar_tb_working_h fdiv| state))
 ))
 (define-fun |sar_tb_working_h| ((state |sar_tb_working_s|)) Bool (and
-  (= (|sar_tb_working_is| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_is| (|sar_tb_working_h adc_instance| state)))
-  (= (|sar_tb_working#2| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n sys_clk| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011.sys_clk
-  (= (|sar_tb_working#6| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n reset| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011.reset
-  (= (|sar_tb_working#7| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n output_result_digital| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011.output_result_digital
-  (= (|sar_tb_working#9| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n input_voltage_real| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011.input_voltage_real
-  (= (|sar_tb_working#10| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n input_hold_digital| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011.input_hold_digital
-  (= (|sar_tb_working#8| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n eoc| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011.eoc
-  (= (= ((_ extract 0 0) (|sar_tb_working#17| state)) #b1) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_n clk| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011.clk
+  (= (|sar_tb_working_is| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_is| (|sar_tb_working_h adc_instance| state)))
+  (= (|sar_tb_working#2| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n sys_clk| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001.sys_clk
+  (= (|sar_tb_working#6| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n reset| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001.reset
+  (= (|sar_tb_working#7| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n output_result_digital| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001.output_result_digital
+  (= (|sar_tb_working#9| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n input_voltage_real| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001.input_voltage_real
+  (= (|sar_tb_working#10| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n input_hold_digital| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001.input_hold_digital
+  (= (|sar_tb_working#8| state) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n eoc| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001.eoc
+  (= (= ((_ extract 0 0) (|sar_tb_working#17| state)) #b1) (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_n clk| (|sar_tb_working_h adc_instance| state))) ; $paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001.clk
   (= (|sar_tb_working_is| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_is| (|sar_tb_working_h fdiv| state)))
   (= (|sar_tb_working#6| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n reset| (|sar_tb_working_h fdiv| state))) ; $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010.reset
   (= (|sar_tb_working#2| state) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n output_clk_digital| (|sar_tb_working_h fdiv| state))) ; $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010.output_clk_digital
   (= (= ((_ extract 0 0) (|sar_tb_working#17| state)) #b1) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n input_clk_digital| (|sar_tb_working_h fdiv| state))) ; $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010.input_clk_digital
   (= (= ((_ extract 0 0) (|sar_tb_working#17| state)) #b1) (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_n clk| (|sar_tb_working_h fdiv| state))) ; $paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010.clk
-  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_h| (|sar_tb_working_h adc_instance| state))
+  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_h| (|sar_tb_working_h adc_instance| state))
   (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_h| (|sar_tb_working_h fdiv| state))
 ))
 (define-fun |sar_tb_working_t| ((state |sar_tb_working_s|) (next_state |sar_tb_working_s|)) Bool (and
-  (= (|sar_tb_working#53| state) (|sar_tb_working#52| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$386 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$385
-  (= (|sar_tb_working#51| state) (|sar_tb_working#50| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$446 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$445
-  (= #b1 (|sar_tb_working#48| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$388 $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$387
-  (= (|sar_tb_working#49| state) (|sar_tb_working#47| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$466 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$465
-  (= (|sar_tb_working#79| state) (|sar_tb_working#45| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$378 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$377
-  (= (|sar_tb_working#46| state) (|sar_tb_working#44| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$376 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$375
-  (= (|sar_tb_working#81| state) (|sar_tb_working#42| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$398 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$397
-  (= (|sar_tb_working#43| state) (|sar_tb_working#41| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$396 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$395
-  (= (|sar_tb_working#85| state) (|sar_tb_working#39| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$428 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$427
-  (= (|sar_tb_working#40| state) (|sar_tb_working#38| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$426 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$425
-  (= (|sar_tb_working#90| state) (|sar_tb_working#36| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$438 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$437
-  (= (|sar_tb_working#37| state) (|sar_tb_working#35| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$436 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$435
-  (= (ite (|sar_tb_working#8| state) #b1 #b0) (|sar_tb_working#32| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$430 $auto$clk2fflogic.cc:74:sample_control_edge$\eoc#sampled$429
-  (= (ite (|sar_tb_working#92| state) #b1 #b0) (|sar_tb_working#31| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$458 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$457
-  (= (|sar_tb_working#34| state) (|sar_tb_working#30| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$456 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$455
-  (= (|sar_tb_working#95| state) (|sar_tb_working#28| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$478 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$477
-  (= (|sar_tb_working#29| state) (|sar_tb_working#27| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$476 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$475
-  (= (|sar_tb_working#96| state) (|sar_tb_working#25| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$358 $auto$clk2fflogic.cc:88:sample_data$$0\cycles[63:0]#sampled$357
-  (= (|sar_tb_working#26| state) (|sar_tb_working#24| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$356 $auto$clk2fflogic.cc:88:sample_data$\cycles#sampled$355
-  (= (|sar_tb_working#100| state) (|sar_tb_working#21| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$418 $auto$clk2fflogic.cc:88:sample_data$$0\eoc_high_counter[31:0]#sampled$417
-  (= (|sar_tb_working#22| state) (|sar_tb_working#20| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$416 $auto$clk2fflogic.cc:88:sample_data$\eoc_high_counter#sampled$415
-  (= (|sar_tb_working#17| state) (|sar_tb_working#16| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$360 $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$359
-  (= (|sar_tb_working#103| state) (|sar_tb_working#15| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$488 $auto$clk2fflogic.cc:88:sample_data$$0\held_value[9:0]#sampled$487
-  (= (|sar_tb_working#19| state) (|sar_tb_working#14| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$486 $auto$clk2fflogic.cc:88:sample_data$\held_value#sampled$485
-  (= (|sar_tb_working#105| state) (|sar_tb_working#12| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$408 $auto$clk2fflogic.cc:88:sample_data$$0\hit_eoc[0:0]#sampled$407
-  (= (|sar_tb_working#13| state) (|sar_tb_working#11| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$406 $auto$clk2fflogic.cc:88:sample_data$\hit_eoc#sampled$405
-  (= (ite (|sar_tb_working#2| state) #b1 #b0) (|sar_tb_working#3| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$370 $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$369
-  (= (|sar_tb_working#106| state) (|sar_tb_working#1| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$368 $auto$clk2fflogic.cc:88:sample_data$$0\sys_counter[31:0]#sampled$367
-  (= (|sar_tb_working#5| state) (|sar_tb_working#0| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$366 $auto$clk2fflogic.cc:88:sample_data$\sys_counter#sampled$365
-  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000011_t| (|sar_tb_working_h adc_instance| state) (|sar_tb_working_h adc_instance| next_state))
+  (= (|sar_tb_working#53| state) (|sar_tb_working#52| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$370 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_EN#sampled$369
+  (= (|sar_tb_working#51| state) (|sar_tb_working#50| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$430 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_EN#sampled$429
+  (= #b1 (|sar_tb_working#48| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$372 $auto$clk2fflogic.cc:88:sample_data$1'1#sampled$371
+  (= (|sar_tb_working#49| state) (|sar_tb_working#47| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$450 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_EN#sampled$449
+  (= (|sar_tb_working#79| state) (|sar_tb_working#45| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$362 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64#sampled$361
+  (= (|sar_tb_working#46| state) (|sar_tb_working#44| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$360 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:103$25_CHECK#sampled$359
+  (= (|sar_tb_working#81| state) (|sar_tb_working#42| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$382 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62#sampled$381
+  (= (|sar_tb_working#43| state) (|sar_tb_working#41| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$380 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:101$24_CHECK#sampled$379
+  (= (|sar_tb_working#85| state) (|sar_tb_working#39| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$412 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85#sampled$411
+  (= (|sar_tb_working#40| state) (|sar_tb_working#38| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$410 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:115$28_CHECK#sampled$409
+  (= (|sar_tb_working#90| state) (|sar_tb_working#36| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$422 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83#sampled$421
+  (= (|sar_tb_working#37| state) (|sar_tb_working#35| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$420 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:114$27_CHECK#sampled$419
+  (= (ite (|sar_tb_working#8| state) #b1 #b0) (|sar_tb_working#32| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$414 $auto$clk2fflogic.cc:74:sample_control_edge$\eoc#sampled$413
+  (= (ite (|sar_tb_working#92| state) #b1 #b0) (|sar_tb_working#31| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$442 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81#sampled$441
+  (= (|sar_tb_working#34| state) (|sar_tb_working#30| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$440 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:113$26_CHECK#sampled$439
+  (= (|sar_tb_working#95| state) (|sar_tb_working#28| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$462 $auto$clk2fflogic.cc:88:sample_data$$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99#sampled$461
+  (= (|sar_tb_working#29| state) (|sar_tb_working#27| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$460 $auto$clk2fflogic.cc:88:sample_data$$formal$sar_adc_ideal_conv.sv:120$29_CHECK#sampled$459
+  (= (|sar_tb_working#96| state) (|sar_tb_working#25| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$342 $auto$clk2fflogic.cc:88:sample_data$$0\cycles[63:0]#sampled$341
+  (= (|sar_tb_working#26| state) (|sar_tb_working#24| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$340 $auto$clk2fflogic.cc:88:sample_data$\cycles#sampled$339
+  (= (|sar_tb_working#100| state) (|sar_tb_working#21| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$402 $auto$clk2fflogic.cc:88:sample_data$$0\eoc_high_counter[31:0]#sampled$401
+  (= (|sar_tb_working#22| state) (|sar_tb_working#20| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$400 $auto$clk2fflogic.cc:88:sample_data$\eoc_high_counter#sampled$399
+  (= (|sar_tb_working#17| state) (|sar_tb_working#16| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$344 $auto$clk2fflogic.cc:74:sample_control_edge$\clk#sampled$343
+  (= (|sar_tb_working#103| state) (|sar_tb_working#15| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$472 $auto$clk2fflogic.cc:88:sample_data$$0\held_value[9:0]#sampled$471
+  (= (|sar_tb_working#19| state) (|sar_tb_working#14| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$470 $auto$clk2fflogic.cc:88:sample_data$\held_value#sampled$469
+  (= (|sar_tb_working#105| state) (|sar_tb_working#12| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$392 $auto$clk2fflogic.cc:88:sample_data$$0\hit_eoc[0:0]#sampled$391
+  (= (|sar_tb_working#13| state) (|sar_tb_working#11| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$390 $auto$clk2fflogic.cc:88:sample_data$\hit_eoc#sampled$389
+  (= (ite (|sar_tb_working#2| state) #b1 #b0) (|sar_tb_working#3| next_state)) ; $auto$clk2fflogic.cc:79:sample_control_edge$354 $auto$clk2fflogic.cc:74:sample_control_edge$\sys_clk#sampled$353
+  (= (|sar_tb_working#106| state) (|sar_tb_working#1| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$352 $auto$clk2fflogic.cc:88:sample_data$$0\sys_counter[31:0]#sampled$351
+  (= (|sar_tb_working#5| state) (|sar_tb_working#0| next_state)) ; $auto$clk2fflogic.cc:95:sample_data$350 $auto$clk2fflogic.cc:88:sample_data$\sys_counter#sampled$349
+  (|$paramod/sar_adc__N_BITS_10/N_BITS=s32'00000000000000000000000000000001_t| (|sar_tb_working_h adc_instance| state) (|sar_tb_working_h adc_instance| next_state))
   (|$paramod/frequency_divider/DIVISION=s32'00000000000000000000000000000010_t| (|sar_tb_working_h fdiv| state) (|sar_tb_working_h fdiv| next_state))
 )) ; end of module sar_tb_working
 ; yosys-smt2-topmod sar_tb_working

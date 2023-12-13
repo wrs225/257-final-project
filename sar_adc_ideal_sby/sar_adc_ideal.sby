@@ -6,7 +6,7 @@ basic bmc
 
 bmc:
 mode bmc
-depth 80
+depth 20
 multiclock on
 fst on
 

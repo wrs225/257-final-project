@@ -1,0 +1,167 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module sar_tb_working.
+Found 0 SCCs in module sample_and_hold.
+Found 0 SCCs in module digital_to_analog_converter.
+Found 0 SCCs in module comparator_latch.
+Found 0 SCCs in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011.
+Found 0 SCCs in module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011.
+Found 0 SCCs in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011.
+Found 0 SCCs in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Replacing sar_tb_working.$procdff$344 ($dff): CLK=\clk, D=$0\cycles[63:0], Q=\cycles
+Replacing sar_tb_working.$procdff$343 ($dff): CLK=\sys_clk, D=$0\sys_counter[31:0], Q=\sys_counter
+Replacing sar_tb_working.$procdff$340 ($dff): CLK=\sys_clk, D=$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64, Q=$formal$sar_adc_ideal_conv.sv:103$25_CHECK
+Replacing sar_tb_working.$procdff$339 ($dff): CLK=\sys_clk, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:101$24_EN
+Replacing sar_tb_working.$procdff$338 ($dff): CLK=\sys_clk, D=$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62, Q=$formal$sar_adc_ideal_conv.sv:101$24_CHECK
+Replacing sar_tb_working.$procdff$337 ($dff): CLK=\sys_clk, D=$0\hit_eoc[0:0], Q=\hit_eoc
+Replacing sar_tb_working.$procdff$336 ($dff): CLK=\sys_clk, D=$0\eoc_high_counter[31:0], Q=\eoc_high_counter
+Replacing sar_tb_working.$procdff$334 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85, Q=$formal$sar_adc_ideal_conv.sv:115$28_CHECK
+Replacing sar_tb_working.$procdff$332 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83, Q=$formal$sar_adc_ideal_conv.sv:114$27_CHECK
+Replacing sar_tb_working.$procdff$331 ($dff): CLK=\eoc, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:113$26_EN
+Replacing sar_tb_working.$procdff$330 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81, Q=$formal$sar_adc_ideal_conv.sv:113$26_CHECK
+Replacing sar_tb_working.$procdff$329 ($dff): CLK=\clk, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:120$29_EN
+Replacing sar_tb_working.$procdff$328 ($dff): CLK=\clk, D=$0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99, Q=$formal$sar_adc_ideal_conv.sv:120$29_CHECK
+Replacing sar_tb_working.$procdff$327 ($dff): CLK=\clk, D=$0\held_value[9:0], Q=\held_value
+Replacing sample_and_hold.$procdff$315 ($dff): CLK=\clk, D=$0\fsm[31:0], Q=\fsm
+Replacing sample_and_hold.$procdff$314 ($dff): CLK=\clk, D=$0\state_cap[9:0], Q=\state_cap
+Replacing comparator_latch.$procdff$323 ($dff): CLK=\clk, D=$0\fsm[31:0], Q=\fsm
+Replacing $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011.$procdff$322 ($dff): CLK=\sys_clk, D=$0\counter[2:0], Q=\counter
+Replacing $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011.$procdff$317 ($dff): CLK=\sys_clk, D=$0$lookahead\quantized_voltage_register$196[2:0]$201, Q=\quantized_voltage_register
+Replacing $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$procdff$326 ($dff): CLK=\input_clk_digital, D=$0\counter[31:0], Q=\counter
+Replacing $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$procdff$325 ($dff): CLK=\input_clk_digital, D=$0\output_clk_digital[0:0], Q=\output_clk_digital
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \sar_tb_working..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Removed 0 unused cells and 21 unused wires.
+<suppressed ~5 debug messages>
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \sar_tb_working..
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010...
+Checking module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011...
+Checking module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011...
+Checking module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011...
+Checking module comparator_latch...
+Checking module digital_to_analog_converter...
+Checking module sample_and_hold...
+Checking module sar_tb_working...
+Found and reported 0 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+<suppressed ~2 debug messages>
+Optimizing module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011.
+Optimizing module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011.
+Optimizing module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011.
+<suppressed ~3 debug messages>
+Optimizing module comparator_latch.
+Optimizing module digital_to_analog_converter.
+<suppressed ~3 debug messages>
+Optimizing module sample_and_hold.
+Optimizing module sar_tb_working.
+<suppressed ~2 debug messages>
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `$paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011'.
+Finding identical cells in module `$paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011'.
+Finding identical cells in module `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\comparator_latch'.
+Finding identical cells in module `\digital_to_analog_converter'.
+Finding identical cells in module `\sample_and_hold'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\sar_tb_working'.
+<suppressed ~72 debug messages>
+Removed a total of 30 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \sar_tb_working..
+Removed 25 unused cells and 59 unused wires.
+<suppressed ~31 debug messages>
+
+11.5. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module \comparator_latch..
+Finding unused cells or wires in module \digital_to_analog_converter..
+Finding unused cells or wires in module \sample_and_hold..
+Finding unused cells or wires in module \sar_tb_working..
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+End of script. Logfile hash: e48e3ab8e0, CPU: user 0.07s system 0.00s, MEM: 13.78 MB peak
+Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 30% 4x opt_clean (0 sec), 16% 1x check (0 sec), ...
