@@ -757,7 +757,7 @@ Removed top 23 bits (of 32) from port B of cell sar_tb_working.$sub$sar_adc_noni
 Removed top 11 bits (of 32) from port Y of cell sar_tb_working.$sub$sar_adc_nonideal_conv.sv:115$90 ($sub).
 Removed top 23 bits (of 32) from port B of cell sar_tb_working.$le$sar_adc_nonideal_conv.sv:116$93 ($le).
 Removed top 31 bits (of 32) from port B of cell sar_tb_working.$gt$sar_adc_nonideal_conv.sv:116$95 ($gt).
-Removed top 58 bits (of 64) from port B of cell sar_tb_working.$eq$sar_adc_nonideal_conv.sv:121$103 ($eq).
+Removed top 59 bits (of 64) from port B of cell sar_tb_working.$eq$sar_adc_nonideal_conv.sv:121$103 ($eq).
 Removed top 11 bits (of 32) from wire sar_tb_working.$add$sar_adc_nonideal_conv.sv:114$86_Y.
 Removed top 11 bits (of 32) from wire sar_tb_working.$mul$sar_adc_nonideal_conv.sv:111$77_Y.
 
@@ -1063,6 +1063,6 @@ Module sar_tb_working directly or indirectly contains formal properties -> setti
 Output filename: ../model/design.il
 
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: 7abc0f9365, CPU: user 1.22s system 0.04s, MEM: 20.87 MB peak
+End of script. Logfile hash: 033935e4ab, CPU: user 1.09s system 0.03s, MEM: 20.65 MB peak
 Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 29% 5x opt_clean (0 sec), 15% 6x opt_expr (0 sec), ...
+Time spent: 32% 5x opt_clean (0 sec), 14% 6x opt_expr (0 sec), ...

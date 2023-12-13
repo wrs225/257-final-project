@@ -292,6 +292,6 @@ Creating SMT-LIBv2 representation of module $paramod\sar_adc\N_BITS=s32'00000000
 Creating SMT-LIBv2 representation of module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000010.
 Creating SMT-LIBv2 representation of module sar_tb_working.
 
-End of script. Logfile hash: bf3c698cd6, CPU: user 0.10s system 0.01s, MEM: 13.31 MB peak
+End of script. Logfile hash: bf3c698cd6, CPU: user 0.09s system 0.00s, MEM: 13.04 MB peak
 Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 60% 2x write_smt2 (0 sec), 18% 2x read_ilang (0 sec), ...
+Time spent: 69% 2x write_smt2 (0 sec), 16% 2x read_ilang (0 sec), ...

@@ -2999,10 +2999,10 @@ module \sar_tb_working
     parameter \A_SIGNED 0
     parameter \A_WIDTH 64
     parameter \B_SIGNED 0
-    parameter \B_WIDTH 6
+    parameter \B_WIDTH 5
     parameter \Y_WIDTH 1
     connect \A \cycles
-    connect \B 6'100111
+    connect \B 5'10011
     connect \Y $eq$sar_adc_nonideal_conv.sv:121$103_Y
   end
   attribute \src "sar_adc_nonideal_conv.sv:124.38-124.53"

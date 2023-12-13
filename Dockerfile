@@ -74,12 +74,11 @@ RUN apt-get install -y gtkwave
 
 RUN ls \ 
     && cd sar_adc_ideal_sby \ 
-    && ls 
-
-RUN sby -f sar_adc_ideal.sby || gtkwave sar_adc_ideal_sby/sar_adc_ideal/engine_0/trace.vcd:
+    && ls \ 
+    && sby -f sar_adc_ideal.sby
 
 
 RUN ls \ 
-    && cd ../sar_adc_nonideal_sby \ 
+    && cd sar_adc_nonideal_sby \ 
     && ls \
-    && sby -f sar_adc_nonideal.sby     
+    && sby -f sar_adc_nonideal.sby

@@ -1765,7 +1765,7 @@
 (define-fun |sar_tb_working#92| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#89| state) #b1 #b0) (ite (|sar_tb_working#91| state) #b1 #b0))) ; $0$formal$sar_adc_nonideal_conv.sv:115$27_CHECK[0:0]$82
 (define-fun |sar_tb_working#93| ((state |sar_tb_working_s|)) (_ BitVec 21) (bvadd (concat #b0 ((_ extract 19 0) (|sar_tb_working#25| state))) #b000000000000100011110)) ; $add$sar_adc_nonideal_conv.sv:114$86_Y
 (define-fun |sar_tb_working#94| ((state |sar_tb_working_s|)) Bool (bvult (concat #b00000000000 (|sar_tb_working#7| state)) (|sar_tb_working#93| state))) ; $0$formal$sar_adc_nonideal_conv.sv:114$26_CHECK[0:0]$80
-(define-fun |sar_tb_working#95| ((state |sar_tb_working_s|)) Bool (= (|sar_tb_working#28| state) #b0000000000000000000000000000000000000000000000000000000000100111)) ; $eq$sar_adc_nonideal_conv.sv:121$103_Y
+(define-fun |sar_tb_working#95| ((state |sar_tb_working_s|)) Bool (= (|sar_tb_working#28| state) #b0000000000000000000000000000000000000000000000000000000000010011)) ; $eq$sar_adc_nonideal_conv.sv:121$103_Y
 (define-fun |sar_tb_working#96| ((state |sar_tb_working_s|)) Bool (not (or  (|sar_tb_working#95| state) false))) ; $0$formal$sar_adc_nonideal_conv.sv:122$30_CHECK[0:0]$101
 (define-fun |sar_tb_working#97| ((state |sar_tb_working_s|)) (_ BitVec 1) (bvor (ite (|sar_tb_working#96| state) #b1 #b0) (|sar_tb_working#15| state))) ; $0$formal$sar_adc_nonideal_conv.sv:121$29_CHECK[0:0]$99
 (define-fun |sar_tb_working#98| ((state |sar_tb_working_s|)) (_ BitVec 64) (bvadd (|sar_tb_working#28| state) #b0000000000000000000000000000000000000000000000000000000000000001)) ; $0\cycles[63:0]
