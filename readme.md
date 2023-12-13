@@ -1,4 +1,4 @@
-##Model-Checking of a SAR-ADC
+## Model-Checking of a SAR-ADC
 
 Warning, running this project installs a bunch of stuff and many of the tools require severely long runtimes (>12hrs).
 
