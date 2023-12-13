@@ -13,7 +13,7 @@ module sar_tb_working(
 
 
 localparam div = 2;
-localparam bmc_range = 10;
+localparam bmc_range = 20;
 localparam adc_nbits = 1;
 
 // Instance of sar_adc__N_BITS_10

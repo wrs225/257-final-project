@@ -60,23 +60,23 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
 
 === sar_tb_working ===
 
-   Number of wires:                114
-   Number of wire bits:            800
+   Number of wires:                111
+   Number of wire bits:            797
    Number of public wires:          19
    Number of public wire bits:     190
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                121
+   Number of cells:                118
      $add                            4
-     $and                            5
+     $and                            4
      $anyinit                       11
      $assert                         6
      $assume                        13
      $div                            1
      $eq                             2
      $eqx                            3
-     $ff                            18
+     $ff                            17
      $ge                             1
      $gt                             5
      $initstate                      1
@@ -84,7 +84,7 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
      $logic_not                     12
      $logic_or                       1
      $lt                             3
-     $mux                           17
+     $mux                           16
      $not                            2
      $or                            11
      $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010      1
@@ -221,23 +221,23 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
          digital_to_analog_converter      1
          sample_and_hold             1
 
-   Number of wires:                261
-   Number of wire bits:           2414
+   Number of wires:                258
+   Number of wire bits:           2411
    Number of public wires:         108
    Number of public wire bits:    1214
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                188
+   Number of cells:                185
      $add                            6
-     $and                            7
+     $and                            6
      $anyinit                       18
      $assert                         6
      $assume                        14
      $div                            1
      $eq                             5
      $eqx                            7
-     $ff                            29
+     $ff                            28
      $ge                             1
      $gt                             7
      $initstate                      2
@@ -247,7 +247,7 @@ Module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010 
      $logic_or                       2
      $lt                             3
      $mul                            1
-     $mux                           39
+     $mux                           38
      $ne                             1
      $not                            2
      $or                            11
@@ -269,6 +269,6 @@ Creating SMT-LIBv2 representation of module $paramod\sar_adc\N_BITS=s32'00000000
 Creating SMT-LIBv2 representation of module $paramod\sar_adc__N_BITS_10\N_BITS=s32'00000000000000000000000000000001.
 Creating SMT-LIBv2 representation of module sar_tb_working.
 
-End of script. Logfile hash: cc510919a6, CPU: user 0.03s system 0.01s, MEM: 11.30 MB peak
+End of script. Logfile hash: ba4190fa72, CPU: user 0.02s system 0.00s, MEM: 11.31 MB peak
 Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 79% 2x write_smt2 (0 sec), 11% 2x read_ilang (0 sec), ...
+Time spent: 71% 2x write_smt2 (0 sec), 16% 2x read_ilang (0 sec), ...

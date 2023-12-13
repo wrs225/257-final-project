@@ -1,3 +1,0 @@
-# running in sar_adc_ideal_basic/engine_0/
-read_rtlil ../model/design_prep.il
-sim -hdlname -summary trace.json -append 0 -r trace.yw -fst trace.fst

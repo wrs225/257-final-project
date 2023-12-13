@@ -43,27 +43,27 @@ Found 0 SCCs.
 4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
 
 5. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
-Replacing sar_tb_working.$procdff$328 ($dff): CLK=\clk, D=$0\cycles[63:0], Q=\cycles
-Replacing sar_tb_working.$procdff$327 ($dff): CLK=\sys_clk, D=$0\sys_counter[31:0], Q=\sys_counter
-Replacing sar_tb_working.$procdff$325 ($dff): CLK=\sys_clk, D=$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64, Q=$formal$sar_adc_ideal_conv.sv:103$25_CHECK
-Replacing sar_tb_working.$procdff$324 ($dff): CLK=\sys_clk, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:101$24_EN
-Replacing sar_tb_working.$procdff$323 ($dff): CLK=\sys_clk, D=$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62, Q=$formal$sar_adc_ideal_conv.sv:101$24_CHECK
-Replacing sar_tb_working.$procdff$322 ($dff): CLK=\sys_clk, D=$0\eoc_high_counter[31:0], Q=\eoc_high_counter
-Replacing sar_tb_working.$procdff$320 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$83, Q=$formal$sar_adc_ideal_conv.sv:115$28_CHECK
-Replacing sar_tb_working.$procdff$318 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$81, Q=$formal$sar_adc_ideal_conv.sv:114$27_CHECK
-Replacing sar_tb_working.$procdff$317 ($dff): CLK=\eoc, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:113$26_EN
-Replacing sar_tb_working.$procdff$316 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$79, Q=$formal$sar_adc_ideal_conv.sv:113$26_CHECK
-Replacing sar_tb_working.$procdff$315 ($dff): CLK=\eoc, D=$0\hit_eoc[0:0], Q=\hit_eoc
-Replacing sar_tb_working.$procdff$314 ($dff): CLK=\clk, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:121$29_EN
-Replacing sar_tb_working.$procdff$313 ($dff): CLK=\clk, D=$0$formal$sar_adc_ideal_conv.sv:121$29_CHECK[0:0]$99, Q=$formal$sar_adc_ideal_conv.sv:121$29_CHECK
-Replacing sar_tb_working.$procdff$312 ($dff): CLK=\clk, D=$0\held_value[9:0], Q=\held_value
-Replacing sample_and_hold.$procdff$300 ($dff): CLK=\clk, D=$0\fsm[31:0], Q=\fsm
-Replacing sample_and_hold.$procdff$299 ($dff): CLK=\clk, D=$0\state_cap[9:0], Q=\state_cap
-Replacing comparator_latch.$procdff$308 ($dff): CLK=\clk, D=$0\fsm[31:0], Q=\fsm
-Replacing $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$procdff$307 ($dff): CLK=\sys_clk, D=$0\counter[0:0], Q=\counter
-Replacing $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$procdff$302 ($dff): CLK=\sys_clk, D=$0$lookahead\quantized_voltage_register$196[0:0]$201, Q=\quantized_voltage_register
-Replacing $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$procdff$311 ($dff): CLK=\input_clk_digital, D=$0\counter[31:0], Q=\counter
-Replacing $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$procdff$310 ($dff): CLK=\input_clk_digital, D=$0\output_clk_digital[0:0], Q=\output_clk_digital
+Replacing sar_tb_working.$procdff$327 ($dff): CLK=\clk, D=$0\cycles[63:0], Q=\cycles
+Replacing sar_tb_working.$procdff$326 ($dff): CLK=\sys_clk, D=$0\sys_counter[31:0], Q=\sys_counter
+Replacing sar_tb_working.$procdff$324 ($dff): CLK=\sys_clk, D=$0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64, Q=$formal$sar_adc_ideal_conv.sv:103$25_CHECK
+Replacing sar_tb_working.$procdff$323 ($dff): CLK=\sys_clk, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:101$24_EN
+Replacing sar_tb_working.$procdff$322 ($dff): CLK=\sys_clk, D=$0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62, Q=$formal$sar_adc_ideal_conv.sv:101$24_CHECK
+Replacing sar_tb_working.$procdff$321 ($dff): CLK=\sys_clk, D=$0\eoc_high_counter[31:0], Q=\eoc_high_counter
+Replacing sar_tb_working.$procdff$319 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$83, Q=$formal$sar_adc_ideal_conv.sv:115$28_CHECK
+Replacing sar_tb_working.$procdff$317 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$81, Q=$formal$sar_adc_ideal_conv.sv:114$27_CHECK
+Replacing sar_tb_working.$procdff$316 ($dff): CLK=\eoc, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:113$26_EN
+Replacing sar_tb_working.$procdff$315 ($dff): CLK=\eoc, D=$0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$79, Q=$formal$sar_adc_ideal_conv.sv:113$26_CHECK
+Replacing sar_tb_working.$procdff$314 ($dff): CLK=\eoc, D=1'1, Q=\hit_eoc
+Replacing sar_tb_working.$procdff$313 ($dff): CLK=\clk, D=1'1, Q=$formal$sar_adc_ideal_conv.sv:121$29_EN
+Replacing sar_tb_working.$procdff$312 ($dff): CLK=\clk, D=$0$formal$sar_adc_ideal_conv.sv:121$29_CHECK[0:0]$98, Q=$formal$sar_adc_ideal_conv.sv:121$29_CHECK
+Replacing sar_tb_working.$procdff$311 ($dff): CLK=\clk, D=$0\held_value[9:0], Q=\held_value
+Replacing sample_and_hold.$procdff$299 ($dff): CLK=\clk, D=$0\fsm[31:0], Q=\fsm
+Replacing sample_and_hold.$procdff$298 ($dff): CLK=\clk, D=$0\state_cap[9:0], Q=\state_cap
+Replacing comparator_latch.$procdff$307 ($dff): CLK=\clk, D=$0\fsm[31:0], Q=\fsm
+Replacing $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$procdff$306 ($dff): CLK=\sys_clk, D=$0\counter[0:0], Q=\counter
+Replacing $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$procdff$301 ($dff): CLK=\sys_clk, D=$0$lookahead\quantized_voltage_register$195[0:0]$200, Q=\quantized_voltage_register
+Replacing $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$procdff$310 ($dff): CLK=\input_clk_digital, D=$0\counter[31:0], Q=\counter
+Replacing $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$procdff$309 ($dff): CLK=\input_clk_digital, D=$0\output_clk_digital[0:0], Q=\output_clk_digital
 
 6. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \sar_tb_working..
@@ -130,8 +130,8 @@ Finding identical cells in module `\digital_to_analog_converter'.
 Finding identical cells in module `\sample_and_hold'.
 <suppressed ~6 debug messages>
 Finding identical cells in module `\sar_tb_working'.
-<suppressed ~72 debug messages>
-Removed a total of 30 cells.
+<suppressed ~75 debug messages>
+Removed a total of 31 cells.
 
 11.3. Executing OPT_DFF pass (perform DFF optimizations).
 
@@ -144,7 +144,7 @@ Finding unused cells or wires in module \comparator_latch..
 Finding unused cells or wires in module \digital_to_analog_converter..
 Finding unused cells or wires in module \sample_and_hold..
 Finding unused cells or wires in module \sar_tb_working..
-Removed 25 unused cells and 68 unused wires.
+Removed 25 unused cells and 69 unused wires.
 <suppressed ~30 debug messages>
 
 11.5. Finished fast OPT passes.
@@ -162,6 +162,6 @@ Finding unused cells or wires in module \sar_tb_working..
 13. Executing RTLIL backend.
 Output filename: ../model/design_prep.il
 
-End of script. Logfile hash: 09556d3abe, CPU: user 0.10s system 0.00s, MEM: 13.45 MB peak
+End of script. Logfile hash: 88d985d11a, CPU: user 0.13s system 0.01s, MEM: 13.59 MB peak
 Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 29% 4x opt_clean (0 sec), 22% 1x check (0 sec), ...
+Time spent: 29% 4x opt_clean (0 sec), 16% 1x check (0 sec), ...

@@ -13,7 +13,7 @@ module sar_tb_working(
 
 
 localparam div = 2;
-localparam bmc_range = 10;
+localparam bmc_range = 20;
 localparam adc_nbits = 1;
 
 // Instance of sar_adc__N_BITS_10
@@ -114,7 +114,7 @@ always @(posedge eoc) begin
     assert (( output_result_digital < digitized_value + (30 + (1 << (10 - adc_nbits))) ) );
     assert (!(digitized_value > (30 + (1 << (10 - adc_nbits)))) | ( output_result_digital > digitized_value - (30 + (1 << (10 - adc_nbits)))));
     assert (!(digitized_value <= (30 + (1 << (10 - adc_nbits)))) | ( output_result_digital > 0));
-    if(hit_eoc != 1 & eoc) hit_eoc <= 1;
+    if(hit_eoc != 1) hit_eoc <= 1;
 end
 
 always@(posedge clk)begin

@@ -34,7 +34,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$287",
+                  "name": "$procmux$286",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:153.8-153.29|sar_adc_ideal_conv.sv:153.5-153.73"
                   },
@@ -43,7 +43,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$290",
+                  "name": "$procmux$289",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "sar_adc_ideal_conv.sv:146.8-146.31|sar_adc_ideal_conv.sv:146.5-148.27"
@@ -75,7 +75,7 @@
             ],
             "cells": [
                 {
-                  "name": "$ne$sar_adc_ideal_conv.sv:146$167",
+                  "name": "$ne$sar_adc_ideal_conv.sv:146$166",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:146.8-146.31"
                   },
@@ -110,7 +110,7 @@
             ],
             "cells": [
                 {
-                  "name": "$mul$sar_adc_ideal_conv.sv:146$166",
+                  "name": "$mul$sar_adc_ideal_conv.sv:146$165",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:146.8-146.17"
                   },
@@ -145,7 +145,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$310",
+                  "name": "$procdff$309",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:152.1-154.4"
                   },
@@ -155,7 +155,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$311",
+                  "name": "$procdff$310",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:144.1-149.4"
                   },
@@ -177,7 +177,7 @@
             ],
             "cells": [
                 {
-                  "name": "$initstate$164",
+                  "name": "$initstate$163",
                   "attributes": {
                     "module_not_derived": "00000000000000000000000000000001",
                     "src": "sar_adc_ideal_conv.sv:0.0-0.0"
@@ -204,7 +204,7 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:140$177",
+                  "name": "$eq$sar_adc_ideal_conv.sv:140$176",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:140.16-140.28"
                   },
@@ -215,7 +215,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:153$172",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:153$171",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:153.53-153.72"
                   },
@@ -248,7 +248,7 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:153$171",
+                  "name": "$eq$sar_adc_ideal_conv.sv:153$170",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:153.8-153.29"
                   },
@@ -278,7 +278,7 @@
             ],
             "cells": [
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:140$173",
+                  "name": "$assume$sar_adc_ideal_conv.sv:140$172",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:140.8-140.29"
                   },
@@ -309,7 +309,7 @@
             ],
             "cells": [
                 {
-                  "name": "$add$sar_adc_ideal_conv.sv:147$168",
+                  "name": "$add$sar_adc_ideal_conv.sv:147$167",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:147.20-147.31"
                   },
@@ -602,7 +602,7 @@
             ],
             "cells": [
                 {
-                  "name": "$sub$./successive_approximation_register.v:0$211",
+                  "name": "$sub$./successive_approximation_register.v:0$210",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
                   },
@@ -615,7 +615,7 @@
                   }
                 },
                 {
-                  "name": "$sub$./successive_approximation_register.v:35$209",
+                  "name": "$sub$./successive_approximation_register.v:35$208",
                   "attributes": {
                     "src": "./successive_approximation_register.v:35.37-35.55"
                   },
@@ -628,7 +628,7 @@
                   }
                 },
                 {
-                  "name": "$sub$./successive_approximation_register.v:35$210",
+                  "name": "$sub$./successive_approximation_register.v:35$209",
                   "attributes": {
                     "src": "./successive_approximation_register.v:35.36-35.60"
                   },
@@ -663,7 +663,7 @@
             ],
             "cells": [
                 {
-                  "name": "$shift$./successive_approximation_register.v:0$213",
+                  "name": "$shift$./successive_approximation_register.v:0$212",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
                   },
@@ -676,7 +676,7 @@
                   }
                 },
                 {
-                  "name": "$shift$./successive_approximation_register.v:0$217",
+                  "name": "$shift$./successive_approximation_register.v:0$216",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
                   },
@@ -716,7 +716,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$258",
+                  "name": "$procmux$257",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./successive_approximation_register.v:32.8-32.36|./successive_approximation_register.v:32.5-36.8"
@@ -726,7 +726,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$270",
+                  "name": "$procmux$269",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./successive_approximation_register.v:26.12-26.37|./successive_approximation_register.v:26.9-27.27"
@@ -736,7 +736,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$272",
+                  "name": "$procmux$271",
                   "attributes": {
                     "src": "./successive_approximation_register.v:25.17-25.35|./successive_approximation_register.v:25.14-28.8"
                   },
@@ -745,7 +745,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$275",
+                  "name": "$procmux$274",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./successive_approximation_register.v:23.8-23.13|./successive_approximation_register.v:23.5-28.8"
@@ -755,7 +755,7 @@
                   }
                 },
                 {
-                  "name": "$ternary$./successive_approximation_register.v:42$228",
+                  "name": "$ternary$./successive_approximation_register.v:42$227",
                   "attributes": {
                     "src": "./successive_approximation_register.v:42.32-42.97"
                   },
@@ -786,7 +786,7 @@
             ],
             "cells": [
                 {
-                  "name": "$or$./successive_approximation_register.v:0$220",
+                  "name": "$or$./successive_approximation_register.v:0$219",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
                   },
@@ -816,7 +816,7 @@
             ],
             "cells": [
                 {
-                  "name": "$not$./successive_approximation_register.v:0$218",
+                  "name": "$not$./successive_approximation_register.v:0$217",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
                   },
@@ -849,7 +849,7 @@
             ],
             "cells": [
                 {
-                  "name": "$logic_or$./successive_approximation_register.v:32$203",
+                  "name": "$logic_or$./successive_approximation_register.v:32$202",
                   "attributes": {
                     "src": "./successive_approximation_register.v:32.8-32.36"
                   },
@@ -884,7 +884,7 @@
             ],
             "cells": [
                 {
-                  "name": "$logic_and$./successive_approximation_register.v:46$231",
+                  "name": "$logic_and$./successive_approximation_register.v:46$230",
                   "attributes": {
                     "src": "./successive_approximation_register.v:46.14-46.51"
                   },
@@ -914,7 +914,7 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$./successive_approximation_register.v:42$226",
+                  "name": "$eq$./successive_approximation_register.v:42$225",
                   "attributes": {
                     "src": "./successive_approximation_register.v:42.33-42.62"
                   },
@@ -925,7 +925,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$./successive_approximation_register.v:32$202",
+                  "name": "$logic_not$./successive_approximation_register.v:32$201",
                   "attributes": {
                     "src": "./successive_approximation_register.v:32.17-32.36"
                   },
@@ -936,7 +936,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$./successive_approximation_register.v:46$230",
+                  "name": "$logic_not$./successive_approximation_register.v:46$229",
                   "attributes": {
                     "src": "./successive_approximation_register.v:46.45-46.51"
                   },
@@ -969,7 +969,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$302",
+                  "name": "$procdff$301",
                   "attributes": {
                     "src": "./successive_approximation_register.v:31.1-37.4"
                   },
@@ -979,7 +979,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$307",
+                  "name": "$procdff$306",
                   "attributes": {
                     "src": "./successive_approximation_register.v:22.1-29.4"
                   },
@@ -1011,7 +1011,7 @@
             ],
             "cells": [
                 {
-                  "name": "$div$./successive_approximation_register.v:35$208",
+                  "name": "$div$./successive_approximation_register.v:35$207",
                   "attributes": {
                     "src": "./successive_approximation_register.v:35.46-35.55"
                   },
@@ -1046,7 +1046,7 @@
             ],
             "cells": [
                 {
-                  "name": "$and$./successive_approximation_register.v:0$219",
+                  "name": "$and$./successive_approximation_register.v:0$218",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
                   },
@@ -1076,7 +1076,7 @@
             ],
             "cells": [
                 {
-                  "name": "$neg$./successive_approximation_register.v:0$212",
+                  "name": "$neg$./successive_approximation_register.v:0$211",
                   "attributes": {
                     "src": "./successive_approximation_register.v:0.0-0.0"
                   },
@@ -1109,7 +1109,7 @@
             ],
             "cells": [
                 {
-                  "name": "$add$./successive_approximation_register.v:26$195",
+                  "name": "$add$./successive_approximation_register.v:26$194",
                   "attributes": {
                     "src": "./successive_approximation_register.v:26.50-26.61"
                   },
@@ -1154,7 +1154,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$280_CMP0",
+                  "name": "$procmux$279_CMP0",
                   "attributes": {
                     "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:41.7-52.14"
                   },
@@ -1194,7 +1194,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$279",
+                  "name": "$procmux$278",
                   "attributes": {
                     "src": "./comparator_latch.v:0.0-0.0|./comparator_latch.v:41.7-52.14"
                   },
@@ -1226,7 +1226,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$308",
+                  "name": "$procdff$307",
                   "attributes": {
                     "src": "./comparator_latch.v:37.3-54.6"
                   },
@@ -1263,7 +1263,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$277",
+                  "name": "$procmux$276",
                   "attributes": {
                     "src": "./comparator_latch.v:48.14-48.38|./comparator_latch.v:48.11-50.14"
                   },
@@ -1272,7 +1272,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$281",
+                  "name": "$procmux$280",
                   "attributes": {
                     "src": "./comparator_latch.v:43.14-43.36|./comparator_latch.v:43.11-45.14"
                   },
@@ -1281,7 +1281,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$285",
+                  "name": "$procmux$284",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./comparator_latch.v:38.8-38.13|./comparator_latch.v:38.5-53.8"
@@ -1291,7 +1291,7 @@
                   }
                 },
                 {
-                  "name": "$ternary$./comparator_latch.v:29$179",
+                  "name": "$ternary$./comparator_latch.v:29$178",
                   "attributes": {
                     "src": "./comparator_latch.v:29.16-29.61"
                   },
@@ -1322,7 +1322,7 @@
             ],
             "cells": [
                 {
-                  "name": "$le$./comparator_latch.v:43$183",
+                  "name": "$le$./comparator_latch.v:43$182",
                   "attributes": {
                     "src": "./comparator_latch.v:43.29-43.35"
                   },
@@ -1335,7 +1335,7 @@
                   }
                 },
                 {
-                  "name": "$le$./comparator_latch.v:48$186",
+                  "name": "$le$./comparator_latch.v:48$185",
                   "attributes": {
                     "src": "./comparator_latch.v:48.25-48.37"
                   },
@@ -1370,7 +1370,7 @@
             ],
             "cells": [
                 {
-                  "name": "$gt$./comparator_latch.v:43$182",
+                  "name": "$gt$./comparator_latch.v:43$181",
                   "attributes": {
                     "src": "./comparator_latch.v:43.15-43.24"
                   },
@@ -1383,7 +1383,7 @@
                   }
                 },
                 {
-                  "name": "$gt$./comparator_latch.v:48$185",
+                  "name": "$gt$./comparator_latch.v:48$184",
                   "attributes": {
                     "src": "./comparator_latch.v:48.15-48.20"
                   },
@@ -1413,7 +1413,7 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$./comparator_latch.v:29$178",
+                  "name": "$eq$./comparator_latch.v:29$177",
                   "attributes": {
                     "src": "./comparator_latch.v:29.17-29.25"
                   },
@@ -1446,7 +1446,7 @@
             ],
             "cells": [
                 {
-                  "name": "$and$./comparator_latch.v:43$184",
+                  "name": "$and$./comparator_latch.v:43$183",
                   "attributes": {
                     "src": "./comparator_latch.v:43.14-43.36"
                   },
@@ -1459,7 +1459,7 @@
                   }
                 },
                 {
-                  "name": "$and$./comparator_latch.v:48$187",
+                  "name": "$and$./comparator_latch.v:48$186",
                   "attributes": {
                     "src": "./comparator_latch.v:48.14-48.38"
                   },
@@ -1503,7 +1503,7 @@
             ],
             "cells": [
                 {
-                  "name": "$mul$./digital_to_analog_converter.v:52$188",
+                  "name": "$mul$./digital_to_analog_converter.v:52$187",
                   "attributes": {
                     "src": "./digital_to_analog_converter.v:52.24-52.41"
                   },
@@ -1516,7 +1516,7 @@
                   }
                 },
                 {
-                  "name": "$mul$./digital_to_analog_converter.v:68$189",
+                  "name": "$mul$./digital_to_analog_converter.v:68$188",
                   "attributes": {
                     "src": "./digital_to_analog_converter.v:68.23-68.39"
                   },
@@ -1555,7 +1555,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$241_CMP0",
+                  "name": "$procmux$240_CMP0",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1588,7 +1588,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$238_CMP0",
+                  "name": "$procmux$237_CMP0",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1628,7 +1628,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$237",
+                  "name": "$procmux$236",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1665,7 +1665,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$235",
+                  "name": "$procmux$234",
                   "attributes": {
                     "src": "./sample_and_hold.v:47.14-47.36|./sample_and_hold.v:47.11-49.14"
                   },
@@ -1674,7 +1674,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$239",
+                  "name": "$procmux$238",
                   "attributes": {
                     "src": "./sample_and_hold.v:37.14-37.35|./sample_and_hold.v:37.11-39.14"
                   },
@@ -1683,7 +1683,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$243",
+                  "name": "$procmux$242",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./sample_and_hold.v:27.8-27.13|./sample_and_hold.v:27.5-52.8"
@@ -1693,7 +1693,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$248",
+                  "name": "$procmux$247",
                   "attributes": {
                     "src": "./sample_and_hold.v:0.0-0.0|./sample_and_hold.v:30.7-51.14"
                   },
@@ -1702,7 +1702,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$255",
+                  "name": "$procmux$254",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "./sample_and_hold.v:27.8-27.13|./sample_and_hold.v:27.5-52.8"
@@ -1734,7 +1734,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$299",
+                  "name": "$procdff$298",
                   "attributes": {
                     "src": "./sample_and_hold.v:26.3-53.6"
                   },
@@ -1744,7 +1744,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$300",
+                  "name": "$procdff$299",
                   "attributes": {
                     "src": "./sample_and_hold.v:26.3-53.6"
                   },
@@ -1825,7 +1825,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$292",
+                  "name": "$procmux$291",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:124.8-124.53|sar_adc_ideal_conv.sv:124.5-124.88"
                   },
@@ -1834,16 +1834,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$294",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:117.8-117.26|sar_adc_ideal_conv.sv:117.5-117.41"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$procmux$297",
+                  "name": "$procmux$296",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "sar_adc_ideal_conv.sv:95.8-95.44|sar_adc_ideal_conv.sv:95.5-96.32"
@@ -1875,13 +1866,23 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$312",
+                  "name": "$procdff$311",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:120.1-125.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
                     "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procdff$312",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:120.1-125.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
@@ -1897,7 +1898,7 @@
                 {
                   "name": "$procdff$314",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:120.1-125.4"
+                    "src": "sar_adc_ideal_conv.sv:113.1-118.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1935,7 +1936,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$318",
+                  "name": "$procdff$319",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:113.1-118.4"
                   },
@@ -1945,13 +1946,13 @@
                   }
                 },
                 {
-                  "name": "$procdff$320",
+                  "name": "$procdff$321",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:113.1-118.4"
+                    "src": "sar_adc_ideal_conv.sv:94.1-109.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000001"
+                    "WIDTH": "00000000000000000000000000100000"
                   }
                 },
                 {
@@ -1961,7 +1962,7 @@
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000100000"
+                    "WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
@@ -1985,17 +1986,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$325",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:94.1-109.4"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$procdff$327",
+                  "name": "$procdff$326",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:43.1-45.4"
                   },
@@ -2005,7 +1996,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$328",
+                  "name": "$procdff$327",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:38.1-40.4"
                   },
@@ -2126,7 +2117,7 @@
                   }
                 },
                 {
-                  "name": "$or$sar_adc_ideal_conv.sv:121$104",
+                  "name": "$or$sar_adc_ideal_conv.sv:121$103",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:121.28-121.71"
                   },
@@ -2139,7 +2130,7 @@
                   }
                 },
                 {
-                  "name": "$or$sar_adc_ideal_conv.sv:59$142",
+                  "name": "$or$sar_adc_ideal_conv.sv:59$141",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:59.13-59.40"
                   },
@@ -2152,7 +2143,7 @@
                   }
                 },
                 {
-                  "name": "$or$sar_adc_ideal_conv.sv:60$144",
+                  "name": "$or$sar_adc_ideal_conv.sv:60$143",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:60.13-60.39"
                   },
@@ -2234,7 +2225,7 @@
             ],
             "cells": [
                 {
-                  "name": "$ne$sar_adc_ideal_conv.sv:60$143",
+                  "name": "$ne$sar_adc_ideal_conv.sv:60$142",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:60.14-60.30"
                   },
@@ -2406,7 +2397,7 @@
             ],
             "cells": [
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:57$109",
+                  "name": "$assume$sar_adc_ideal_conv.sv:57$108",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:57.14-59.41"
                   },
@@ -2415,7 +2406,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:59$110",
+                  "name": "$assume$sar_adc_ideal_conv.sv:59$109",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:59.42-60.40"
                   },
@@ -2424,7 +2415,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:60$111",
+                  "name": "$assume$sar_adc_ideal_conv.sv:60$110",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:60.41-62.30"
                   },
@@ -2433,7 +2424,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:62$112",
+                  "name": "$assume$sar_adc_ideal_conv.sv:62$111",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:62.31-64.25"
                   },
@@ -2442,7 +2433,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:64$113",
+                  "name": "$assume$sar_adc_ideal_conv.sv:64$112",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:64.26-66.26"
                   },
@@ -2451,7 +2442,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:66$114",
+                  "name": "$assume$sar_adc_ideal_conv.sv:66$113",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:66.27-67.35"
                   },
@@ -2460,7 +2451,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:67$115",
+                  "name": "$assume$sar_adc_ideal_conv.sv:67$114",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:67.36-68.26"
                   },
@@ -2469,7 +2460,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:68$116",
+                  "name": "$assume$sar_adc_ideal_conv.sv:68$115",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:68.27-69.29"
                   },
@@ -2478,7 +2469,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:77$117",
+                  "name": "$assume$sar_adc_ideal_conv.sv:77$116",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:77.56-80.57"
                   },
@@ -2487,7 +2478,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:80$118",
+                  "name": "$assume$sar_adc_ideal_conv.sv:80$117",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:80.58-81.57"
                   },
@@ -2496,7 +2487,7 @@
                   }
                 },
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:81$119",
+                  "name": "$assume$sar_adc_ideal_conv.sv:81$118",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:81.58-83.69"
                   },
@@ -2558,7 +2549,7 @@
                   }
                 },
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:121$101",
+                  "name": "$eq$sar_adc_ideal_conv.sv:121$100",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:121.30-121.53"
                   },
@@ -2566,7 +2557,7 @@
                     "A_SIGNED": "00000000000000000000000000000000",
                     "A_WIDTH": "00000000000000000000000001000000",
                     "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000100",
+                    "B_WIDTH": "00000000000000000000000000000101",
                     "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 }
@@ -2593,20 +2584,7 @@
             ],
             "cells": [
                 {
-                  "name": "$and$sar_adc_ideal_conv.sv:117$97",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:117.8-117.26"
-                  },
-                  "parameters": {
-                    "A_SIGNED": "00000000000000000000000000000000",
-                    "A_WIDTH": "00000000000000000000000000000001",
-                    "B_SIGNED": "00000000000000000000000000000000",
-                    "B_WIDTH": "00000000000000000000000000000001",
-                    "Y_WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$and$sar_adc_ideal_conv.sv:124$106",
+                  "name": "$and$sar_adc_ideal_conv.sv:124$105",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:124.8-124.35"
                   },
@@ -2619,7 +2597,7 @@
                   }
                 },
                 {
-                  "name": "$and$sar_adc_ideal_conv.sv:124$108",
+                  "name": "$and$sar_adc_ideal_conv.sv:124$107",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:124.8-124.53"
                   },
@@ -2675,7 +2653,7 @@
             ],
             "cells": [
                 {
-                  "name": "$assert$sar_adc_ideal_conv.sv:113$120",
+                  "name": "$assert$sar_adc_ideal_conv.sv:113$119",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:113.28-114.91"
                   },
@@ -2684,7 +2662,7 @@
                   }
                 },
                 {
-                  "name": "$assert$sar_adc_ideal_conv.sv:114$121",
+                  "name": "$assert$sar_adc_ideal_conv.sv:114$120",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:114.92-115.143"
                   },
@@ -2693,7 +2671,7 @@
                   }
                 },
                 {
-                  "name": "$assert$sar_adc_ideal_conv.sv:115$122",
+                  "name": "$assert$sar_adc_ideal_conv.sv:115$121",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:115.144-116.97"
                   },
@@ -2916,7 +2894,7 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:124$107",
+                  "name": "$eq$sar_adc_ideal_conv.sv:124$106",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:124.38-124.53"
                   },
@@ -2927,7 +2905,7 @@
                   }
                 },
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:59$141",
+                  "name": "$eq$sar_adc_ideal_conv.sv:59$140",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:59.23-59.39"
                   },
@@ -2938,7 +2916,7 @@
                   }
                 },
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:64$146",
+                  "name": "$eq$sar_adc_ideal_conv.sv:64$145",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:64.13-64.24"
                   },
@@ -2949,7 +2927,7 @@
                   }
                 },
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:67$148",
+                  "name": "$eq$sar_adc_ideal_conv.sv:67$147",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:67.13-67.34"
                   },
@@ -3004,7 +2982,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:121$102",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:121$101",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:121.28-121.54"
                   },
@@ -3015,7 +2993,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:124$105",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:124$104",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:124.29-124.35"
                   },
@@ -3187,7 +3165,7 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:66$147",
+                  "name": "$eq$sar_adc_ideal_conv.sv:66$146",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:66.13-66.25"
                   },
@@ -3198,7 +3176,7 @@
                   }
                 },
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:68$149",
+                  "name": "$eq$sar_adc_ideal_conv.sv:68$148",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:68.13-68.25"
                   },
