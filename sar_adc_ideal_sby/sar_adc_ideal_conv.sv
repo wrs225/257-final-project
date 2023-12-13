@@ -114,7 +114,7 @@ always @(posedge eoc) begin
     assert (( output_result_digital < digitized_value + (30 + (1 << (10 - adc_nbits))) ) );
     assert (!(digitized_value > (30 + (1 << (10 - adc_nbits)))) | ( output_result_digital > digitized_value - (30 + (1 << (10 - adc_nbits)))));
     assert (!(digitized_value <= (30 + (1 << (10 - adc_nbits)))) | ( output_result_digital > 0));
-    if(hit_eoc != 1 & eoc) hit_eoc <= 1;
+    if(hit_eoc != 1) hit_eoc <= 1;
 end
 
 always@(posedge clk)begin

@@ -69,7 +69,17 @@ WORKDIR /usr/src/app/257-final-project
 # ENV NAME Value
 
 # Command to run on container start (modify this according to your needs)
+
+RUN apt-get install -y gtkwave
+
 RUN ls \ 
     && cd sar_adc_ideal_sby \ 
+    && ls 
+
+RUN sby -f sar_adc_ideal.sby || gtkwave sar_adc_ideal_sby/sar_adc_ideal/engine_0/trace.vcd:
+
+
+RUN ls \ 
+    && cd ../sar_adc_nonideal_sby \ 
     && ls \
-    && sby -f sar_adc_ideal.sby 
+    && sby -f sar_adc_nonideal.sby     

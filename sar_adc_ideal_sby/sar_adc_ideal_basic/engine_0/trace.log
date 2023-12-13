@@ -47,9 +47,9 @@ Simulating cycle 16.
 Simulating cycle 17.
 Simulating cycle 18.
 Simulating cycle 19.
-Warning: Assert sar_tb_working.bmc_range_for (sar_adc_ideal_conv.sv:120.5-120.72) failed.
+Warning: Assert sar_tb_working.bmc_range_for (sar_adc_ideal_conv.sv:121.5-121.72) failed.
 
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: 496b617067, CPU: user 0.05s system 0.00s, MEM: 11.04 MB peak
+End of script. Logfile hash: 5f125acf1c, CPU: user 0.03s system 0.01s, MEM: 11.02 MB peak
 Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 87% 1x sim (0 sec), 12% 2x read_rtlil (0 sec)
+Time spent: 86% 1x sim (0 sec), 13% 2x read_rtlil (0 sec)

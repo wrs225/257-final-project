@@ -2,39 +2,39 @@
 autoidx 339
 attribute \keep 1
 attribute \hdlname "\\frequency_divider"
-attribute \src "sar_adc_ideal_conv.sv:128.1-156.10"
+attribute \src "sar_adc_ideal_conv.sv:129.1-157.10"
 module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
   parameter \DIVISION 2
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
-  wire $0$formal$sar_adc_ideal_conv.sv:139$163_CHECK[0:0]$175
+  wire $0$formal$sar_adc_ideal_conv.sv:140$163_CHECK[0:0]$175
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
-  wire $0$formal$sar_adc_ideal_conv.sv:139$163_EN[0:0]$176
-  attribute \src "sar_adc_ideal_conv.sv:143.1-148.4"
+  wire $0$formal$sar_adc_ideal_conv.sv:140$163_EN[0:0]$176
+  attribute \src "sar_adc_ideal_conv.sv:144.1-149.4"
   wire width 32 $0\counter[31:0]
-  attribute \src "sar_adc_ideal_conv.sv:151.1-153.4"
+  attribute \src "sar_adc_ideal_conv.sv:152.1-154.4"
   wire $0\output_clk_digital[0:0]
-  attribute \src "sar_adc_ideal_conv.sv:146.20-146.31"
-  wire width 32 $add$sar_adc_ideal_conv.sv:146$168_Y
-  attribute \src "sar_adc_ideal_conv.sv:152.8-152.29"
-  wire $eq$sar_adc_ideal_conv.sv:152$171_Y
-  attribute \src "sar_adc_ideal_conv.sv:152.53-152.72"
-  wire $logic_not$sar_adc_ideal_conv.sv:152$172_Y
-  attribute \src "sar_adc_ideal_conv.sv:145.8-145.17"
-  wire width 32 $mul$sar_adc_ideal_conv.sv:145$166_Y
-  attribute \src "sar_adc_ideal_conv.sv:145.8-145.31"
-  wire $ne$sar_adc_ideal_conv.sv:145$167_Y
-  attribute \src "sar_adc_ideal_conv.sv:136.17-136.20"
+  attribute \src "sar_adc_ideal_conv.sv:147.20-147.31"
+  wire width 32 $add$sar_adc_ideal_conv.sv:147$168_Y
+  attribute \src "sar_adc_ideal_conv.sv:153.8-153.29"
+  wire $eq$sar_adc_ideal_conv.sv:153$171_Y
+  attribute \src "sar_adc_ideal_conv.sv:153.53-153.72"
+  wire $logic_not$sar_adc_ideal_conv.sv:153$172_Y
+  attribute \src "sar_adc_ideal_conv.sv:146.8-146.17"
+  wire width 32 $mul$sar_adc_ideal_conv.sv:146$166_Y
+  attribute \src "sar_adc_ideal_conv.sv:146.8-146.31"
+  wire $ne$sar_adc_ideal_conv.sv:146$167_Y
+  attribute \src "sar_adc_ideal_conv.sv:137.17-137.20"
   wire input 4 \clk
-  attribute \src "sar_adc_ideal_conv.sv:140.14-140.21"
+  attribute \src "sar_adc_ideal_conv.sv:141.14-141.21"
   wire width 32 \counter
-  attribute \src "sar_adc_ideal_conv.sv:132.18-132.35"
+  attribute \src "sar_adc_ideal_conv.sv:133.18-133.35"
   wire input 1 \input_clk_digital
-  attribute \src "sar_adc_ideal_conv.sv:133.18-133.36"
+  attribute \src "sar_adc_ideal_conv.sv:134.18-134.36"
   wire output 2 \output_clk_digital
-  attribute \src "sar_adc_ideal_conv.sv:135.17-135.22"
+  attribute \src "sar_adc_ideal_conv.sv:136.17-136.22"
   wire input 3 \reset
-  attribute \src "sar_adc_ideal_conv.sv:146.20-146.31"
-  cell $add $add$sar_adc_ideal_conv.sv:146$168
+  attribute \src "sar_adc_ideal_conv.sv:147.20-147.31"
+  cell $add $add$sar_adc_ideal_conv.sv:147$168
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
@@ -42,47 +42,47 @@ module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
     parameter \Y_WIDTH 32
     connect \A \counter
     connect \B 1'1
-    connect \Y $add$sar_adc_ideal_conv.sv:146$168_Y
+    connect \Y $add$sar_adc_ideal_conv.sv:147$168_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:139.8-139.29"
-  cell $assume $assume$sar_adc_ideal_conv.sv:139$173
-    connect \A $0$formal$sar_adc_ideal_conv.sv:139$163_CHECK[0:0]$175
-    connect \EN $0$formal$sar_adc_ideal_conv.sv:139$163_EN[0:0]$176
+  attribute \src "sar_adc_ideal_conv.sv:140.8-140.29"
+  cell $assume $assume$sar_adc_ideal_conv.sv:140$173
+    connect \A $0$formal$sar_adc_ideal_conv.sv:140$163_CHECK[0:0]$175
+    connect \EN $0$formal$sar_adc_ideal_conv.sv:140$163_EN[0:0]$176
   end
-  attribute \src "sar_adc_ideal_conv.sv:139.16-139.28"
-  cell $logic_not $eq$sar_adc_ideal_conv.sv:139$177
+  attribute \src "sar_adc_ideal_conv.sv:140.16-140.28"
+  cell $logic_not $eq$sar_adc_ideal_conv.sv:140$177
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \Y_WIDTH 1
     connect \A \counter
-    connect \Y $0$formal$sar_adc_ideal_conv.sv:139$163_CHECK[0:0]$175
+    connect \Y $0$formal$sar_adc_ideal_conv.sv:140$163_CHECK[0:0]$175
   end
-  attribute \src "sar_adc_ideal_conv.sv:152.8-152.29"
-  cell $eq $eq$sar_adc_ideal_conv.sv:152$171
+  attribute \src "sar_adc_ideal_conv.sv:153.8-153.29"
+  cell $eq $eq$sar_adc_ideal_conv.sv:153$171
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 1
-    connect \A $mul$sar_adc_ideal_conv.sv:145$166_Y
+    connect \A $mul$sar_adc_ideal_conv.sv:146$166_Y
     connect \B 2'10
-    connect \Y $eq$sar_adc_ideal_conv.sv:152$171_Y
+    connect \Y $eq$sar_adc_ideal_conv.sv:153$171_Y
   end
   attribute \module_not_derived 1
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
   cell $initstate $initstate$164
-    connect \Y $0$formal$sar_adc_ideal_conv.sv:139$163_EN[0:0]$176
+    connect \Y $0$formal$sar_adc_ideal_conv.sv:140$163_EN[0:0]$176
   end
-  attribute \src "sar_adc_ideal_conv.sv:152.53-152.72"
-  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:152$172
+  attribute \src "sar_adc_ideal_conv.sv:153.53-153.72"
+  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:153$172
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \output_clk_digital
-    connect \Y $logic_not$sar_adc_ideal_conv.sv:152$172_Y
+    connect \Y $logic_not$sar_adc_ideal_conv.sv:153$172_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:145.8-145.17"
-  cell $mul $mul$sar_adc_ideal_conv.sv:145$166
+  attribute \src "sar_adc_ideal_conv.sv:146.8-146.17"
+  cell $mul $mul$sar_adc_ideal_conv.sv:146$166
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
@@ -90,20 +90,20 @@ module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
     parameter \Y_WIDTH 32
     connect \A \counter
     connect \B 2'10
-    connect \Y $mul$sar_adc_ideal_conv.sv:145$166_Y
+    connect \Y $mul$sar_adc_ideal_conv.sv:146$166_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:145.8-145.31"
-  cell $ne $ne$sar_adc_ideal_conv.sv:145$167
+  attribute \src "sar_adc_ideal_conv.sv:146.8-146.31"
+  cell $ne $ne$sar_adc_ideal_conv.sv:146$167
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 1
-    connect \A $mul$sar_adc_ideal_conv.sv:145$166_Y
+    connect \A $mul$sar_adc_ideal_conv.sv:146$166_Y
     connect \B 2'10
-    connect \Y $ne$sar_adc_ideal_conv.sv:145$167_Y
+    connect \Y $ne$sar_adc_ideal_conv.sv:146$167_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:151.1-153.4"
+  attribute \src "sar_adc_ideal_conv.sv:152.1-154.4"
   cell $dff $procdff$310
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
@@ -111,7 +111,7 @@ module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
     connect \D $0\output_clk_digital[0:0]
     connect \Q \output_clk_digital
   end
-  attribute \src "sar_adc_ideal_conv.sv:143.1-148.4"
+  attribute \src "sar_adc_ideal_conv.sv:144.1-149.4"
   cell $dff $procdff$311
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 32
@@ -119,21 +119,21 @@ module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010
     connect \D $0\counter[31:0]
     connect \Q \counter
   end
-  attribute \src "sar_adc_ideal_conv.sv:152.8-152.29|sar_adc_ideal_conv.sv:152.5-152.73"
+  attribute \src "sar_adc_ideal_conv.sv:153.8-153.29|sar_adc_ideal_conv.sv:153.5-153.73"
   cell $mux $procmux$287
     parameter \WIDTH 1
     connect \A \output_clk_digital
-    connect \B $logic_not$sar_adc_ideal_conv.sv:152$172_Y
-    connect \S $eq$sar_adc_ideal_conv.sv:152$171_Y
+    connect \B $logic_not$sar_adc_ideal_conv.sv:153$172_Y
+    connect \S $eq$sar_adc_ideal_conv.sv:153$171_Y
     connect \Y $0\output_clk_digital[0:0]
   end
   attribute \full_case 1
-  attribute \src "sar_adc_ideal_conv.sv:145.8-145.31|sar_adc_ideal_conv.sv:145.5-147.27"
+  attribute \src "sar_adc_ideal_conv.sv:146.8-146.31|sar_adc_ideal_conv.sv:146.5-148.27"
   cell $mux $procmux$290
     parameter \WIDTH 32
     connect \A 0
-    connect \B $add$sar_adc_ideal_conv.sv:146$168_Y
-    connect \S $ne$sar_adc_ideal_conv.sv:145$167_Y
+    connect \B $add$sar_adc_ideal_conv.sv:147$168_Y
+    connect \S $ne$sar_adc_ideal_conv.sv:146$167_Y
     connect \Y $0\counter[31:0]
   end
 end
@@ -951,20 +951,20 @@ end
 attribute \keep 1
 attribute \hdlname "\\sar_tb_working"
 attribute \top 1
-attribute \src "sar_adc_ideal_conv.sv:5.1-126.10"
+attribute \src "sar_adc_ideal_conv.sv:5.1-127.10"
 module \sar_tb_working
   attribute \src "sar_adc_ideal_conv.sv:94.1-109.4"
   wire $0$formal$sar_adc_ideal_conv.sv:101$24_CHECK[0:0]$62
   attribute \src "sar_adc_ideal_conv.sv:94.1-109.4"
   wire $0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64
-  attribute \src "sar_adc_ideal_conv.sv:113.1-117.4"
-  wire $0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81
-  attribute \src "sar_adc_ideal_conv.sv:113.1-117.4"
-  wire $0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83
-  attribute \src "sar_adc_ideal_conv.sv:113.1-117.4"
-  wire $0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85
-  attribute \src "sar_adc_ideal_conv.sv:119.1-124.4"
-  wire $0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
+  wire $0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$79
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
+  wire $0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$81
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
+  wire $0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$83
+  attribute \src "sar_adc_ideal_conv.sv:120.1-125.4"
+  wire $0$formal$sar_adc_ideal_conv.sv:121$29_CHECK[0:0]$99
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
   wire $0$formal$sar_adc_ideal_conv.sv:57$3_CHECK[0:0]$124
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
@@ -997,21 +997,21 @@ module \sar_tb_working
   wire width 64 $0\cycles[63:0]
   attribute \src "sar_adc_ideal_conv.sv:94.1-109.4"
   wire width 32 $0\eoc_high_counter[31:0]
-  attribute \src "sar_adc_ideal_conv.sv:119.1-124.4"
+  attribute \src "sar_adc_ideal_conv.sv:120.1-125.4"
   wire width 10 $0\held_value[9:0]
-  attribute \src "sar_adc_ideal_conv.sv:94.1-109.4"
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
   wire $0\hit_eoc[0:0]
   attribute \src "sar_adc_ideal_conv.sv:43.1-45.4"
   wire width 32 $0\sys_counter[31:0]
-  wire width 21 $add$sar_adc_ideal_conv.sv:114$87_Y
+  wire width 21 $add$sar_adc_ideal_conv.sv:114$85_Y
   attribute \src "sar_adc_ideal_conv.sv:95.66-95.86"
   wire width 32 $add$sar_adc_ideal_conv.sv:95$69_Y
-  attribute \src "sar_adc_ideal_conv.sv:108.8-108.26"
-  wire $and$sar_adc_ideal_conv.sv:108$77_Y
-  attribute \src "sar_adc_ideal_conv.sv:123.8-123.35"
-  wire $and$sar_adc_ideal_conv.sv:123$106_Y
-  attribute \src "sar_adc_ideal_conv.sv:123.8-123.53"
-  wire $and$sar_adc_ideal_conv.sv:123$108_Y
+  attribute \src "sar_adc_ideal_conv.sv:117.8-117.26"
+  wire $and$sar_adc_ideal_conv.sv:117$97_Y
+  attribute \src "sar_adc_ideal_conv.sv:124.8-124.35"
+  wire $and$sar_adc_ideal_conv.sv:124$106_Y
+  attribute \src "sar_adc_ideal_conv.sv:124.8-124.53"
+  wire $and$sar_adc_ideal_conv.sv:124$108_Y
   attribute \src "sar_adc_ideal_conv.sv:95.8-95.44"
   wire $and$sar_adc_ideal_conv.sv:95$68_Y
   attribute \src "sar_adc_ideal_conv.sv:111.26-111.51"
@@ -1021,8 +1021,8 @@ module \sar_tb_working
   wire width 32 $auto$wreduce.cc:461:run$338
   attribute \src "sar_adc_ideal_conv.sv:101.24-101.61"
   wire $eq$sar_adc_ideal_conv.sv:101$70_Y
-  attribute \src "sar_adc_ideal_conv.sv:120.30-120.53"
-  wire $eq$sar_adc_ideal_conv.sv:120$101_Y
+  attribute \src "sar_adc_ideal_conv.sv:121.30-121.53"
+  wire $eq$sar_adc_ideal_conv.sv:121$101_Y
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
   wire $formal$sar_adc_ideal_conv.sv:101$24_CHECK
   attribute \init 1'0
@@ -1040,36 +1040,36 @@ module \sar_tb_working
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
   wire $formal$sar_adc_ideal_conv.sv:115$28_CHECK
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
-  wire $formal$sar_adc_ideal_conv.sv:120$29_CHECK
+  wire $formal$sar_adc_ideal_conv.sv:121$29_CHECK
   attribute \init 1'0
   attribute \src "sar_adc_ideal_conv.sv:0.0-0.0"
-  wire $formal$sar_adc_ideal_conv.sv:120$29_EN
+  wire $formal$sar_adc_ideal_conv.sv:121$29_EN
   attribute \src "sar_adc_ideal_conv.sv:77.29-77.45"
   wire $ge$sar_adc_ideal_conv.sv:77$48_Y
   attribute \src "sar_adc_ideal_conv.sv:115.15-115.63"
-  wire $gt$sar_adc_ideal_conv.sv:115$89_Y
+  wire $gt$sar_adc_ideal_conv.sv:115$87_Y
   attribute \src "sar_adc_ideal_conv.sv:115.69-115.141"
-  wire $gt$sar_adc_ideal_conv.sv:115$92_Y
+  wire $gt$sar_adc_ideal_conv.sv:115$90_Y
   attribute \src "sar_adc_ideal_conv.sv:116.70-116.95"
-  wire $gt$sar_adc_ideal_conv.sv:116$96_Y
+  wire $gt$sar_adc_ideal_conv.sv:116$94_Y
   attribute \src "sar_adc_ideal_conv.sv:80.16-80.26"
   wire $gt$sar_adc_ideal_conv.sv:80$50_Y
   attribute \src "sar_adc_ideal_conv.sv:83.14-83.38"
   wire $gt$sar_adc_ideal_conv.sv:83$58_Y
   attribute \src "sar_adc_ideal_conv.sv:116.15-116.64"
-  wire $le$sar_adc_ideal_conv.sv:116$94_Y
+  wire $le$sar_adc_ideal_conv.sv:116$92_Y
   attribute \src "sar_adc_ideal_conv.sv:101.22-101.62"
   wire $logic_not$sar_adc_ideal_conv.sv:101$71_Y
   attribute \src "sar_adc_ideal_conv.sv:103.64-103.68"
   wire $logic_not$sar_adc_ideal_conv.sv:103$74_Y
   attribute \src "sar_adc_ideal_conv.sv:115.13-115.64"
-  wire $logic_not$sar_adc_ideal_conv.sv:115$90_Y
+  wire $logic_not$sar_adc_ideal_conv.sv:115$88_Y
   attribute \src "sar_adc_ideal_conv.sv:116.13-116.65"
-  wire $logic_not$sar_adc_ideal_conv.sv:116$95_Y
-  attribute \src "sar_adc_ideal_conv.sv:120.28-120.54"
-  wire $logic_not$sar_adc_ideal_conv.sv:120$102_Y
-  attribute \src "sar_adc_ideal_conv.sv:123.29-123.35"
-  wire $logic_not$sar_adc_ideal_conv.sv:123$105_Y
+  wire $logic_not$sar_adc_ideal_conv.sv:116$93_Y
+  attribute \src "sar_adc_ideal_conv.sv:121.28-121.54"
+  wire $logic_not$sar_adc_ideal_conv.sv:121$102_Y
+  attribute \src "sar_adc_ideal_conv.sv:124.29-124.35"
+  wire $logic_not$sar_adc_ideal_conv.sv:124$105_Y
   attribute \src "sar_adc_ideal_conv.sv:80.14-80.27"
   wire $logic_not$sar_adc_ideal_conv.sv:80$51_Y
   attribute \src "sar_adc_ideal_conv.sv:81.29-81.55"
@@ -1083,7 +1083,7 @@ module \sar_tb_working
   attribute \src "sar_adc_ideal_conv.sv:60.14-60.30"
   wire $ne$sar_adc_ideal_conv.sv:60$143_Y
   attribute \src "sar_adc_ideal_conv.sv:115.93-115.141"
-  wire width 32 $sub$sar_adc_ideal_conv.sv:115$91_Y
+  wire width 32 $sub$sar_adc_ideal_conv.sv:115$89_Y
   attribute \src "sar_adc_ideal_conv.sv:6.17-6.20"
   wire input 1 \clk
   attribute \src "sar_adc_ideal_conv.sv:31.18-31.24"
@@ -1111,7 +1111,7 @@ module \sar_tb_working
   attribute \src "sar_adc_ideal_conv.sv:34.18-34.29"
   wire width 32 \sys_counter
   attribute \src "sar_adc_ideal_conv.sv:114.39-114.87"
-  cell $add $add$sar_adc_ideal_conv.sv:114$87
+  cell $add $add$sar_adc_ideal_conv.sv:114$85
     parameter \A_SIGNED 0
     parameter \A_WIDTH 20
     parameter \B_SIGNED 0
@@ -1119,7 +1119,7 @@ module \sar_tb_working
     parameter \Y_WIDTH 21
     connect \A \digitized_value
     connect \B 10'1000011110
-    connect \Y $add$sar_adc_ideal_conv.sv:114$87_Y
+    connect \Y $add$sar_adc_ideal_conv.sv:114$85_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:39.15-39.25"
   cell $add $add$sar_adc_ideal_conv.sv:39$31
@@ -1154,8 +1154,8 @@ module \sar_tb_working
     connect \B 1'1
     connect \Y $add$sar_adc_ideal_conv.sv:95$69_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:108.8-108.26"
-  cell $and $and$sar_adc_ideal_conv.sv:108$77
+  attribute \src "sar_adc_ideal_conv.sv:117.8-117.26"
+  cell $and $and$sar_adc_ideal_conv.sv:117$97
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1163,29 +1163,29 @@ module \sar_tb_working
     parameter \Y_WIDTH 1
     connect \A $0$formal$sar_adc_ideal_conv.sv:67$15_CHECK[0:0]$136
     connect \B \eoc
-    connect \Y $and$sar_adc_ideal_conv.sv:108$77_Y
+    connect \Y $and$sar_adc_ideal_conv.sv:117$97_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:123.8-123.35"
-  cell $and $and$sar_adc_ideal_conv.sv:123$106
+  attribute \src "sar_adc_ideal_conv.sv:124.8-124.35"
+  cell $and $and$sar_adc_ideal_conv.sv:124$106
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \input_hold_digital
-    connect \B $logic_not$sar_adc_ideal_conv.sv:123$105_Y
-    connect \Y $and$sar_adc_ideal_conv.sv:123$106_Y
+    connect \B $logic_not$sar_adc_ideal_conv.sv:124$105_Y
+    connect \Y $and$sar_adc_ideal_conv.sv:124$106_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:123.8-123.53"
-  cell $and $and$sar_adc_ideal_conv.sv:123$108
+  attribute \src "sar_adc_ideal_conv.sv:124.8-124.53"
+  cell $and $and$sar_adc_ideal_conv.sv:124$108
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $and$sar_adc_ideal_conv.sv:123$106_Y
+    connect \A $and$sar_adc_ideal_conv.sv:124$106_Y
     connect \B $0$formal$sar_adc_ideal_conv.sv:68$17_CHECK[0:0]$138
-    connect \Y $and$sar_adc_ideal_conv.sv:123$108_Y
+    connect \Y $and$sar_adc_ideal_conv.sv:124$108_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:83.13-83.68"
   cell $and $and$sar_adc_ideal_conv.sv:83$60
@@ -1206,7 +1206,7 @@ module \sar_tb_working
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $logic_or$sar_adc_ideal_conv.sv:95$66_Y
-    connect \B $logic_not$sar_adc_ideal_conv.sv:123$105_Y
+    connect \B $logic_not$sar_adc_ideal_conv.sv:124$105_Y
     connect \Y $and$sar_adc_ideal_conv.sv:95$68_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:113.28-114.91"
@@ -1280,7 +1280,7 @@ module \sar_tb_working
     connect \EN 1'1
   end
   attribute \src "sar_adc_ideal_conv.sv:111.26-111.51"
-  cell $div $div$sar_adc_ideal_conv.sv:111$79
+  cell $div $div$sar_adc_ideal_conv.sv:111$77
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
@@ -1301,8 +1301,8 @@ module \sar_tb_working
     connect \B 1'1
     connect \Y $eq$sar_adc_ideal_conv.sv:101$70_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:120.30-120.53"
-  cell $eq $eq$sar_adc_ideal_conv.sv:120$101
+  attribute \src "sar_adc_ideal_conv.sv:121.30-121.53"
+  cell $eq $eq$sar_adc_ideal_conv.sv:121$101
     parameter \A_SIGNED 0
     parameter \A_WIDTH 64
     parameter \B_SIGNED 0
@@ -1310,10 +1310,10 @@ module \sar_tb_working
     parameter \Y_WIDTH 1
     connect \A \cycles
     connect \B 4'1001
-    connect \Y $eq$sar_adc_ideal_conv.sv:120$101_Y
+    connect \Y $eq$sar_adc_ideal_conv.sv:121$101_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:123.38-123.53"
-  cell $logic_not $eq$sar_adc_ideal_conv.sv:123$107
+  attribute \src "sar_adc_ideal_conv.sv:124.38-124.53"
+  cell $logic_not $eq$sar_adc_ideal_conv.sv:124$107
     parameter \A_SIGNED 0
     parameter \A_WIDTH 10
     parameter \Y_WIDTH 1
@@ -1372,7 +1372,7 @@ module \sar_tb_working
     connect \Y $ge$sar_adc_ideal_conv.sv:77$48_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:115.15-115.63"
-  cell $gt $gt$sar_adc_ideal_conv.sv:115$89
+  cell $gt $gt$sar_adc_ideal_conv.sv:115$87
     parameter \A_SIGNED 0
     parameter \A_WIDTH 20
     parameter \B_SIGNED 0
@@ -1380,21 +1380,21 @@ module \sar_tb_working
     parameter \Y_WIDTH 1
     connect \A \digitized_value
     connect \B 10'1000011110
-    connect \Y $gt$sar_adc_ideal_conv.sv:115$89_Y
+    connect \Y $gt$sar_adc_ideal_conv.sv:115$87_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:115.69-115.141"
-  cell $gt $gt$sar_adc_ideal_conv.sv:115$92
+  cell $gt $gt$sar_adc_ideal_conv.sv:115$90
     parameter \A_SIGNED 0
     parameter \A_WIDTH 10
     parameter \B_SIGNED 0
     parameter \B_WIDTH 32
     parameter \Y_WIDTH 1
     connect \A \output_result_digital
-    connect \B { $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [19:0] }
-    connect \Y $gt$sar_adc_ideal_conv.sv:115$92_Y
+    connect \B { $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [19:0] }
+    connect \Y $gt$sar_adc_ideal_conv.sv:115$90_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:116.70-116.95"
-  cell $gt $gt$sar_adc_ideal_conv.sv:116$96
+  cell $gt $gt$sar_adc_ideal_conv.sv:116$94
     parameter \A_SIGNED 0
     parameter \A_WIDTH 10
     parameter \B_SIGNED 0
@@ -1402,7 +1402,7 @@ module \sar_tb_working
     parameter \Y_WIDTH 1
     connect \A \output_result_digital
     connect \B 1'0
-    connect \Y $gt$sar_adc_ideal_conv.sv:116$96_Y
+    connect \Y $gt$sar_adc_ideal_conv.sv:116$94_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:80.16-80.26"
   cell $gt $gt$sar_adc_ideal_conv.sv:80$50
@@ -1432,7 +1432,7 @@ module \sar_tb_working
     connect \Y $0$formal$sar_adc_ideal_conv.sv:57$3_EN[0:0]$125
   end
   attribute \src "sar_adc_ideal_conv.sv:116.15-116.64"
-  cell $le $le$sar_adc_ideal_conv.sv:116$94
+  cell $le $le$sar_adc_ideal_conv.sv:116$92
     parameter \A_SIGNED 0
     parameter \A_WIDTH 20
     parameter \B_SIGNED 0
@@ -1440,7 +1440,7 @@ module \sar_tb_working
     parameter \Y_WIDTH 1
     connect \A \digitized_value
     connect \B 10'1000011110
-    connect \Y $le$sar_adc_ideal_conv.sv:116$94_Y
+    connect \Y $le$sar_adc_ideal_conv.sv:116$92_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:101.22-101.62"
   cell $logic_not $logic_not$sar_adc_ideal_conv.sv:101$71
@@ -1459,36 +1459,36 @@ module \sar_tb_working
     connect \Y $logic_not$sar_adc_ideal_conv.sv:103$74_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:115.13-115.64"
-  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:115$90
+  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:115$88
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $gt$sar_adc_ideal_conv.sv:115$89_Y
-    connect \Y $logic_not$sar_adc_ideal_conv.sv:115$90_Y
+    connect \A $gt$sar_adc_ideal_conv.sv:115$87_Y
+    connect \Y $logic_not$sar_adc_ideal_conv.sv:115$88_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:116.13-116.65"
-  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:116$95
+  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:116$93
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $le$sar_adc_ideal_conv.sv:116$94_Y
-    connect \Y $logic_not$sar_adc_ideal_conv.sv:116$95_Y
+    connect \A $le$sar_adc_ideal_conv.sv:116$92_Y
+    connect \Y $logic_not$sar_adc_ideal_conv.sv:116$93_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:120.28-120.54"
-  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:120$102
+  attribute \src "sar_adc_ideal_conv.sv:121.28-121.54"
+  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:121$102
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$sar_adc_ideal_conv.sv:120$101_Y
-    connect \Y $logic_not$sar_adc_ideal_conv.sv:120$102_Y
+    connect \A $eq$sar_adc_ideal_conv.sv:121$101_Y
+    connect \Y $logic_not$sar_adc_ideal_conv.sv:121$102_Y
   end
-  attribute \src "sar_adc_ideal_conv.sv:123.29-123.35"
-  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:123$105
+  attribute \src "sar_adc_ideal_conv.sv:124.29-124.35"
+  cell $logic_not $logic_not$sar_adc_ideal_conv.sv:124$105
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \reset
-    connect \Y $logic_not$sar_adc_ideal_conv.sv:123$105_Y
+    connect \Y $logic_not$sar_adc_ideal_conv.sv:124$105_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:80.14-80.27"
   cell $logic_not $logic_not$sar_adc_ideal_conv.sv:80$51
@@ -1518,15 +1518,15 @@ module \sar_tb_working
     connect \Y $logic_or$sar_adc_ideal_conv.sv:95$66_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:114.15-114.87"
-  cell $lt $lt$sar_adc_ideal_conv.sv:114$88
+  cell $lt $lt$sar_adc_ideal_conv.sv:114$86
     parameter \A_SIGNED 0
     parameter \A_WIDTH 10
     parameter \B_SIGNED 0
     parameter \B_WIDTH 21
     parameter \Y_WIDTH 1
     connect \A \output_result_digital
-    connect \B $add$sar_adc_ideal_conv.sv:114$87_Y
-    connect \Y $0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81
+    connect \B $add$sar_adc_ideal_conv.sv:114$85_Y
+    connect \Y $0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$79
   end
   attribute \src "sar_adc_ideal_conv.sv:76.38-76.53"
   cell $lt $lt$sar_adc_ideal_conv.sv:76$46
@@ -1551,7 +1551,7 @@ module \sar_tb_working
     connect \Y $lt$sar_adc_ideal_conv.sv:83$59_Y
   end
   attribute \src "sar_adc_ideal_conv.sv:111.27-111.44"
-  cell $mul $mul$sar_adc_ideal_conv.sv:111$78
+  cell $mul $mul$sar_adc_ideal_conv.sv:111$76
     parameter \A_SIGNED 0
     parameter \A_WIDTH 11
     parameter \B_SIGNED 0
@@ -1592,37 +1592,37 @@ module \sar_tb_working
     connect \Y $0$formal$sar_adc_ideal_conv.sv:103$25_CHECK[0:0]$64
   end
   attribute \src "sar_adc_ideal_conv.sv:115.13-115.142"
-  cell $or $or$sar_adc_ideal_conv.sv:115$93
+  cell $or $or$sar_adc_ideal_conv.sv:115$91
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_not$sar_adc_ideal_conv.sv:115$90_Y
-    connect \B $gt$sar_adc_ideal_conv.sv:115$92_Y
-    connect \Y $0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83
+    connect \A $logic_not$sar_adc_ideal_conv.sv:115$88_Y
+    connect \B $gt$sar_adc_ideal_conv.sv:115$90_Y
+    connect \Y $0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$81
   end
   attribute \src "sar_adc_ideal_conv.sv:116.13-116.96"
-  cell $or $or$sar_adc_ideal_conv.sv:116$97
+  cell $or $or$sar_adc_ideal_conv.sv:116$95
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_not$sar_adc_ideal_conv.sv:116$95_Y
-    connect \B $gt$sar_adc_ideal_conv.sv:116$96_Y
-    connect \Y $0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85
+    connect \A $logic_not$sar_adc_ideal_conv.sv:116$93_Y
+    connect \B $gt$sar_adc_ideal_conv.sv:116$94_Y
+    connect \Y $0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$83
   end
-  attribute \src "sar_adc_ideal_conv.sv:120.28-120.71"
-  cell $or $or$sar_adc_ideal_conv.sv:120$104
+  attribute \src "sar_adc_ideal_conv.sv:121.28-121.71"
+  cell $or $or$sar_adc_ideal_conv.sv:121$104
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_not$sar_adc_ideal_conv.sv:120$102_Y
+    connect \A $logic_not$sar_adc_ideal_conv.sv:121$102_Y
     connect \B \hit_eoc
-    connect \Y $0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99
+    connect \Y $0$formal$sar_adc_ideal_conv.sv:121$29_CHECK[0:0]$99
   end
   attribute \src "sar_adc_ideal_conv.sv:59.13-59.40"
   cell $or $or$sar_adc_ideal_conv.sv:59$142
@@ -1631,7 +1631,7 @@ module \sar_tb_working
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_not$sar_adc_ideal_conv.sv:123$105_Y
+    connect \A $logic_not$sar_adc_ideal_conv.sv:124$105_Y
     connect \B $0$formal$sar_adc_ideal_conv.sv:60$7_CHECK[0:0]$128
     connect \Y $0$formal$sar_adc_ideal_conv.sv:57$3_CHECK[0:0]$124
   end
@@ -1653,7 +1653,7 @@ module \sar_tb_working
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_not$sar_adc_ideal_conv.sv:123$105_Y
+    connect \A $logic_not$sar_adc_ideal_conv.sv:124$105_Y
     connect \B $lt$sar_adc_ideal_conv.sv:76$46_Y
     connect \Y $0$formal$sar_adc_ideal_conv.sv:76$19_CHECK[0:0]$35
   end
@@ -1690,7 +1690,7 @@ module \sar_tb_working
     connect \B $logic_not$sar_adc_ideal_conv.sv:81$56_Y
     connect \Y $0$formal$sar_adc_ideal_conv.sv:80$22_CHECK[0:0]$41
   end
-  attribute \src "sar_adc_ideal_conv.sv:119.1-124.4"
+  attribute \src "sar_adc_ideal_conv.sv:120.1-125.4"
   cell $dff $procdff$312
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 10
@@ -1698,69 +1698,69 @@ module \sar_tb_working
     connect \D $0\held_value[9:0]
     connect \Q \held_value
   end
-  attribute \src "sar_adc_ideal_conv.sv:119.1-124.4"
+  attribute \src "sar_adc_ideal_conv.sv:120.1-125.4"
   cell $dff $procdff$313
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$sar_adc_ideal_conv.sv:120$29_CHECK[0:0]$99
-    connect \Q $formal$sar_adc_ideal_conv.sv:120$29_CHECK
+    connect \D $0$formal$sar_adc_ideal_conv.sv:121$29_CHECK[0:0]$99
+    connect \Q $formal$sar_adc_ideal_conv.sv:121$29_CHECK
   end
-  attribute \src "sar_adc_ideal_conv.sv:119.1-124.4"
+  attribute \src "sar_adc_ideal_conv.sv:120.1-125.4"
   cell $dff $procdff$314
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D 1'1
-    connect \Q $formal$sar_adc_ideal_conv.sv:120$29_EN
+    connect \Q $formal$sar_adc_ideal_conv.sv:121$29_EN
   end
-  attribute \src "sar_adc_ideal_conv.sv:113.1-117.4"
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
   cell $dff $procdff$315
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \eoc
-    connect \D $0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$81
+    connect \D $0\hit_eoc[0:0]
+    connect \Q \hit_eoc
+  end
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
+  cell $dff $procdff$316
+    parameter \CLK_POLARITY 1'1
+    parameter \WIDTH 1
+    connect \CLK \eoc
+    connect \D $0$formal$sar_adc_ideal_conv.sv:113$26_CHECK[0:0]$79
     connect \Q $formal$sar_adc_ideal_conv.sv:113$26_CHECK
   end
-  attribute \src "sar_adc_ideal_conv.sv:113.1-117.4"
-  cell $dff $procdff$316
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
+  cell $dff $procdff$317
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \eoc
     connect \D 1'1
     connect \Q $formal$sar_adc_ideal_conv.sv:113$26_EN
   end
-  attribute \src "sar_adc_ideal_conv.sv:113.1-117.4"
-  cell $dff $procdff$317
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
+  cell $dff $procdff$318
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \eoc
-    connect \D $0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$83
+    connect \D $0$formal$sar_adc_ideal_conv.sv:114$27_CHECK[0:0]$81
     connect \Q $formal$sar_adc_ideal_conv.sv:114$27_CHECK
   end
-  attribute \src "sar_adc_ideal_conv.sv:113.1-117.4"
-  cell $dff $procdff$319
+  attribute \src "sar_adc_ideal_conv.sv:113.1-118.4"
+  cell $dff $procdff$320
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \eoc
-    connect \D $0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$85
+    connect \D $0$formal$sar_adc_ideal_conv.sv:115$28_CHECK[0:0]$83
     connect \Q $formal$sar_adc_ideal_conv.sv:115$28_CHECK
   end
   attribute \src "sar_adc_ideal_conv.sv:94.1-109.4"
-  cell $dff $procdff$321
+  cell $dff $procdff$322
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 32
     connect \CLK \sys_clk
     connect \D $0\eoc_high_counter[31:0]
     connect \Q \eoc_high_counter
-  end
-  attribute \src "sar_adc_ideal_conv.sv:94.1-109.4"
-  cell $dff $procdff$322
-    parameter \CLK_POLARITY 1'1
-    parameter \WIDTH 1
-    connect \CLK \sys_clk
-    connect \D $0\hit_eoc[0:0]
-    connect \Q \hit_eoc
   end
   attribute \src "sar_adc_ideal_conv.sv:94.1-109.4"
   cell $dff $procdff$323
@@ -1802,33 +1802,33 @@ module \sar_tb_working
     connect \D $0\cycles[63:0]
     connect \Q \cycles
   end
-  attribute \src "sar_adc_ideal_conv.sv:123.8-123.53|sar_adc_ideal_conv.sv:123.5-123.88"
+  attribute \src "sar_adc_ideal_conv.sv:124.8-124.53|sar_adc_ideal_conv.sv:124.5-124.88"
   cell $mux $procmux$292
     parameter \WIDTH 10
     connect \A \held_value
     connect \B \input_voltage_real
-    connect \S $and$sar_adc_ideal_conv.sv:123$108_Y
+    connect \S $and$sar_adc_ideal_conv.sv:124$108_Y
     connect \Y $0\held_value[9:0]
+  end
+  attribute \src "sar_adc_ideal_conv.sv:117.8-117.26|sar_adc_ideal_conv.sv:117.5-117.41"
+  cell $mux $procmux$294
+    parameter \WIDTH 1
+    connect \A \hit_eoc
+    connect \B 1'1
+    connect \S $and$sar_adc_ideal_conv.sv:117$97_Y
+    connect \Y $0\hit_eoc[0:0]
   end
   attribute \full_case 1
   attribute \src "sar_adc_ideal_conv.sv:95.8-95.44|sar_adc_ideal_conv.sv:95.5-96.32"
-  cell $mux $procmux$295
+  cell $mux $procmux$297
     parameter \WIDTH 32
     connect \A 0
     connect \B $add$sar_adc_ideal_conv.sv:95$69_Y
     connect \S $and$sar_adc_ideal_conv.sv:95$68_Y
     connect \Y $0\eoc_high_counter[31:0]
   end
-  attribute \src "sar_adc_ideal_conv.sv:108.8-108.26|sar_adc_ideal_conv.sv:108.5-108.41"
-  cell $mux $procmux$297
-    parameter \WIDTH 1
-    connect \A \hit_eoc
-    connect \B 1'1
-    connect \S $and$sar_adc_ideal_conv.sv:108$77_Y
-    connect \Y $0\hit_eoc[0:0]
-  end
   attribute \src "sar_adc_ideal_conv.sv:115.93-115.141"
-  cell $sub $sub$sar_adc_ideal_conv.sv:115$91
+  cell $sub $sub$sar_adc_ideal_conv.sv:115$89
     parameter \A_SIGNED 0
     parameter \A_WIDTH 20
     parameter \B_SIGNED 0
@@ -1836,7 +1836,7 @@ module \sar_tb_working
     parameter \Y_WIDTH 21
     connect \A \digitized_value
     connect \B 10'1000011110
-    connect \Y { $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [19:0] }
+    connect \Y { $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [19:0] }
   end
   attribute \module_not_derived 1
   attribute \src "sar_adc_ideal_conv.sv:20.42-28.2"
@@ -1854,10 +1854,10 @@ module \sar_tb_working
     connect \A $formal$sar_adc_ideal_conv.sv:103$25_CHECK
     connect \EN $formal$sar_adc_ideal_conv.sv:101$24_EN
   end
-  attribute \src "sar_adc_ideal_conv.sv:120.5-120.72"
+  attribute \src "sar_adc_ideal_conv.sv:121.5-121.72"
   cell $assert \bmc_range_for
-    connect \A $formal$sar_adc_ideal_conv.sv:120$29_CHECK
-    connect \EN $formal$sar_adc_ideal_conv.sv:120$29_EN
+    connect \A $formal$sar_adc_ideal_conv.sv:121$29_CHECK
+    connect \EN $formal$sar_adc_ideal_conv.sv:121$29_EN
   end
   attribute \src "sar_adc_ideal_conv.sv:76.5-76.55"
   cell $assume \count_if_reset
@@ -1884,5 +1884,5 @@ module \sar_tb_working
   end
   connect $auto$wreduce.cc:461:run$337 [19:0] \digitized_value
   connect $auto$wreduce.cc:461:run$338 [31:21] 11'00000000000
-  connect $sub$sar_adc_ideal_conv.sv:115$91_Y [30:20] { $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] $sub$sar_adc_ideal_conv.sv:115$91_Y [31] }
+  connect $sub$sar_adc_ideal_conv.sv:115$89_Y [30:20] { $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] $sub$sar_adc_ideal_conv.sv:115$89_Y [31] }
 end

@@ -129,7 +129,7 @@ Marked 3 switch rules as full_case in process $proc$./sample_and_hold.v:26$233 i
 Marked 1 switch rules as full_case in process $proc$./successive_approximation_register.v:31$197 in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.
 Marked 2 switch rules as full_case in process $proc$./successive_approximation_register.v:22$193 in module $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.
 Marked 1 switch rules as full_case in process $proc$./comparator_latch.v:37$181 in module comparator_latch.
-Marked 1 switch rules as full_case in process $proc$sar_adc_ideal_conv.sv:143$165 in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
+Marked 1 switch rules as full_case in process $proc$sar_adc_ideal_conv.sv:144$165 in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.
 Marked 1 switch rules as full_case in process $proc$sar_adc_ideal_conv.sv:94$61 in module sar_tb_working.
 Removed a total of 0 dead cases.
 
@@ -139,7 +139,7 @@ Promoted 57 assignments to connections.
 
 2.3.4. Executing PROC_INIT pass (extract init attributes).
 Found init rule in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$161'.
-  Set init value: $formal$sar_adc_ideal_conv.sv:120$29_EN = 1'0
+  Set init value: $formal$sar_adc_ideal_conv.sv:121$29_EN = 1'0
 Found init rule in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$159'.
   Set init value: $formal$sar_adc_ideal_conv.sv:115$28_EN = 1'0
 Found init rule in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$157'.
@@ -174,9 +174,9 @@ Creating decoders for process `\comparator_latch.$proc$./comparator_latch.v:37$1
      1/1: $0\fsm[31:0]
 Creating decoders for process `\comparator_latch.$proc$./comparator_latch.v:31$180'.
 Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$174'.
-Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:151$169'.
+Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:152$169'.
      1/1: $0\output_clk_digital[0:0]
-Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:143$165'.
+Creating decoders for process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:144$165'.
      1/1: $0\counter[31:0]
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$161'.
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$159'.
@@ -185,12 +185,12 @@ Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$155
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$153'.
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$151'.
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$123'.
-Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:119$98'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:120$98'.
      1/1: $0\held_value[9:0]
-Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
+Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
+     1/1: $0\hit_eoc[0:0]
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
-     1/2: $0\eoc_high_counter[31:0]
-     2/2: $0\hit_eoc[0:0]
+     1/1: $0\eoc_high_counter[31:0]
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:73$34'.
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:43$32'.
 Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:38$30'.
@@ -198,8 +198,8 @@ Creating decoders for process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:38$30
 2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 No latch inferred for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.\quantized_voltage' from process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$proc$./successive_approximation_register.v:39$221'.
 No latch inferred for signal `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$unnamed_block$2.i' from process `$paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$proc$./successive_approximation_register.v:39$221'.
-No latch inferred for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$formal$sar_adc_ideal_conv.sv:139$163_CHECK' from process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$174'.
-No latch inferred for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$formal$sar_adc_ideal_conv.sv:139$163_EN' from process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$174'.
+No latch inferred for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$formal$sar_adc_ideal_conv.sv:140$163_CHECK' from process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$174'.
+No latch inferred for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$formal$sar_adc_ideal_conv.sv:140$163_EN' from process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$174'.
 No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:57$3_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$123'.
 No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:57$3_EN' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$123'.
 No latch inferred for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:59$5_CHECK' from process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$123'.
@@ -250,31 +250,31 @@ Creating register for signal `\comparator_latch.\fsm' using process `\comparator
   created $dff cell `$procdff$308' with positive edge clock.
 Creating register for signal `\comparator_latch.\prev_sys_clk' using process `\comparator_latch.$proc$./comparator_latch.v:31$180'.
   created $dff cell `$procdff$309' with positive edge clock.
-Creating register for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.\output_clk_digital' using process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:151$169'.
+Creating register for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.\output_clk_digital' using process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:152$169'.
   created $dff cell `$procdff$310' with positive edge clock.
-Creating register for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.\counter' using process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:143$165'.
+Creating register for signal `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.\counter' using process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:144$165'.
   created $dff cell `$procdff$311' with positive edge clock.
-Creating register for signal `\sar_tb_working.\held_value' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:119$98'.
+Creating register for signal `\sar_tb_working.\held_value' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:120$98'.
   created $dff cell `$procdff$312' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:120$29_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:119$98'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:121$29_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:120$98'.
   created $dff cell `$procdff$313' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:120$29_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:119$98'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:121$29_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:120$98'.
   created $dff cell `$procdff$314' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:113$26_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
+Creating register for signal `\sar_tb_working.\hit_eoc' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
   created $dff cell `$procdff$315' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:113$26_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:113$26_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
   created $dff cell `$procdff$316' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:114$27_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:113$26_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
   created $dff cell `$procdff$317' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:114$27_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:114$27_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
   created $dff cell `$procdff$318' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:115$28_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:114$27_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
   created $dff cell `$procdff$319' with positive edge clock.
-Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:115$28_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:115$28_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
   created $dff cell `$procdff$320' with positive edge clock.
-Creating register for signal `\sar_tb_working.\eoc_high_counter' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
+Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:115$28_EN' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
   created $dff cell `$procdff$321' with positive edge clock.
-Creating register for signal `\sar_tb_working.\hit_eoc' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
+Creating register for signal `\sar_tb_working.\eoc_high_counter' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
   created $dff cell `$procdff$322' with positive edge clock.
 Creating register for signal `\sar_tb_working.$formal$sar_adc_ideal_conv.sv:101$24_CHECK' using process `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
   created $dff cell `$procdff$323' with positive edge clock.
@@ -304,10 +304,10 @@ Found and cleaned up 4 empty switches in `\comparator_latch.$proc$./comparator_l
 Removing empty process `comparator_latch.$proc$./comparator_latch.v:37$181'.
 Removing empty process `comparator_latch.$proc$./comparator_latch.v:31$180'.
 Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:0$174'.
-Found and cleaned up 1 empty switch in `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:151$169'.
-Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:151$169'.
-Found and cleaned up 1 empty switch in `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:143$165'.
-Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:143$165'.
+Found and cleaned up 1 empty switch in `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:152$169'.
+Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:152$169'.
+Found and cleaned up 1 empty switch in `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:144$165'.
+Removing empty process `$paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$proc$sar_adc_ideal_conv.sv:144$165'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$161'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$159'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$157'.
@@ -315,10 +315,11 @@ Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$155'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$153'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$151'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:0$123'.
-Found and cleaned up 1 empty switch in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:119$98'.
-Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:119$98'.
-Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$80'.
-Found and cleaned up 2 empty switches in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
+Found and cleaned up 1 empty switch in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:120$98'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:120$98'.
+Found and cleaned up 1 empty switch in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
+Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:113$78'.
+Found and cleaned up 1 empty switch in `\sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:94$61'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:73$34'.
 Removing empty process `sar_tb_working.$proc$sar_adc_ideal_conv.sv:43$32'.
@@ -564,10 +565,10 @@ Optimizing module sar_tb_working.
 2.8.14. Finished OPT passes. (There is nothing left to do.)
 
 2.9. Executing WREDUCE pass (reducing word size of cells).
-Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$mul$sar_adc_ideal_conv.sv:145$166 ($mul).
-Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$ne$sar_adc_ideal_conv.sv:145$167 ($ne).
-Removed top 31 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$add$sar_adc_ideal_conv.sv:146$168 ($add).
-Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$eq$sar_adc_ideal_conv.sv:152$171 ($eq).
+Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$mul$sar_adc_ideal_conv.sv:146$166 ($mul).
+Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$ne$sar_adc_ideal_conv.sv:146$167 ($ne).
+Removed top 31 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$add$sar_adc_ideal_conv.sv:147$168 ($add).
+Removed top 30 bits (of 32) from port B of cell $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010.$eq$sar_adc_ideal_conv.sv:153$171 ($eq).
 Removed top 9 bits (of 10) from wire $paramod\sar_adc\N_BITS=s32'00000000000000000000000000000001.output_result_digital_prescale.
 Removed top 30 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$div$./successive_approximation_register.v:35$208 ($div).
 Removed top 31 bits (of 32) from port B of cell $paramod\successive_approximation_register\N_BITS=s32'00000000000000000000000000000001.$add$./successive_approximation_register.v:26$195 ($add).
@@ -593,7 +594,7 @@ Removed top 1 bits (of 10) from wire digital_to_analog_converter.padr_0.
 Removed top 1 bits (of 26) from wire digital_to_analog_converter.padr_8.
 Removed top 1 bits (of 13) from wire digital_to_analog_converter.toSInt_imm_11.
 Removed top 31 bits (of 32) from port B of cell sample_and_hold.$procmux$238_CMP0 ($eq).
-Removed top 23 bits (of 32) from port B of cell sar_tb_working.$div$sar_adc_ideal_conv.sv:111$79 ($div).
+Removed top 23 bits (of 32) from port B of cell sar_tb_working.$div$sar_adc_ideal_conv.sv:111$77 ($div).
 Removed top 31 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:39$31 ($add).
 Removed top 31 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:44$33 ($add).
 Removed top 30 bits (of 32) from port B of cell sar_tb_working.$lt$sar_adc_ideal_conv.sv:76$46 ($lt).
@@ -603,20 +604,20 @@ Removed top 25 bits (of 32) from port B of cell sar_tb_working.$gt$sar_adc_ideal
 Removed top 23 bits (of 32) from port B of cell sar_tb_working.$lt$sar_adc_ideal_conv.sv:83$59 ($lt).
 Removed top 31 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:95$69 ($add).
 Removed top 31 bits (of 32) from port B of cell sar_tb_working.$eq$sar_adc_ideal_conv.sv:101$70 ($eq).
-Removed top 21 bits (of 32) from port A of cell sar_tb_working.$mul$sar_adc_ideal_conv.sv:111$78 ($mul).
-Removed top 11 bits (of 32) from port Y of cell sar_tb_working.$mul$sar_adc_ideal_conv.sv:111$78 ($mul).
-Removed top 22 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:114$87 ($add).
-Removed top 11 bits (of 32) from port Y of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:114$87 ($add).
-Removed top 11 bits (of 32) from port B of cell sar_tb_working.$lt$sar_adc_ideal_conv.sv:114$88 ($lt).
-Removed top 22 bits (of 32) from port B of cell sar_tb_working.$gt$sar_adc_ideal_conv.sv:115$89 ($gt).
-Removed top 22 bits (of 32) from port B of cell sar_tb_working.$sub$sar_adc_ideal_conv.sv:115$91 ($sub).
-Removed top 11 bits (of 32) from port Y of cell sar_tb_working.$sub$sar_adc_ideal_conv.sv:115$91 ($sub).
-Removed top 22 bits (of 32) from port B of cell sar_tb_working.$le$sar_adc_ideal_conv.sv:116$94 ($le).
-Removed top 31 bits (of 32) from port B of cell sar_tb_working.$gt$sar_adc_ideal_conv.sv:116$96 ($gt).
-Removed top 60 bits (of 64) from port B of cell sar_tb_working.$eq$sar_adc_ideal_conv.sv:120$101 ($eq).
-Removed top 11 bits (of 32) from wire sar_tb_working.$add$sar_adc_ideal_conv.sv:114$87_Y.
-Removed top 4 bits (of 32) from wire sar_tb_working.$div$sar_adc_ideal_conv.sv:111$79_Y.
-Removed top 12 bits (of 32) from wire sar_tb_working.$mul$sar_adc_ideal_conv.sv:111$78_Y.
+Removed top 21 bits (of 32) from port A of cell sar_tb_working.$mul$sar_adc_ideal_conv.sv:111$76 ($mul).
+Removed top 11 bits (of 32) from port Y of cell sar_tb_working.$mul$sar_adc_ideal_conv.sv:111$76 ($mul).
+Removed top 22 bits (of 32) from port B of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:114$85 ($add).
+Removed top 11 bits (of 32) from port Y of cell sar_tb_working.$add$sar_adc_ideal_conv.sv:114$85 ($add).
+Removed top 11 bits (of 32) from port B of cell sar_tb_working.$lt$sar_adc_ideal_conv.sv:114$86 ($lt).
+Removed top 22 bits (of 32) from port B of cell sar_tb_working.$gt$sar_adc_ideal_conv.sv:115$87 ($gt).
+Removed top 22 bits (of 32) from port B of cell sar_tb_working.$sub$sar_adc_ideal_conv.sv:115$89 ($sub).
+Removed top 11 bits (of 32) from port Y of cell sar_tb_working.$sub$sar_adc_ideal_conv.sv:115$89 ($sub).
+Removed top 22 bits (of 32) from port B of cell sar_tb_working.$le$sar_adc_ideal_conv.sv:116$92 ($le).
+Removed top 31 bits (of 32) from port B of cell sar_tb_working.$gt$sar_adc_ideal_conv.sv:116$94 ($gt).
+Removed top 60 bits (of 64) from port B of cell sar_tb_working.$eq$sar_adc_ideal_conv.sv:121$101 ($eq).
+Removed top 11 bits (of 32) from wire sar_tb_working.$add$sar_adc_ideal_conv.sv:114$85_Y.
+Removed top 3 bits (of 32) from wire sar_tb_working.$div$sar_adc_ideal_conv.sv:111$77_Y.
+Removed top 11 bits (of 32) from wire sar_tb_working.$mul$sar_adc_ideal_conv.sv:111$76_Y.
 
 2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module $paramod\frequency_divider\DIVISION=s32'00000000000000000000000000000010..
@@ -907,6 +908,6 @@ Module sar_tb_working directly or indirectly contains formal properties -> setti
 Output filename: ../model/design.il
 
 Warnings: 2 unique messages, 2 total
-End of script. Logfile hash: 63a20f1768, CPU: user 0.32s system 0.02s, MEM: 13.97 MB peak
+End of script. Logfile hash: c2544215f3, CPU: user 0.17s system 0.02s, MEM: 13.93 MB peak
 Yosys 0.34+14 (git sha1 11b9deba9, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 21% 5x opt_clean (0 sec), 19% 6x opt_expr (0 sec), ...
+Time spent: 17% 5x opt_clean (0 sec), 16% 2x check (0 sec), ...

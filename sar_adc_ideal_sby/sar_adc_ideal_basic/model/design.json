@@ -36,7 +36,7 @@
                 {
                   "name": "$procmux$287",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:152.8-152.29|sar_adc_ideal_conv.sv:152.5-152.73"
+                    "src": "sar_adc_ideal_conv.sv:153.8-153.29|sar_adc_ideal_conv.sv:153.5-153.73"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -46,7 +46,7 @@
                   "name": "$procmux$290",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "sar_adc_ideal_conv.sv:145.8-145.31|sar_adc_ideal_conv.sv:145.5-147.27"
+                    "src": "sar_adc_ideal_conv.sv:146.8-146.31|sar_adc_ideal_conv.sv:146.5-148.27"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000100000"
@@ -75,9 +75,9 @@
             ],
             "cells": [
                 {
-                  "name": "$ne$sar_adc_ideal_conv.sv:145$167",
+                  "name": "$ne$sar_adc_ideal_conv.sv:146$167",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:145.8-145.31"
+                    "src": "sar_adc_ideal_conv.sv:146.8-146.31"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -110,9 +110,9 @@
             ],
             "cells": [
                 {
-                  "name": "$mul$sar_adc_ideal_conv.sv:145$166",
+                  "name": "$mul$sar_adc_ideal_conv.sv:146$166",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:145.8-145.17"
+                    "src": "sar_adc_ideal_conv.sv:146.8-146.17"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -147,7 +147,7 @@
                 {
                   "name": "$procdff$310",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:151.1-153.4"
+                    "src": "sar_adc_ideal_conv.sv:152.1-154.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -157,7 +157,7 @@
                 {
                   "name": "$procdff$311",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:143.1-148.4"
+                    "src": "sar_adc_ideal_conv.sv:144.1-149.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -204,9 +204,9 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:139$177",
+                  "name": "$eq$sar_adc_ideal_conv.sv:140$177",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:139.16-139.28"
+                    "src": "sar_adc_ideal_conv.sv:140.16-140.28"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -215,9 +215,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:152$172",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:153$172",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:152.53-152.72"
+                    "src": "sar_adc_ideal_conv.sv:153.53-153.72"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -248,9 +248,9 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:152$171",
+                  "name": "$eq$sar_adc_ideal_conv.sv:153$171",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:152.8-152.29"
+                    "src": "sar_adc_ideal_conv.sv:153.8-153.29"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -278,9 +278,9 @@
             ],
             "cells": [
                 {
-                  "name": "$assume$sar_adc_ideal_conv.sv:139$173",
+                  "name": "$assume$sar_adc_ideal_conv.sv:140$173",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:139.8-139.29"
+                    "src": "sar_adc_ideal_conv.sv:140.8-140.29"
                   },
                   "parameters": {
 
@@ -309,9 +309,9 @@
             ],
             "cells": [
                 {
-                  "name": "$add$sar_adc_ideal_conv.sv:146$168",
+                  "name": "$add$sar_adc_ideal_conv.sv:147$168",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:146.20-146.31"
+                    "src": "sar_adc_ideal_conv.sv:147.20-147.31"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -327,7 +327,7 @@
         "attributes": {
             "keep": "00000000000000000000000000000001",
             "hdlname": "\\frequency_divider",
-            "src": "sar_adc_ideal_conv.sv:128.1-156.10"
+            "src": "sar_adc_ideal_conv.sv:129.1-157.10"
         }
       },
       {
@@ -1785,7 +1785,7 @@
             ],
             "cells": [
                 {
-                  "name": "$sub$sar_adc_ideal_conv.sv:115$91",
+                  "name": "$sub$sar_adc_ideal_conv.sv:115$89",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:115.93-115.141"
                   },
@@ -1827,29 +1827,29 @@
                 {
                   "name": "$procmux$292",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:123.8-123.53|sar_adc_ideal_conv.sv:123.5-123.88"
+                    "src": "sar_adc_ideal_conv.sv:124.8-124.53|sar_adc_ideal_conv.sv:124.5-124.88"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000001010"
                   }
                 },
                 {
-                  "name": "$procmux$295",
+                  "name": "$procmux$294",
+                  "attributes": {
+                    "src": "sar_adc_ideal_conv.sv:117.8-117.26|sar_adc_ideal_conv.sv:117.5-117.41"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$297",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "sar_adc_ideal_conv.sv:95.8-95.44|sar_adc_ideal_conv.sv:95.5-96.32"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000100000"
-                  }
-                },
-                {
-                  "name": "$procmux$297",
-                  "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:108.8-108.26|sar_adc_ideal_conv.sv:108.5-108.41"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]
@@ -1877,7 +1877,7 @@
                 {
                   "name": "$procdff$312",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:119.1-124.4"
+                    "src": "sar_adc_ideal_conv.sv:120.1-125.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1887,7 +1887,7 @@
                 {
                   "name": "$procdff$313",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:119.1-124.4"
+                    "src": "sar_adc_ideal_conv.sv:120.1-125.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1897,7 +1897,7 @@
                 {
                   "name": "$procdff$314",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:119.1-124.4"
+                    "src": "sar_adc_ideal_conv.sv:120.1-125.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1907,7 +1907,7 @@
                 {
                   "name": "$procdff$315",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:113.1-117.4"
+                    "src": "sar_adc_ideal_conv.sv:113.1-118.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1917,7 +1917,7 @@
                 {
                   "name": "$procdff$316",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:113.1-117.4"
+                    "src": "sar_adc_ideal_conv.sv:113.1-118.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1927,7 +1927,7 @@
                 {
                   "name": "$procdff$317",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:113.1-117.4"
+                    "src": "sar_adc_ideal_conv.sv:113.1-118.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1935,9 +1935,9 @@
                   }
                 },
                 {
-                  "name": "$procdff$319",
+                  "name": "$procdff$318",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:113.1-117.4"
+                    "src": "sar_adc_ideal_conv.sv:113.1-118.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -1945,13 +1945,13 @@
                   }
                 },
                 {
-                  "name": "$procdff$321",
+                  "name": "$procdff$320",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:94.1-109.4"
+                    "src": "sar_adc_ideal_conv.sv:113.1-118.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000100000"
+                    "WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
@@ -1961,7 +1961,7 @@
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000001"
+                    "WIDTH": "00000000000000000000000000100000"
                   }
                 },
                 {
@@ -2100,7 +2100,7 @@
                   }
                 },
                 {
-                  "name": "$or$sar_adc_ideal_conv.sv:115$93",
+                  "name": "$or$sar_adc_ideal_conv.sv:115$91",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:115.13-115.142"
                   },
@@ -2113,7 +2113,7 @@
                   }
                 },
                 {
-                  "name": "$or$sar_adc_ideal_conv.sv:116$97",
+                  "name": "$or$sar_adc_ideal_conv.sv:116$95",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:116.13-116.96"
                   },
@@ -2126,9 +2126,9 @@
                   }
                 },
                 {
-                  "name": "$or$sar_adc_ideal_conv.sv:120$104",
+                  "name": "$or$sar_adc_ideal_conv.sv:121$104",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:120.28-120.71"
+                    "src": "sar_adc_ideal_conv.sv:121.28-121.71"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -2267,7 +2267,7 @@
             ],
             "cells": [
                 {
-                  "name": "$mul$sar_adc_ideal_conv.sv:111$78",
+                  "name": "$mul$sar_adc_ideal_conv.sv:111$76",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:111.27-111.44"
                   },
@@ -2302,7 +2302,7 @@
             ],
             "cells": [
                 {
-                  "name": "$add$sar_adc_ideal_conv.sv:114$87",
+                  "name": "$add$sar_adc_ideal_conv.sv:114$85",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:114.39-114.87"
                   },
@@ -2558,9 +2558,9 @@
                   }
                 },
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:120$101",
+                  "name": "$eq$sar_adc_ideal_conv.sv:121$101",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:120.30-120.53"
+                    "src": "sar_adc_ideal_conv.sv:121.30-121.53"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -2593,9 +2593,9 @@
             ],
             "cells": [
                 {
-                  "name": "$and$sar_adc_ideal_conv.sv:108$77",
+                  "name": "$and$sar_adc_ideal_conv.sv:117$97",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:108.8-108.26"
+                    "src": "sar_adc_ideal_conv.sv:117.8-117.26"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -2606,9 +2606,9 @@
                   }
                 },
                 {
-                  "name": "$and$sar_adc_ideal_conv.sv:123$106",
+                  "name": "$and$sar_adc_ideal_conv.sv:124$106",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:123.8-123.35"
+                    "src": "sar_adc_ideal_conv.sv:124.8-124.35"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -2619,9 +2619,9 @@
                   }
                 },
                 {
-                  "name": "$and$sar_adc_ideal_conv.sv:123$108",
+                  "name": "$and$sar_adc_ideal_conv.sv:124$108",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:123.8-123.53"
+                    "src": "sar_adc_ideal_conv.sv:124.8-124.53"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -2713,7 +2713,7 @@
                 {
                   "name": "bmc_range_for",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:120.5-120.72"
+                    "src": "sar_adc_ideal_conv.sv:121.5-121.72"
                   },
                   "parameters": {
 
@@ -2751,7 +2751,7 @@
             ],
             "cells": [
                 {
-                  "name": "$div$sar_adc_ideal_conv.sv:111$79",
+                  "name": "$div$sar_adc_ideal_conv.sv:111$77",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:111.26-111.51"
                   },
@@ -2860,7 +2860,7 @@
             ],
             "cells": [
                 {
-                  "name": "$lt$sar_adc_ideal_conv.sv:114$88",
+                  "name": "$lt$sar_adc_ideal_conv.sv:114$86",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:114.15-114.87"
                   },
@@ -2916,9 +2916,9 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$sar_adc_ideal_conv.sv:123$107",
+                  "name": "$eq$sar_adc_ideal_conv.sv:124$107",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:123.38-123.53"
+                    "src": "sar_adc_ideal_conv.sv:124.38-124.53"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -2982,7 +2982,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:115$90",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:115$88",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:115.13-115.64"
                   },
@@ -2993,7 +2993,7 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:116$95",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:116$93",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:116.13-116.65"
                   },
@@ -3004,9 +3004,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:120$102",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:121$102",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:120.28-120.54"
+                    "src": "sar_adc_ideal_conv.sv:121.28-121.54"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -3015,9 +3015,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$sar_adc_ideal_conv.sv:123$105",
+                  "name": "$logic_not$sar_adc_ideal_conv.sv:124$105",
                   "attributes": {
-                    "src": "sar_adc_ideal_conv.sv:123.29-123.35"
+                    "src": "sar_adc_ideal_conv.sv:124.29-124.35"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -3070,7 +3070,7 @@
             ],
             "cells": [
                 {
-                  "name": "$gt$sar_adc_ideal_conv.sv:115$89",
+                  "name": "$gt$sar_adc_ideal_conv.sv:115$87",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:115.15-115.63"
                   },
@@ -3083,7 +3083,7 @@
                   }
                 },
                 {
-                  "name": "$gt$sar_adc_ideal_conv.sv:115$92",
+                  "name": "$gt$sar_adc_ideal_conv.sv:115$90",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:115.69-115.141"
                   },
@@ -3096,7 +3096,7 @@
                   }
                 },
                 {
-                  "name": "$gt$sar_adc_ideal_conv.sv:116$96",
+                  "name": "$gt$sar_adc_ideal_conv.sv:116$94",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:116.70-116.95"
                   },
@@ -3157,7 +3157,7 @@
             ],
             "cells": [
                 {
-                  "name": "$le$sar_adc_ideal_conv.sv:116$94",
+                  "name": "$le$sar_adc_ideal_conv.sv:116$92",
                   "attributes": {
                     "src": "sar_adc_ideal_conv.sv:116.15-116.64"
                   },
@@ -3250,7 +3250,7 @@
             "keep": "00000000000000000000000000000001",
             "hdlname": "\\sar_tb_working",
             "top": "00000000000000000000000000000001",
-            "src": "sar_adc_ideal_conv.sv:5.1-126.10"
+            "src": "sar_adc_ideal_conv.sv:5.1-127.10"
         }
       }
   ]
